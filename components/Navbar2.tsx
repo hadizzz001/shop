@@ -45,7 +45,8 @@ function NavBar() {
               </Link>
               <div className="md:hidden">
                 <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                style={{borderColor: "transparent !important"}}
+                  className="p-2 text-gray-700 rounded-md outline-none"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
@@ -56,7 +57,7 @@ function NavBar() {
                       width={30}
                       height={30}
                       alt="logo"
-                      className="focus:border-none active:border-none"
+                      className="focus:border-none active:border-none" 
                     />
                   )}
                 </button>
@@ -94,7 +95,7 @@ function NavBar() {
                                 </Link>
                               </li>
                               <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-blue-600  border-blue-900  md:hover:text-red-600 md:hover:bg-transparent">
-                                <Link href="/contact" onClick={() => setNavbar(!navbar)}>
+                                <Link href="https://triple-dash.netlify.app/" onClick={() => setNavbar(!navbar)}>
                                   {a.t4}
                                 </Link>
                               </li>
