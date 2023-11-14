@@ -95,7 +95,7 @@ function NavBar() {
                                 </Link>
                               </li>
                               <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-blue-600  border-blue-900  md:hover:text-red-600 md:hover:bg-transparent">
-                                <Link href="https://triple-dash.netlify.app/" onClick={() => setNavbar(!navbar)}>
+                                <Link href="https://triple-dash.netlify.app/" target='_blank' onClick={() => setNavbar(!navbar)}>
                                   {a.t4}
                                 </Link>
                               </li>
@@ -135,7 +135,7 @@ function NavBar() {
                                 </Link>
                               </li>
                               <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-blue-600  border-blue-900  md:hover:text-red-600 md:hover:bg-transparent">
-                                <Link href="/contact" onClick={() => setNavbar(!navbar)}>
+                                <Link href="https://triple-dash.netlify.app/" target='_blank' onClick={() => setNavbar(!navbar)}>
                                   {a.t4}
                                 </Link>
                               </li>
