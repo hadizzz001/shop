@@ -1,17 +1,18 @@
-"use client"; 
+// "use client"; 
+import { fetchTemp } from '@/utils'
+import { useState, useEffect } from "react";
 
+ 
+const Body = async () => { 
+    const [allTemp, setTemp] = useState<any>()
 
-
-async function getData() {
-    const res = await fetch("http://localhost:3000/api/post", { cache: 'no-store' }); 
-    if (!res.ok) {
-        throw new Error("Failed to fetch data")
-    } 
-    return res.json();
-}
-
-const Body = async () => {
-    const posts = await getData();
+    const a = async () => {
+        const b = await fetchTemp()
+        setTemp(b) 
+    }
+    useEffect(() => {
+        a()
+    }, [])
 
     return (
 
@@ -21,8 +22,10 @@ const Body = async () => {
             <div className="container-fluid mb-10">
                 <div className="row row-grid">
 
-                    {
-                        posts.map((post: any) => (
+
+                    {allTemp && allTemp?.length > 0 ? (
+
+                        allTemp.map((post: any) => (
 
 
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 slide slide-product">
@@ -31,7 +34,7 @@ const Body = async () => {
                                     src={post.img}
                                 />
                                 <div className="details color-primary">
-                                    <span className="title-1" style={{ fontWeight: "600", fontSize:"27px" }}>
+                                    <span className="title-1" style={{ fontWeight: "600", fontSize: "27px" }}>
                                         {post.title}
                                     </span>
                                     <div className="actions">
@@ -43,11 +46,21 @@ const Body = async () => {
                                         </a>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         ))
-                    }
+
+
+                    ) : (
+                        <div className='home___error-container'>
+                            <h2 className='text-black text-xl dont-bold'>...</h2>
+
+                        </div>
+                    )
+
+                    } 
+
                 </div>
-            </div> 
+            </div>
 
         </div>
 

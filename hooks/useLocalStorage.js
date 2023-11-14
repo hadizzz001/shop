@@ -1,9 +1,12 @@
 import { useState } from "react"
 
+
+
 const useLocalStorage = (key, initialValue) => {
   const [state, setState] = useState(() => {
-    // Initialize the state
+    // Initialize the state 
     try {
+      
       const value = window.localStorage.getItem(key)
       // Check if the local storage already has any values,
       // otherwise initialize it with the passed initialValue
@@ -12,6 +15,7 @@ const useLocalStorage = (key, initialValue) => {
       console.log(error)
     }
   })
+
 
   const setValue = value => {
     try {
@@ -23,9 +27,14 @@ const useLocalStorage = (key, initialValue) => {
     } catch (error) {
       console.log(error)
     }
+    
   }
+
+
 
   return [state, setValue]
 }
+
+ 
 
 export default useLocalStorage

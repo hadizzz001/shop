@@ -28,6 +28,7 @@ function NavBar() {
       setLang('en')
       setValue('en')
     }
+    if(typeof window !== "undefined")
     window.location.href = "/"
   }
 
@@ -40,7 +41,7 @@ function NavBar() {
             <div className="flex items-center justify-between md:block">
 
               <Link href="/" className='flex justify-center items-center'>
-                <Image src="https://res.cloudinary.com/dixtwo21g/image/upload/v1696414180/new%20items/wix7gyjekmhxln5ywjiv.png" sizes="100vw" alt='Logo' width={200} height={18} className='object-contain' />
+                <Image src="https://res.cloudinary.com/dixtwo21g/image/upload/v1699910478/next/ll1k5mlcahbayj0uds3p.png" sizes="100vw" alt='Logo' width={200} height={18} className='object-contain' />
               </Link>
               <div className="md:hidden">
                 <button

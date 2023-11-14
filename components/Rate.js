@@ -1,42 +1,40 @@
 "use client"
-
-import React from 'react'
+ 
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import { useRouter } from 'next/navigation' 
-// import ReactStars from 'react-stars' 
-import ReactStars from "react-rating-stars-component";
+import ReactStars from "react-rating-stars-component"; 
 
-
-export default function Rate() {
-
-    const { push } = useRouter();
-    const router = useRouter();
+export default function Rate() {  
     const [inputs, setInputs] = useState({});
     const [active, setActive] = useState(false)
-    const [values, setValues] = useState(0); 
+    const [values, setValues] = useState(0);
 
-    useEffect(() => { 
-        setInputs((prevState) => ({ ...prevState, stars: values+"" }));
-      }, [values]);
+ 
+
+    useEffect(() => {
+        setInputs((prevState) => ({ ...prevState, stars: values + "" }));
+    }, [values]);
 
     const handleSubmit = (e) => {
-        e.preventDefault(); 
-        setActive(true)
-        axios
-            .post("/api/rate", inputs)
-            .then((res) => {
-                console.log(res);
-                window.location.replace("/");
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-            .finally(() => {
-                setInputs({});
-                setActive(false) 
-                // router.refresh()
-            });
+        if (typeof window !== "undefined") {
+            e.preventDefault();
+            setActive(true)
+            axios
+                .post("/api/rate", inputs)
+                .then((res) => {
+                    console.log(res);
+
+                    window.location.replace("/");
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+                .finally(() => {
+                    setInputs({});
+                    setActive(false)
+                    // router.refresh()
+                });
+        }
     };
 
     const handleChange = (e) => {
@@ -100,7 +98,7 @@ export default function Rate() {
                                     <ReactStars
                                         count={5}
                                         size={24}
-                                        color2={'#ffd700'} 
+                                        color2={'#ffd700'}
                                         isHalf={false}
                                         onChange={ratingChanged} />
                                 </div>

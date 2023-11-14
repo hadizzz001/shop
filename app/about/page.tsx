@@ -5,9 +5,9 @@ import useLocalStorage from '@/hooks/useLocalStorage'
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-    const { open, setOpen } = useDrawerContext()
-    const [value, setValue] = useLocalStorage("lang", "")
-    const [lang, setLang] = useState(value)
+    // const { open, setOpen } = useDrawerContext()
+    // const [value, setValue] = useLocalStorage("lang", "")
+    // const [lang, setLang] = useState(value)
 
     return (
         <>

@@ -7,9 +7,9 @@ import './bs-select.css'
 import './slick.css'
 import { useSearchParams } from 'next/navigation'
 import ContextWrapper from './context/store';
-import {Rubik} from 'next/font/google'
+ 
 
-const rubik = Rubik({subsets:['latin']})
+ 
 
 export const metadata = {
   title: 'Triple Win Solutions',
@@ -28,7 +28,7 @@ export default function RootLayout({
 
   return (
     <html lang='en'>  
-      <body className={rubik.className}>
+      <body>
 
         <ContextWrapper>
           <Navbar2 />

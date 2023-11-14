@@ -35,7 +35,7 @@ model Review{
   name String
   description String 
   stars String 
-  date DateTime @default(now())
+  date DateTime @default(now()) @db.Date
 }
 
 

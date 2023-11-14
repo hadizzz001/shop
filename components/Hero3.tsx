@@ -10,6 +10,7 @@ const Hero3 = () => {
 
     const router = useRouter();
     const handleScroll = () => {
+        if(typeof window !== "undefined")
         window.open('https://wa.me/96560999213', '_ blank');
     }
 
