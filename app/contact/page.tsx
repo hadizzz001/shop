@@ -5,34 +5,20 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
+import {sendEmail} from '@/app/api/sendEmail/sendEmail'
 
-
-export default function Home() {
-
-  
  
+
+ 
+
+
+export default function Home() { 
       const router = useRouter(); 
       const [inputs, setInputs] = useState({});
       const [active, setActive] = useState(false) 
       const [value, setValue] = useState(''); 
   
-      const handleSubmit = (e: any) => {
-          e.preventDefault(); 
-          setActive(true)
-          axios
-              .post("/api/order", inputs)
-              .then((res) => {
-                  console.log(res);
-              })
-              .catch((err) => {
-                  console.log(err);
-              })
-              .finally(() => {
-                  setInputs({});
-                  setActive(false)
-                  router.push('/thank');
-              });
-      };
+       
   
       const handleChange = (e: any) => { 
           if(e.target.name == "phone"){ 
@@ -52,20 +38,17 @@ export default function Home() {
     <>
 
 
-      <div className="custom-header-1">
+      <div className="">
         <div className="container-xl">
           <br />
-          <h4 className="text-center text-white pt-3">GET IN TOUCH</h4>
+          <h4 className="br_text-2xl-serif md:br_text-3xl-serif" style={{textAlign:"center"}}>GET IN TOUCH</h4>
 
         </div>
       </div>
-      <div className="container-xl bg-white custom-page-1 mt-5">
+      <div className="container-xl mt-5">
         <div>
-          <div className="pl-5 pt-4 pr-5">
-            <p className="font-sinkinsans-700bold color-blue get-in-touch-title">
-              Send us a message
-            </p>
-            <form onSubmit={handleSubmit}>
+          <div className="pl-5 pt-4 pr-5"> 
+            <form action={async formData => { await sendEmail(formData); }}>
  
               <div className="row">
                 <div className="col-md-6">
@@ -139,94 +122,19 @@ export default function Home() {
                  
               </div>
               <div className="form-group row pt-2">
-                <div className="col-sm-12">
-                  <button type="submit" className="btn btn-2 pr-5 pl-5 float-right">
+              <div className="col-md-5"></div>
+                <div className="col-md-2">
+                  <button type="submit" className="klaviyo_submit_button" style={{padding:"1.5em"}}>
                     Send
                   </button>
                 </div>
+                <div className="col-md-5"></div>
               </div>
               <br />
             </form>
           </div>
         </div>
-        <div className="background-gray color-primary">
-          <div className="pl-5 pr-5" style={{ paddingTop: "0.1px" }}>
-            <div className="row contact-details">
-              <div className="col-lg-6">
-                 
-                <div className="clearfix">
-                  <img
-                    src="https://www.securiteassurance.com/images/icon-location.svg"
-                    alt="sa location"
-                    className="float-left mr-3"
-                  />
-                  <div className="float-left">
-                    Lebanon, Beirut <br />
-                    Sin El Fil, Fouad Chehab Avenue, <br />
-                    Gedco 3 Center, Block B <br />
-                    P.O.Box: 16 6499
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-1"> 
-              </div>
-              <div className="col-lg-5">
-                <div className="clearfix mb-sm-3">
-                  <div className="icon">
-                    <img
-                      src="https://www.securiteassurance.com/images/icon-mobile.svg"
-                      alt="sa mobile"
-                      className="float-left mr-3"
-                    />
-                  </div>
-                  <div className="float-left">+961 9 231 511</div>
-                </div>
-                <div className="clearfix mb-sm-3">
-                  <div className="icon">
-                    <img
-                      src="https://www.securiteassurance.com/images/icon-telephone.svg"
-                      alt="sa telephone"
-                      className="float-left mr-3"
-                    />
-                  </div>
-                  <div className="float-left">+961 9 232 735</div>
-                </div>
-                <div className="clearfix mb-sm-3">
-                  <div className="icon">
-                    <img
-                      src="https://www.securiteassurance.com/images/icon-envelope.svg"
-                      alt="sa mobile"
-                      className="float-left mr-3"
-                    />
-                  </div>
-                  <div className="float-left">email@email.com</div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-            <div className="d-none">
-              <p>
-                Lebanon, Beirut
-                <br />
-                Sin El Fil, Fouad Chehab Avenue,
-                <br />
-                Gedco 3 Center, Blocks A&amp;B
-                <br />
-                P.O.Box: 15 5499
-              </p>
-              <p>
-              +961 9 231 511
-                <br />
-                +961 9 232 735
-              </p>
-              <p>email@email.com</p>
-            </div>
-          </div>
-          <br />
-        </div>
+        
       </div>
       <div className="clearfix" />
       

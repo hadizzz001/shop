@@ -9,6 +9,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
+  border-color: transparent !important;
+}
+
+body {
+  background-color: #dadad2 !important;
 }
 
 /* START: General styles */
@@ -35,6 +40,7 @@
 .custom-btn {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
 }
+
 /* END: General styles */
 
 /* START: Hero styles */
@@ -61,6 +67,7 @@
 .hero__image-overlay {
   @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
 }
+
 /* END: Hero styles */
 
 /* START: Home styles */
@@ -84,6 +91,7 @@
 .home__error-container {
   @apply mt-16 flex justify-center items-center flex-col gap-2;
 }
+
 /* END: Home styles */
 
 /* START: Car Card styles */
@@ -130,6 +138,7 @@
 .car-card__btn-container {
   @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
 }
+
 /* END: Car Card styles */
 
 /* START: Car Details styles */
@@ -144,6 +153,7 @@
 .car-details__main-image {
   @apply relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg;
 }
+
 /* END: Car Details styles */
 
 /* START: Custom Filter styles */
@@ -154,11 +164,12 @@
 .custom-filter__options {
   @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
 }
+
 /* END: Custom Filter styles */
 
 /* START: Footer styles */
 .footer {
-  @apply flex flex-col text-black-100  mt-5 border-t border-gray-100;
+  @apply flex flex-col text-black-100 mt-5 border-t border-gray-100;
 }
 
 .footer__links-container {
@@ -184,6 +195,7 @@
 .footer__copyrights-link {
   @apply flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10;
 }
+
 /* END: Footer styles */
 
 /* START: searchbar styles */
@@ -198,6 +210,7 @@
 .searchbar__input {
   @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
 }
+
 /* END: searchbar styles */
 
 /* START: search manufacturer styles */
@@ -216,38 +229,298 @@
 .search-manufacturer__option {
   @apply cursor-default select-none py-2 pl-10 pr-4;
 }
+
 /* END: search manufacturer styles */
 
-.bg-c1{
+.bg-c1 {
   background-color: #ece7e1;
 }
 
-.bg-c2{
+.bg-c2 {
   background-color: #b1a8a3;
 }
- 
- .myClass1{
+
+.myClass1 {
   color: red;
- }
+}
 
 
- .btn{
+.btn {
   font-weight: bolder !important;
- }
+}
 
 
- .btn-2 {
+.btn-2 {
   background-color: #6c3429 !important;
   color: white !important;
   font-size: 14px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
-  font-family: 'SinkinSans-Semibold','SinkinSans-700Bold', sans-serif;
+  font-family: 'SinkinSans-Semibold', 'SinkinSans-700Bold', sans-serif;
 }
 
 
 
+@media (min-width: 1200px) {
+  @media (pointer: fine) {
+    .xl\:pointer-fine\:br_h-\[75px\] {
+      height: 100px !important;
+    }
+
+    .xl\:pointer-fine\:br_top-\[9px\] {
+      top: 25px !important;
+    }
+
+    .secondaryLevel {
+      top: 65px !important;
+    }
+  }
+}
+
+
+.sywVideo {
+  color: #231f20 !important;
+  background-color: transparent !important;
+}
+
+.sywCarousel {
+  color: #231f20 !important;
+}
+
+.sywProductTabs-title {
+  color: #231f20 !important;
+  background-color: transparent !important;
+}
+
+.sywPaymentOptions {
+  color: #231f20 !important;
+}
+
+.SiteFooter__wrapper {
+  background: #231f20 !important;
+}
+
+
+a:hover {
+  color: #ea6a2b !important;
+  text-decoration: none;
+}
+
+#page-footer-mailto-support-bellroy-com-1 {
+  color: #eee !important;
+}
+
+
+.syw-cta-desktop:hover,
+.syw-cta-desktop:focus {
+  color: #231f20 !important;
+  text-decoration: none;
+}
+
+.productTabs,
+.productTabs__tabs,
+.syw-usps {
+  background: transparent !important;
+}
+
+.productTabs__tabContent__image_tab_4 {
+  background-image: url(https://res.cloudinary.com/duppvjinz/image/upload/v1703165548/kko5bkseeucwjt0bj7jh.png);
+}
+
+
+.klaviyo_submit_button {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  background: #ea6a2b;
+  text-align: center;
+  padding: 0 5px;
+  min-width: 100%;
+  outline: none;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+@media (min-width: 1100px) {
+  .syw-cta-desktop {
+    bottom: 33%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .syw-cta-desktop {
+    bottom: 30%;
+  }
+  #PageMenuPreHeader {
+    background-color: #231f20
+  }
+}
+
+
+@media (max-width: 3000px) {
+  .wallet-image {
+    content: url("https://res.cloudinary.com/duppvjinz/image/upload/v1701429544/sh2ghbas3wdjnmzzrr3w.jpg")
+  }
+}
+
+@media (max-width: 1100px) {
+  .wallet-image {
+    content: url("https://res.cloudinary.com/duppvjinz/image/upload/v1701429544/y5dek37imwznxs9ubi0c.jpg")
+  }
+}
+
+@media (max-width: 720px) {
+  #newB1 {
+    right: 5em
+  }
+
+  #newB2 {
+    left: 5em
+  }
+
+  #PageMenuPreHeader {
+    background-color: #fff
+  }
+
+  .syw-cta-desktop {
+    bottom: 15%;
+  }
+
+}
+
+@media (min-width: 720px) {
+  #newB1 {
+    right: 28em
+  }
+
+  #newB2 {
+    left: 28em
+  } 
+ 
+}
+
+
+
+#anchorNew:hover {
+  color: #231f20 !important;
+}
+
+.form-control {
+  border-radius: initial !important;
+}
+
+
+.form-control:focus {
+  box-shadow: none !important;
+  font-size: 14px !important;
+}
+
+
+.swiper-wrapper {
+  width: 1500px !important;
+}
+
+.car-card {
+  background-color: transparent;
+}
+
+.car-card:hover {
+  background-color: transparent;
+  --tw-shadow: none;
+}
+
+
+.HtmlProductAddToCart {
+  background-color: #ea6a2b !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+.select-theme {
+  margin-top: 20px;
+}
+
+.select-theme p {
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.radio-label {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 7px;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.radio-input {
+  margin: 0;
+  visibility: hidden;
+}
+
+.radio-input:checked+span {
+  border: 2px solid #f4b400;
+}
+
+.radio-input:checked+span:after {
+  opacity: 1;
+}
+
+.custom-radio {
+  left: -8px;
+  top: 6px;
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #9a9a9a;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+/* for inner filled circle */
+.custom-radio::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #f4b400;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+
+
+
+.MiniCart_Cart .MiniCart_Cart_SupportedPaymentTypes_Icons {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+
+.MiniCart_Cart .MiniCart_Cart_SupportedPaymentTypes {
+  padding: 20px;
+}
 
 
  

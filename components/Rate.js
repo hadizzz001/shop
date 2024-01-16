@@ -21,8 +21,7 @@ export default function Rate() {
             setActive(true)
             axios
                 .post("/api/rate", inputs)
-                .then((res) => {
-                    console.log(res);
+                .then((res) => { 
 
                     window.location.replace("/");
                 })

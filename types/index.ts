@@ -11,6 +11,10 @@ export interface CustomButtonProps {
 export interface TempProps{ 
     id: string;
     title:string;
-    description:string;
+    category:string;
+    type:string;
     img: string;
 }
+
+
+ 

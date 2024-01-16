@@ -55,7 +55,7 @@ const page = () => {
         axios
             .post("/api/order", inputs)
             .then((res) => {
-                console.log(res);
+                 
             })
             .catch((err) => {
                 console.log(err);
