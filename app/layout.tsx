@@ -14,13 +14,7 @@ import GifLoader from '../components/GifLoader'
 
  
 
-export const metadata = {
-  title: 'Social Tap',
-  description: 'Discover the best insurance in the world',
-  icons: {
-    icon: 'favicon.ico',
-  },
-}
+ 
 
 export default function RootLayout({
   children
