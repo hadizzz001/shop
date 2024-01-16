@@ -146,7 +146,7 @@ const page = () => {
 
 
 
-  function handleClickc() {
+  function handleClickc() { 
     var cartb = document.getElementById("cartid");
     var cartb2 = document.getElementById("cartid2");
     setBooleanValue(!isBooleanValue);
