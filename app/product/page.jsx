@@ -1823,7 +1823,7 @@ const page = () => {
 
 
                     {allTemp2 && allTemp2?.length > 0 ? (
-                      <section>
+                      <section style={{maxWidth:"100%"}}>
 
                         <Swiper
                           spaceBetween={50}

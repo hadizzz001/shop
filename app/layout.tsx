@@ -43,7 +43,7 @@ export default function RootLayout({
     name="description"
     property=""
   />
-  <meta content="Bellroy" name="keywords" property="" />
+  <meta content="Socialtap" name="keywords" property="" />
   <meta
     content="Social Tap"
     name=""
@@ -61,72 +61,47 @@ export default function RootLayout({
     property="og:description"
   />
   <meta
-    content="https://bellroy-cms-images.imgix.net/686/bellroy-brand-homepage-2.jpg"
+    content="/logo.png"
     name=""
     property="og:image"
   />
-  <meta
-    content="d_hTwlGjrkXyIa7Rxp5Cq9mYU-c_LfefY9PqUPFeK50"
-    name="google-site-verification"
-    property=""
-  />
-  <meta
-    content="KjwMdcUc1yMKbVR6ZgGLhtpXUu6I9U86jnhyueYnMKU"
-    name="google-site-verification"
-    property=""
-  />
-  <meta
-    content="ewuddVwTh3Lhq9G7vdmttYTXJYms8JiKS62SKyBE4Tw"
-    name="google-site-verification"
-    property=""
-  />
+   
   <link
-    href="/apple-touch-icon.png?v=YAmYvvKg0r"
+    href="/favicon"
     rel="apple-touch-icon"
     sizes="180x180"
   />
   <link
-    href="/favicon-32x32.png?v=YAmYvvKg0r"
+    href="/favicon"
     rel="icon"
     sizes="32x32"
     type="image/png"
   />
   <link
-    href="/favicon-16x16.png?v=YAmYvvKg0r"
+    href="/favicon"
     rel="icon"
     sizes="16x16"
     type="image/png"
   /> 
-  <link
-    color="#ea6a2b"
-    href="/safari-pinned-tab.svg?v=YAmYvvKg0r"
-    rel="mask-icon"
-  />
+ 
   <meta content="#ffffff" name="msapplication-TileColor" />
   <meta content="#ffffff" name="theme-color" />
   <link href="https://assets.bellroy.com" rel="preconnect" />
   <link href="https://bellroy.imgix.net" rel="preconnect" /> 
-  <meta
-    name="csrf-token"
-    content="eliUSL0E0pLUmcPEuJfQMf-26CDKfNynOZOMa8R0PrTHFeGYaSnCEIWj0IBPcMW3UVDbuzj9fGdfZKeAYck7UA"
-  />
+  
   <link
-    href="https://bellroy.com/collection/slim-your-wallet"
-    rel="canonical"
-  />
-  <link
-    href="https://assets.bellroy.com/client/webfonts-3e3c2400.css"
+    href="css/webfonts-3e3c2400.css"
     rel="preload"
     as="style"
   />
   <link
     rel="stylesheet"
-    href="https://assets.bellroy.com/client/webfonts-3e3c2400.css"
+    href="css/webfonts-3e3c2400.css"
     media="print" 
   />
   <link
     rel="stylesheet"
-    href="https://assets.bellroy.com/client/style-4109db2b.css"
+    href="css/style-4109db2b.css"
   />
 
 <link href="https://fonts.cdnfonts.com/css/lato" rel="stylesheet"/>

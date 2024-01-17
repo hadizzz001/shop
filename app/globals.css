@@ -349,7 +349,7 @@ a:hover {
 @media (min-width: 1100px) {
   .syw-cta-desktop {
     bottom: 33%;
-  }
+  } 
 }
 
 @media (min-width: 1200px) {
@@ -357,16 +357,28 @@ a:hover {
     bottom: 30%;
   }
   #PageMenuPreHeader {
+    background-color: #fff
+  }
+}
+
+
+@media (max-width: 2300px) and (max-height: 900px) {
+  #PageMenuPreHeader {
     background-color: #231f20
   }
 }
 
 
-@media (max-width: 3000px) {
+
+
+@media (min-width: 1300px) {
   .wallet-image {
     content: url("https://res.cloudinary.com/duppvjinz/image/upload/v1701429544/sh2ghbas3wdjnmzzrr3w.jpg")
-  }
+  }  
 }
+
+
+
 
 @media (max-width: 1100px) {
   .wallet-image {
@@ -402,6 +414,13 @@ a:hover {
     left: 28em
   } 
  
+}
+
+
+@media (min-height: 1100px) and (min-width: 1300px) { 
+  #PageMenuPreHeader {
+    background-color: #fff
+  }
 }
 
 
@@ -442,6 +461,8 @@ a:hover {
 button:focus {
   outline: none !important;
 }
+
+
 
 
 

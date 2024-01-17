@@ -8,6 +8,49 @@ import { useState, useEffect } from 'react'
 import { sendEmail } from '@/app/api/sendEmail/sendEmail'
 
 const Footer = () => {
+    const [isFoot1, setIsFoot1] = useState(true);
+    const [isFoot2, setIsFoot2] = useState(true);
+    const [isFoot3, setIsFoot3] = useState(true);
+
+
+    const handleFoot = () => { 
+        var d2 = document.getElementById("footId1");
+        setIsFoot1(!isFoot1);
+        if (d2) {
+            if (isFoot1) {
+                d2.className += " open"; 
+            }
+            else{
+                d2.classList.remove("open"); 
+            }
+        }
+    };
+
+    const handleFoot2 = () => { 
+        var d2 = document.getElementById("footId2");
+        setIsFoot2(!isFoot2);
+        if (d2) {
+            if (isFoot2) {
+                d2.className += " open"; 
+            }
+            else{
+                d2.classList.remove("open"); 
+            }
+        }
+    };
+
+    const handleFoot3 = () => { 
+        var d2 = document.getElementById("footId3");
+        setIsFoot3(!isFoot3);
+        if (d2) {
+            if (isFoot3) {
+                d2.className += " open"; 
+            }
+            else{
+                d2.classList.remove("open"); 
+            }
+        }
+    };
 
     return (
         <footer
@@ -44,11 +87,11 @@ const Footer = () => {
                     />
                     <form action={async formData => { await sendEmail(formData); }}
                     >
-                         
-                        <div className="klaviyo_field_group"> 
+
+                        <div className="klaviyo_field_group">
                             <input
                                 className="email-input"
-                                type="email" 
+                                type="email"
                                 name="email"
                                 id="k_id_email"
                                 placeholder="Enter your email to register"
@@ -59,7 +102,7 @@ const Footer = () => {
                                     Submit
                                 </button>
                             </div>
-                        </div> 
+                        </div>
                     </form>
                 </div>
                 <p className="NewsletterSignupFooter_Disclaimer br_text-xs-sans-spaced br_text-grey-400 br_text-center">
@@ -303,8 +346,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="column collapsable-section">
-                        <h4>
+                    <div className="column collapsable-section" id='footId1' onClick={handleFoot}>
+                        <h4 >
                             HELP
                             <svg
                                 version="1.1"
@@ -325,34 +368,16 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <a
-                                    href="/customer-care"
+                                    href="/faq"
                                     data-auto-id="true"
                                     id="page-footer-customer-care-1"
                                 >
-                                    Customer Care
+                                    FAQ
                                 </a>
-                            </li>
+                            </li> 
                             <li>
                                 <a
-                                    href="/customer-care/shipping-delivery"
-                                    data-auto-id="true"
-                                    id="page-footer-customer-care-shipping-delivery-1"
-                                >
-                                    Shipping and Returns
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/customer-care/warranty"
-                                    data-auto-id="true"
-                                    id="page-footer-customer-care-warranty-1"
-                                >
-                                    3-Year Warranty
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/customer-care/contact-us"
+                                    href="/contact"
                                     data-auto-id="true"
                                     id="page-footer-customer-care-contact-us-1"
                                 >
@@ -388,110 +413,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="column collapsable-section">
-                        <h4>
-                            Shop Products
-                            <svg
-                                version="1.1"
-                                id="Layer_1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlnsXlink="http://www.w3.org/1999/xlink"
-                                x="0px"
-                                y="0px"
-                                viewBox="0 0 11 6"
-                                xmlSpace="preserve"
-                            >
-                                <path
-                                    className="st0"
-                                    d="M5.4,4.4l4.5-4.2c0.2-0.3,0.7-0.3,0.9,0c0,0,0,0,0,0c0.3,0.3,0.3,0.7,0,1c0,0,0,0,0,0L5.9,5.8 C5.6,6.1,5.2,6.1,5,5.8L0.2,1.1c-0.3-0.3-0.3-0.7,0-0.9C0.4,0,0.8,0,1.1,0.2c0,0,0,0,0,0L5.4,4.4z"
-                                />
-                            </svg>
-                        </h4>
-                        <ul>
-                            <li>
-                                <a
-                                    href="/products/category/wallets"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-wallets-1"
-                                >
-                                    Wallets
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/products/category/passport-holders"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-passport-holders-1"
-                                >
-                                    Passport Holders
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/products/category/rfid-protected-wallets"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-rfid-protected-wallets-1"
-                                >
-                                    RFID Protected
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/products/category/bags"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-bags-1"
-                                >
-                                    Bags
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/products/category/phone-cases"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-phone-cases-1"
-                                >
-                                    Phone Cases
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/products/category/work-accessories"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-work-accessories-1"
-                                >
-                                    Work Accessories
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/products/category/travel-accessories"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-travel-accessories-1"
-                                >
-                                    Travel
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/products/category/pouches"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-pouches-1"
-                                >
-                                    Pouches
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/products/category/key-holders"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-key-holders-1"
-                                >
-                                    Key Holders
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="column collapsable-section">
+                    
+                    <div className="column collapsable-section" id='footId2' onClick={handleFoot2}>
                         <h4>
                             Shop Collections
                             <svg
@@ -513,151 +436,140 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <a
-                                    href="/collection/new-releases"
+                                    href="/search?type=Business Cards"
                                     data-auto-id="true"
                                     id="page-footer-collection-new-releases-1"
                                 >
-                                    New Releases
+                                    Business Cards
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/bestsellers"
+                                    href="/search?type=Reviews Cards"
                                     data-auto-id="true"
                                     id="page-footer-collection-bestsellers-1"
                                 >
-                                    Bestsellers
+                                    
+                                    Reviews Cards
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/coming-soon"
+                                    href="/search?type=Social Media Cards"
                                     data-auto-id="true"
                                     id="page-footer-coming-soon-1"
                                 >
-                                    Coming Soon
+                                    
+                                    Social Media Cards
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/premium"
+                                    href="/search?type=Medical ID Cards"
                                     data-auto-id="true"
                                     id="page-footer-collection-premium-1"
                                 >
-                                    Premium
+                                    
+                                    Medical ID Cards
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/venture"
+                                    href="/search?type=Pets Tags"
                                     data-auto-id="true"
                                     id="page-footer-collection-venture-1"
-                                >
-                                    Venture
+                                > 
+                                    Pets Tags
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/for-tech-lovers"
+                                    href="/search?type=Reviews Tags"
                                     data-auto-id="true"
                                     id="page-footer-collection-for-tech-lovers-1"
                                 >
-                                    For Tech Lovers
+                                    
+                                    Reviews Tags
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/small-bags"
+                                    href="/search?type=Social Media Tags"
                                     data-auto-id="true"
                                     id="page-footer-collection-small-bags-1"
                                 >
-                                    Small Bags
+                                    
+                                    Social Media Tags
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/recycled"
+                                    href="/search?type=Medical ID Tags"
                                     data-auto-id="true"
                                     id="page-footer-collection-recycled-1"
                                 >
-                                    Recycled
+                                    
+                                    Medical ID Tags
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/slim-your-wallet"
+                                    href="/search?type=Review Stands"
                                     data-auto-id="true"
                                     id="page-footer-collection-slim-your-wallet-1"
-                                >
-                                    Slim Your Wallet
+                                > 
+                                    Review Stands
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/apex"
+                                    href="/search?type=Menu Stands"
                                     data-auto-id="true"
                                     id="page-footer-collection-apex-1"
-                                >
-                                    Apex
+                                > 
+                                    Menu Stands
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/materials-guide"
+                                    href="/search?type=Business Cards Stickers"
                                     data-auto-id="true"
                                     id="page-footer-collection-materials-guide-1"
-                                >
-                                    Materials Hub
+                                > 
+                                    Business Cards Stickers 
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/products/category/outlet"
+                                    href="/search?type=Reviews Stickers"
                                     data-auto-id="true"
                                     id="page-footer-products-category-outlet-1"
                                 >
-                                    The Outlet
+                                    Reviews Stickers
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/travel"
+                                    href="/search?type=Social Media Stickers"
                                     data-auto-id="true"
                                     id="page-footer-collection-travel-1"
                                 >
-                                    Travel
+                                    
+                                    Social Media Stickers
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/collection/lite"
+                                    href="/search?type=Medical ID Stickers"
                                     data-auto-id="true"
                                     id="page-footer-collection-lite-1"
-                                >
-                                    Lite Collection
+                                > 
+                                    Medical ID Stickers
                                 </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/collection/for-work"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-for-work-1"
-                                >
-                                    Work
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/collection/gifting"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-gifting-1"
-                                >
-                                    Gift Guide
-                                </a>
-                            </li>
+                            </li> 
                         </ul>
                     </div>
-                    <div className="column collapsable-section">
+                    <div className="column collapsable-section" id='footId3' onClick={handleFoot3}>
                         <h4>
                             ABOUT
                             <svg
@@ -771,6 +683,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
+                    <div className="column ">  </div>
                 </nav>
                 <section className="SiteFooter__footNote">
                     <div className="SiteFooter__footNote__inner">
