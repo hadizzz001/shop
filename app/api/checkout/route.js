@@ -54,8 +54,8 @@ export const POST = async (request ) => {
         quantity: item.quantity,
       })),
       mode: "payment",
-      success_url: `http://localhost:3000/done`,
-      cancel_url: `http://localhost:3000/checkout`, 
+      success_url: `https://socialbang.netlify.app/done`,
+      cancel_url: `https://socialbang.netlify.app/checkout`,
     });
 
     return NextResponse.json({ url: checkoutSession.url });
