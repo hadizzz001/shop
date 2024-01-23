@@ -98,34 +98,9 @@ const Body = () => {
               sizes="100%" />
           </div>
 
-          <div className="syw-header-content">
-          <p className="br_text-base-sans-bold-stretched">
-            Simplify seamless connections and boost your reviews with
-            </p>
-            <h1 className="br_text-4xl-serif md:br_text-6xl-serif" style={{color:"#231f20"}}>
-            JUST ONE TAP!
-            </h1>
-
-          </div>
-          <a
-            href="#syw-product-tabs"
-            className="syw-cta-mobile br_text-base-sans-bold-cta-uppercase"
-            data-auto-id="true"
-            id="collection-slim-your-wallet-syw-product-tabs-1"
-            style={{color:"#231f20"}}
-          >
-            Discover how we do it
-          </a>
-          <a
-            href="#usp-scroll-to"
-            className="syw-cta-desktop br_text-base-sans-bold-stretched"
-            data-auto-id="true"
-            id="collection-slim-your-wallet-usp-scroll-to-1"
-            style={{color:"#231f20"}}
-          >
-            <span>Discover how we do it</span><br/>
-            <svg style={{ display: "inline" }} width="30px" height="30px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#231f20"></path></g></svg>
-          </a>
+          
+          
+          
         </div>
         <style
           type="text/css"
@@ -207,7 +182,7 @@ const Body = () => {
             type="text/css"
             dangerouslySetInnerHTML={{
               __html:
-                ".sywPaymentOptions{background-color:#dadad2;color:#231f20;padding:30px 10px;text-align:center}.sywPaymentOptions>h2{margin:0 0 25px}.sywPaymentOptions>ul{padding:0;margin:0 auto;display:flex;flex-direction:row;align-items:center;justify-content:center;list-style:none}.sywPaymentOptions>ul>li{display:flex;margin:0 4%}.sywPaymentOptions>ul>li>img{max-height:22px;min-height:12px;height:3.5vw}.sywPaymentOptions>ul>li.mastercard>img{max-height:40px;min-height:23px}.sywPaymentOptions>ul>li.apple-pay>img,.sywPaymentOptions>ul>li.amex>img{min-height:16px}@media (min-width: 811px){.sywPaymentOptions>ul>li{display:flex;margin:0 2.8%}}\n"
+                ".sywPaymentOptions{background-color:transparent;color:#231f20;padding:30px 10px;text-align:center}.sywPaymentOptions>h2{margin:0 0 25px}.sywPaymentOptions>ul{padding:0;margin:0 auto;display:flex;flex-direction:row;align-items:center;justify-content:center;list-style:none}.sywPaymentOptions>ul>li{display:flex;margin:0 4%}.sywPaymentOptions>ul>li>img{max-height:22px;min-height:12px;height:3.5vw}.sywPaymentOptions>ul>li.mastercard>img{max-height:40px;min-height:23px}.sywPaymentOptions>ul>li.apple-pay>img,.sywPaymentOptions>ul>li.amex>img{min-height:16px}@media (min-width: 811px){.sywPaymentOptions>ul>li{display:flex;margin:0 2.8%}}\n"
             }}
           />
           <div className="sywPaymentOptions">
