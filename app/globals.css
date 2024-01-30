@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #ADADAD !important;
+  background-color: #c6c6c6 !important;
 }
 
 /* START: General styles */
@@ -251,7 +251,7 @@ body {
 
 
 .btn-2 {
-  background-color: #6c3429 !important;
+  background-color: #000 !important;
   color: white !important;
   font-size: 14px;
   -webkit-border-radius: 12px;
