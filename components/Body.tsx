@@ -5,6 +5,7 @@ import NewCarousel from './NewCarousel';
 import Products from './Products'; 
 import Work from './Work';
 import Contact from './Contact';
+import Feature from './Feature';
 
 
 
@@ -176,7 +177,7 @@ const Body = () => {
 
 <Work/>
 <Contact/>
-
+<Feature/>
 
           <style
             type="text/css"

@@ -14,15 +14,15 @@ export const sendEmail = async (formData: FormData) => {
 
     if (firstname != null) {
         resend.emails.send({
-            from: "info@hadizproductions.com",
-            to: "info@hadizproductions.com",
+            from: "info@socialtapnfc.au",
+            to: "info@socialtapnfc.au",
             subject: "New message from your website customer",
             text: "Name: " + firstname + " " + lastname + "\nEmail:" + email + "\nPhone:" + phone + "\n" + message,
         })
     } else {
         resend.emails.send({
-            from: "info@hadizproductions.com",
-            to: "info@hadizproductions.com",
+            from: "info@socialtapnfc.au",
+            to: "info@socialtapnfc.au",
             subject: "New subscriber from your website",
             text: "Email:" + email,
         })

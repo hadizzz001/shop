@@ -104,8 +104,7 @@ export default function RootLayout({
     href="css/style-4109db2b.css"
   />
 
-<link href="https://fonts.cdnfonts.com/css/lato" rel="stylesheet"/>
- 
+<link href="https://fonts.cdnfonts.com/css/lato" rel="stylesheet"/> 
        
   
 </>

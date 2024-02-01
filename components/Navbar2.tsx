@@ -14,6 +14,25 @@ function NavBar() {
   const { isBooleanValue, setBooleanValue } = useBooleanValue();
   const [isActive2, setIsActive2] = useState(true);
   const { cart } = useCart();
+  const [isHovered, setIsHovered] = useState(true);
+
+  // Function to handle hover
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+    var d = document.getElementById("myUniD");
+    var d1 = document.getElementById("yourDivId");
+    if (d && d1) {
+      if (isHovered) {
+        d.className += " br_submenu-open";
+        d1.className += " br_open";
+      }
+      else {
+        d.classList.remove("br_submenu-open");
+        d1.classList.remove("br_open");
+      }
+    }
+  };
+
 
 
 
@@ -41,7 +60,7 @@ function NavBar() {
 
 
 
-  const handleClickc = () => { 
+  const handleClickc = () => {
     var cartb = document.getElementById("cartid");
     var cartb2 = document.getElementById("cartid2");
     setBooleanValue(!isBooleanValue);
@@ -78,6 +97,7 @@ function NavBar() {
 
   return (
     <>
+
 
 
       <style
@@ -241,10 +261,10 @@ function NavBar() {
                   <span className="menuicon">
                     <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#999999"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#00055" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     {cart && cart.length > 0 ? (
-                  <span className="MiniCart_CartIndicator_Badge1"></span>
-                ) :
-                  (<div></div>)
-                }
+                      <span className="MiniCart_CartIndicator_Badge1"></span>
+                    ) :
+                      (<div></div>)
+                    }
                   </span>
                 </a>
               </li>
@@ -289,17 +309,142 @@ function NavBar() {
                   </div>
 
                 </a>
+
               </li>
-              <li className="br_group/item">
+              <li className="br_group/item"
+                onClick={handleHover}
+                id="yourDivId"
+                onMouseEnter={() => {
+                  document.getElementById('yourDivId')!.style.cursor = 'pointer';
+                }}
+              >
                 <a
                   className="br_flex br_items-center br_justify-between br_px-8 br_py-4  br_border-solid br_border-0 br_border-b  br_text-grey-600 br_text-lg-sans-bold-stretched br_no-underline xl:pointer-fine: xl:pointer-fine:br_text-base-sans-bold-stretched xl:pointer-fine:group-hover/item: xl:pointer-fine:focus:"
-                  href="/shop"
-                  id="3_accessories2_all-accessories"
+
                 >
                   <div className="br_flex br_items-center br_gap-2">
                     Shop
                   </div>
                 </a>
+
+
+
+
+
+                <div
+                  className="subMenu br_bg-white br_max-h-0 br_overflow-hidden br_transition-[max-height] br_duration-300 br_ease-in-out group-open/item:br_max-h-[720px] group-open/item:br_overflow-y-auto xl:pointer-fine:br_absolute xl:pointer-fine:br_left-0 xl:pointer-fine:br_w-screen xl:pointer-fine:br_block xl:pointer-fine:br_opacity-0 xl:pointer-fine:br_h-0 xl:pointer-fine:br_max-h-min xl:pointer-fine:br_overflow-hidden xl:pointer-fine:br_transition-all xl:pointer-fine:br_duration-300 xl:pointer-fine:group-submenu-open/menu:br_h-[174px] xl:pointer-fine:group-submenu-open/menu:br_overflow-hidden xl:pointer-fine:group-open/item:br_opacity-100 xl:pointer-fine:group-open/item:br_z-20 xl:pointer-fine:br_pointer-events-none xl:pointer-fine:group-hover/item:br_pointer-events-auto"
+                   
+                >
+                  <div className="br_px-8 br_py-4 xl:pointer-fine:br_pb-8 xl:pointer-fine:br_pt-12">
+                    <hr className="br_hidden br_border-none xl:pointer-fine:br_block xl:pointer-fine:br_bg-grey-200 br_absolute br_w-full br_h-[1px] br_top-[5px] br_left-0 " />
+                    <ul className="br_columns-2 br_gap-4 xl:pointer-fine:br_columns-auto xl:pointer-fine:br_flex xl:pointer-fine:br_gap-5 xl:pointer-fine:br_justify-center xl:pointer-fine:br_items-stretch 2xl:pointer-fine:br_justify-start 2xl:pointer-fine:br_ml-[140px]">
+                      <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
+                        <a
+                          className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
+                          href="/search?cat=Cards"
+                          id="0_bags_0_backpacks"
+                        >
+                          <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
+                            <img
+                              alt="Backpacks"
+                              className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
+                              loading="lazy"
+                              sizes="100vw"
+                              src="https://res.cloudinary.com/duppvjinz/image/upload/v1705952516/izipljt6kfdtdcu2xqsk.webp?auto=format&fit=max"
+                            />
+                          </figure>
+                          <span>
+                          Cards
+                          </span>
+                        </a>
+                      </li>
+                      <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
+                        <a
+                          className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
+                          href="/search?cat=Tags"
+                          id="0_bags_1_crossbody-bags"
+                        >
+                          <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
+                            <img
+                              alt="Slings & Crossbody Bags"
+                              className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
+                              loading="lazy"
+                              sizes="100vw"
+                              src="https://res.cloudinary.com/duppvjinz/image/upload/v1705952516/dfll4wwwtpt2myso4sys.webp?auto=format&fit=max"
+                            />
+                          </figure>
+                          <span>
+                            Tags
+                          </span>
+                        </a>
+                      </li>
+                      <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
+                        <a
+                          className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
+                          href="/search?cat=Stands"
+                          id="0_bags_2_tote-bags"
+                        >
+                          <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
+                            <img
+                              alt="Tote & Shoulder Bags"
+                              className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
+                              loading="lazy"
+                              sizes="100vw"
+                              src="https://res.cloudinary.com/duppvjinz/image/upload/v1705952516/akxxwxewhxemx6x2tqb8.webp?auto=format&fit=max"
+                            />
+                          </figure>
+                          <span>
+                          Stands
+                          </span>
+                        </a>
+                      </li>
+                      <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
+                        <a
+                          className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
+                          href="/search?cat=Stickers"
+                          id="0_bags_3_market-cooler-bags"
+                        >
+                          <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
+                            <img
+                              alt="Market & Cooler Bags"
+                              className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
+                              loading="lazy"
+                              sizes="100vw"
+                              src="https://res.cloudinary.com/duppvjinz/image/upload/v1705952516/v9dfrieph0t7ememxkvm.webp"
+                            />
+                          </figure>
+                          <span>
+                            Stickers
+                          </span>
+                        </a>
+                      </li>
+                      <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
+                        <a
+                          className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
+                          href="/shop"
+                          id="0_bags_4_work-bags"
+                        >
+                          <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
+                            <img
+                              alt="Work Bags"
+                              className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
+                              loading="lazy"
+                              sizes="100vw"
+                              src="https://res.cloudinary.com/duppvjinz/image/upload/v1706734815/yhaeljnxa9wkthi7b48k.webp"
+                            />
+                          </figure>
+                          <span>
+                            All Products
+                          </span>
+                        </a>
+                      </li> 
+                    </ul>
+                  </div>
+                </div>
+
+
+
+
 
               </li>
               <li className="br_group/item">
@@ -332,7 +477,6 @@ function NavBar() {
               </li>
             </ul>
           </nav>
-          <div className="xl:pointer-fine:br_pointer-events-none xl:pointer-fine:br_h-0 xl:pointer-fine:br_w-screen xl:pointer-fine:br_absolute xl:pointer-fine:br_top-full xl:pointer-fine: xl:pointer-fine:br_transition-all xl:pointer-fine:br_duration-300 xl:pointer-fine:group-submenu-open/menu:br_h-[174px] xl:pointer-fine:group-submenu-open/menu:br_shadow-lg xl:pointer-fine:group-submenu-open/menu:br_shadow-black/20"></div>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 "use client";
-import { fetchTemp3, fetchTemp2 } from '@/utils'
+import { fetchTemp3, fetchTemp2, fetchTemp1 } from '@/utils'
 import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from 'next/navigation'
 
@@ -11,6 +11,7 @@ const Body = () => {
     const searchParams = useSearchParams()
     const search = searchParams.get('q')
     const search1 = searchParams.get('type')
+    const search2 = searchParams.get('cat')
 
 
 
@@ -25,6 +26,10 @@ const Body = () => {
         }
         else if (search1) {
             b = await fetchTemp2(search1)
+            setTemp(b)
+        }
+        else if (search2) {
+            b = await fetchTemp1(search2)
             setTemp(b)
         }
     }
