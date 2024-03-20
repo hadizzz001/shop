@@ -465,16 +465,7 @@ function NavBar() {
                 >
                   <div className="br_flex br_items-center br_gap-2">Contact Us</div>
                 </a>
-              </li>
-              <li className="br_group/item">
-                <a
-                  className="br_flex br_items-center br_justify-between br_px-8 br_py-4  br_border-solid br_border-0 br_border-b  br_text-grey-600 br_text-lg-sans-bold-stretched br_no-underline xl:pointer-fine: xl:pointer-fine:br_text-base-sans-bold-stretched xl:pointer-fine:group-hover/item: xl:pointer-fine:focus:"
-                  href="/faq"
-                  id="about-us_about-us"
-                >
-                  <div className="br_flex br_items-center br_gap-2">FAQ</div>
-                </a>
-              </li>
+              </li> 
             </ul>
           </nav>
         </div>

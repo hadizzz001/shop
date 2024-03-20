@@ -224,16 +224,7 @@ const Footer = () => {
                                 />
                             </svg>
                         </h4>
-                        <ul>
-                            <li>
-                                <a
-                                    href="/faq"
-                                    data-auto-id="true"
-                                    id="page-footer-customer-care-1"
-                                >
-                                    FAQ
-                                </a>
-                            </li>
+                        <ul> 
                             <li>
                                 <a
                                     href="/contact"

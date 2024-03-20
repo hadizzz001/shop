@@ -349,13 +349,14 @@ a:hover {
 @media (min-width: 1100px) {
   .syw-cta-desktop {
     bottom: 33%;
-  } 
+  }
 }
 
 @media (min-width: 1200px) {
   .syw-cta-desktop {
     bottom: 30%;
   }
+
   #PageMenuPreHeader {
     background-color: #fff
   }
@@ -374,7 +375,7 @@ a:hover {
 @media (min-width: 1300px) {
   .wallet-image {
     content: url("https://res.cloudinary.com/duppvjinz/image/upload/v1705952784/wvl2fayuv06gcds8jrmn.webp")
-  }  
+  }
 }
 
 
@@ -382,8 +383,9 @@ a:hover {
 
 @media (max-width: 1199px) {
   .wallet-image {
-    content: url("https://res.cloudinary.com/duppvjinz/image/upload/v1701429544/y5dek37imwznxs9ubi0c.jpg")
+    content: url("https://res.cloudinary.com/duppvjinz/image/upload/v1710874485/driq7bfudzttnbkogjst.webp")
   }
+
   #PageMenuPreHeader {
     background-color: #fff
   }
@@ -406,6 +408,10 @@ a:hover {
     bottom: 15%;
   }
 
+  .logo {
+    max-height: 250px; 
+  }
+
 }
 
 @media (min-width: 720px) {
@@ -416,11 +422,11 @@ a:hover {
   #newB2 {
     left: 28em
   } 
- 
+
 }
 
 
-@media (min-height: 1100px) and (min-width: 1300px) { 
+@media (min-height: 1100px) and (min-width: 1300px) {
   #PageMenuPreHeader {
     background-color: #fff
   }
@@ -545,6 +551,9 @@ button:focus {
 .MiniCart_Cart .MiniCart_Cart_SupportedPaymentTypes {
   padding: 20px;
 }
+
+
+
 
 
  
