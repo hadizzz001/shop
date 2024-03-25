@@ -3,24 +3,374 @@
 import { useState } from 'react';
 
 const page = () => {
-  const [showDiv1, setShowDiv1] = useState(true);
+   
+  if (window.navigator.userAgent.indexOf('MSIE ') > 0 || window.navigator.userAgent.indexOf('Trident/') > 0) {
+    document.documentElement.className = document.documentElement.className + ' ie';
 
-  const toggleDiv = () => {
-    setShowDiv1((prevShowDiv1) => !prevShowDiv1);
+    var scripts = document.getElementsByTagName('script')[0];
+    var polyfill = document.createElement("script");
+    polyfill.defer = true;
+    polyfill.src = "cdn/shop/t/151/assets/ie11.js?v=144489047535103983231699441056";
+
+    scripts.parentNode.insertBefore(polyfill, scripts);
+  } else {
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  }
+
+  window.lazySizesConfig = window.lazySizesConfig || {};
+  window.lazySizesConfig.preloadAfterLoad = true;
+
+  let root = '/';
+  if (root[root.length - 1] !== '/') {
+    root = root + '/';
+  }
+
+  window.theme = {
+    routes: {
+      root: root,
+      cart: '/cart',
+      cart_add_url: '/cart/add',
+      product_recommendations_url: '/recommendations/products',
+      predictive_search_url: '/search/suggest',
+      addresses_url: '/account/addresses'
+    },
+    assets: {
+      photoswipe: 'cdn/shop/t/151/assets/photoswipe.js?v=101811760775731399961699441056',
+      smoothscroll: 'cdn/shop/t/151/assets/smoothscroll.js?v=37906625415260927261699441056',
+      swatches: 'cdn/shop/t/151/assets/swatches.json?v=153762849283573572451699441056',
+      base: "cdn/shop/t/151/assets/",
+      no_image: "cdn/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_1024x.gif",
+    },
+    strings: {
+      addToCart: "Add to cart",
+      soldOut: "We’re working on it",
+      from: "From",
+      preOrder: "Pre-order",
+      sale: "Sale",
+      subscription: "Subscription",
+      unavailable: "Unavailable",
+      unitPrice: "Unit price",
+      unitPriceSeparator: "per",
+      shippingCalcSubmitButton: "Calculate shipping",
+      shippingCalcSubmitButtonDisabled: "Calculating...",
+      selectValue: "Select value",
+      selectColor: "Select color",
+      oneColor: "color",
+      otherColor: "colors",
+      upsellAddToCart: "Add",
+      free: "Free"
+    },
+    settings: {
+      customerLoggedIn: null ? true : false,
+      cartDrawerEnabled: true,
+      enableQuickAdd: true,
+      enableAnimations: true,
+      transparentHeader: false,
+      swatchStyle: "rectangle"
+    },
+    moneyFormat: false ? "£{{amount}} GBP" : "£{{amount}}",
+    moneyWithoutCurrencyFormat: "£{{amount}}",
+    moneyWithCurrencyFormat: "£{{amount}} GBP",
+    subtotal: 0,
+    info: {
+      name: 'broadcast'
+    },
+    version: '3.6.0'
   };
+
+  document.addEventListener('lazyloaded', (e) => {
+    const lazyImage = e.target.parentNode;
+    if (lazyImage.classList.contains('lazy-image')) {
+      lazyImage.style.backgroundImage = 'none';
+    }
+  }); 
+ 
   return (
-    <>
-<style
-  type="text/css"
-  dangerouslySetInnerHTML={{
-    __html:
-      '.sywCarousel{background-color:#f4f4f4;color:#333;padding:30px 0 0;margin:0 auto;position:relative;text-align:center}.sywCarousel--imageSlider{position:relative;background-color:transparent;overflow:hidden;z-index:1}.sywCarousel--imageSlider.desktop{display:none}.sywCarousel--imageSlider-arrowPrev,.sywCarousel--imageSlider-arrowNext{display:none}.sywCarousel--imageSlider-content{text-align:left;display:flex;align-items:flex-start;width:100%;overflow-x:scroll;scroll-snap-type:both mandatory;-webkit-overflow-scrolling:touch;padding:20px 0 80px}.sywCarousel--imageSlider-content::-webkit-scrollbar{display:none}.sywCarousel--imageSlider .imageSlider__slide{display:flex;flex-direction:column;justify-content:center;background-color:#f4f4f4;min-width:85%;scroll-snap-align:start;scroll-snap-stop:always;padding-left:15px}.sywCarousel--imageSlider .imageSlider__slide:nth-child(4){padding-right:15px}.sywCarousel--imageSlider .imageSlider__slide .logo{width:100%;height:64vw;background-size:cover;background-repeat:no-repeat;background-position:center center}.sywCarousel--imageSlider .imageSlider__slide .logo>img{width:100%;display:block}.sywCarousel--imageSlider .imageSlider__slide .text{padding:15px;background-color:#fff;box-shadow:0 20px 20px -20px rgba(0,0,0,0.5);text-align:center}.sywCarousel--imageSlider .imageSlider__navDots{position:absolute;left:50%;bottom:15px;transform:translate(-50%);z-index:10;list-style:none;padding:0;margin:0;text-align:center}.sywCarousel--imageSlider .imageSlider__navDots-dot{display:inline;margin:0 7px;padding:0;list-style:none}.sywCarousel--imageSlider .imageSlider__navDots-dot.dot-active span{background:#ADADAD}.sywCarousel--imageSlider .imageSlider__navDots-dot span{display:inline-block;width:12px;height:12px;border:1px solid #ADADAD;border-radius:50%;cursor:pointer}.syw-floating-image{display:none}@media (min-width: 811px){.sywCarousel{padding:45px 0;max-width:unset;position:relative;background-color:transparent}.sywCarousel:after{display:block;content:"";height:100%;width:100%;position:absolute;background-color:#f4f4f4;bottom:0;clip-path:polygon(100% 0, 100% 88%, 50% 100%, 0 88%, 0 0);z-index:-1}.sywCarousel__title{margin-bottom:40px}.sywCarousel--imageSlider{display:flex;justify-content:center;margin:0 auto}.sywCarousel--imageSlider.desktop{display:flex}.sywCarousel--imageSlider.mobile{display:none}.sywCarousel--imageSlider-arrowPrev,.sywCarousel--imageSlider-arrowNext{height:374px;margin:0 25px;width:40px;display:flex;justify-content:center;align-items:center;cursor:pointer}.sywCarousel--imageSlider-arrowPrev:after,.sywCarousel--imageSlider-arrowNext:after{display:block;content:"";height:30px;width:30px}.sywCarousel--imageSlider-arrowPrev:after{border-left:1px solid #ADADAD;border-bottom:1px solid #ADADAD;transform:translateX(50%) rotate(45deg)}.sywCarousel--imageSlider-arrowNext:after{border-right:1px solid #ADADAD;border-top:1px solid #ADADAD;transform:translateX(-50%) rotate(45deg)}.sywCarousel--imageSlider-arrowPrev.arrow-invisible,.sywCarousel--imageSlider-arrowNext.arrow-invisible{opacity:0;pointer-events:none}.sywCarousel--imageSlider-content{padding:0 0 100px;max-width:770px}.sywCarousel--imageSlider .imageSlider__slide{flex-direction:row;min-width:100%;padding-left:0}.sywCarousel--imageSlider .imageSlider__slide-sub{width:50%;padding:0 10px}.sywCarousel--imageSlider .imageSlider__slide .logo{width:100%;height:30vw;max-height:280px}.sywCarousel--imageSlider .imageSlider__slide .text{padding:20px 35px;font-family: "Manrope", sans-serif;font-weight: 400; line-height: 1.5; font-size: 13px } .sywCarousel--imageSlider .imageSlider__navDots{bottom:40px}.sywCarousel--imageSlider .imageSlider__navDots-dot{margin:0 5px}.sywCarousel--imageSlider .imageSlider__navDots-dot span{width:14px;height:14px}.syw-floating-image{display:block;position:absolute;width:11vw;max-width:190px;left:0;bottom:-6vmax;z-index:1}.syw-floating-image.cards{top:-8vmax;right:0;left:auto}}\n'
-  }}
-/>
+<>
+  <style
+    data-shopify=""
+    dangerouslySetInnerHTML={{
+      __html:
+        '\n    :root {\n      --scrollbar-width: 0px;\n\n\n      --COLOR-VIDEO-BG: #cecec4;\n\n\n      --COLOR-BG: #dadad2;\n      --COLOR-BG-TRANSPARENT: rgba(218, 218, 210, 0);\n      --COLOR-BG-SECONDARY: #dadad2;\n      --COLOR-BG-RGB: 218, 218, 210;\n\n      --COLOR-TEXT-DARK: #000000;\n      --COLOR-TEXT: #212121;\n      --COLOR-TEXT-LIGHT: #595956;\n\n\n      /* === Opacity shades of grey ===*/\n      --COLOR-A5: rgba(33, 33, 33, 0.05);\n      --COLOR-A10: rgba(33, 33, 33, 0.1);\n      --COLOR-A15: rgba(33, 33, 33, 0.15);\n      --COLOR-A20: rgba(33, 33, 33, 0.2);\n      --COLOR-A25: rgba(33, 33, 33, 0.25);\n      --COLOR-A30: rgba(33, 33, 33, 0.3);\n      --COLOR-A35: rgba(33, 33, 33, 0.35);\n      --COLOR-A40: rgba(33, 33, 33, 0.4);\n      --COLOR-A45: rgba(33, 33, 33, 0.45);\n      --COLOR-A50: rgba(33, 33, 33, 0.5);\n      --COLOR-A55: rgba(33, 33, 33, 0.55);\n      --COLOR-A60: rgba(33, 33, 33, 0.6);\n      --COLOR-A65: rgba(33, 33, 33, 0.65);\n      --COLOR-A70: rgba(33, 33, 33, 0.7);\n      --COLOR-A75: rgba(33, 33, 33, 0.75);\n      --COLOR-A80: rgba(33, 33, 33, 0.8);\n      --COLOR-A85: rgba(33, 33, 33, 0.85);\n      --COLOR-A90: rgba(33, 33, 33, 0.9);\n      --COLOR-A95: rgba(33, 33, 33, 0.95);\n\n      --COLOR-BORDER: rgb(235, 235, 226);\n      --COLOR-BORDER-LIGHT: #e4e4dc;\n      --COLOR-BORDER-HAIRLINE: #d3d3ca;\n      --COLOR-BORDER-DARK: #c1c1a6;\n      /* === Bright color ===*/\n      --COLOR-PRIMARY: #ffffff;\n      --COLOR-PRIMARY-HOVER: #d9d9d9;\n      --COLOR-PRIMARY-FADE: rgba(255, 255, 255, 0.05);\n      --COLOR-PRIMARY-FADE-HOVER: rgba(255, 255, 255, 0.1);\n      --COLOR-PRIMARY-OPPOSITE: #000000;\n\n\n      /* === Secondary Color ===*/\n      --COLOR-SECONDARY: #5b2a14;\n      --COLOR-SECONDARY-HOVER: #1e0c04;\n      --COLOR-SECONDARY-FADE: rgba(91, 42, 20, 0.05);\n      --COLOR-SECONDARY-FADE-HOVER: rgba(91, 42, 20, 0.1);\n      --COLOR-SECONDARY-OPPOSITE: #ffffff;\n\n\n      /* === link Color ===*/\n      --COLOR-LINK: #212121;\n      --COLOR-LINK-HOVER: #5b2a14;\n      --COLOR-LINK-FADE: rgba(33, 33, 33, 0.05);\n      --COLOR-LINK-FADE-HOVER: rgba(33, 33, 33, 0.1);\n      --COLOR-LINK-OPPOSITE: #ffffff;\n\n\n      /* === Product grid sale tags ===*/\n      --COLOR-SALE-BG: rgba(0, 0, 0, 0);\n      --COLOR-SALE-TEXT: #d02e2e;\n      --COLOR-SALE-TEXT-SECONDARY: rgba(0, 0, 0, 0);\n\n      /* === Product grid badges ===*/\n      --COLOR-BADGE-BG: rgba(0, 0, 0, 0);\n      --COLOR-BADGE-TEXT: #212121;\n\n      /* === Product sale color ===*/\n      --COLOR-SALE: #5b2a14;\n\n      /* === Gray background on Product grid items ===*/\n      --filter-bg: 1.0;\n      /* === Helper colors for form error states ===*/\n      --COLOR-ERROR: #721C24;\n      --COLOR-ERROR-BG: #F8D7DA;\n      --COLOR-ERROR-BORDER: #F5C6CB;\n\n\n\n      --RADIUS: 0px;\n      --RADIUS-SM: 0px;\n\n\n      --COLOR-ANNOUNCEMENT-BG: #ffffff;\n      --COLOR-ANNOUNCEMENT-TEXT: #ab8c52;\n      --COLOR-ANNOUNCEMENT-BORDER: #e6ddcb;\n\n      --COLOR-HEADER-BG: rgba(0, 0, 0, 0);\n      --COLOR-HEADER-LINK: #5b2a14;\n      --COLOR-HEADER-LINK-HOVER: #5b2a14;\n\n      --COLOR-MENU-BG: rgba(0, 0, 0, 0);\n      --COLOR-MENU-BORDER: rgba(0, 0, 0, 0);\n      --COLOR-MENU-LINK: #212121;\n      --COLOR-MENU-LINK-HOVER: #212121;\n      --COLOR-SUBMENU-BG: #dadad2;\n      --COLOR-SUBMENU-LINK: #212121;\n      --COLOR-SUBMENU-LINK-HOVER: #ffffff;\n      --COLOR-MENU-TRANSPARENT: #ffffff;\n\n      --COLOR-FOOTER-BG: #dadad2;\n      --COLOR-FOOTER-TEXT: #ffffff;\n      --COLOR-FOOTER-LINK: #ffffff;\n      --COLOR-FOOTER-LINK-HOVER: #5b2a14;\n      --COLOR-FOOTER-BORDER: #000000;\n\n      --TRANSPARENT: rgba(255, 255, 255, 0);\n\n      /* === Default overlay opacity ===*/\n      --overlay-opacity: 0;\n\n      /* === Custom Cursor ===*/\n\n      --icon-zoom-in: url("cdn/shop/t/151/assets/icon-zoom-in.svg@v=126996651526054293301699441056");\n      --icon-zoom-out: url("cdn/shop/t/151/assets/icon-zoom-out.svg@v=128675709041987423641699441056");\n\n      /* === Typography ===*/\n      --PRODUCT-GRID-ASPECT-RATIO: 70.0%;\n      --PRODUCT-GRID-SIZE-PIECE: 7.0;\n\n\n      --FONT-WEIGHT-BODY: 400;\n      --FONT-WEIGHT-BODY-BOLD: 500;\n\n      --FONT-STACK-BODY: "Neue Haas Unica", sans-serif;\n      --FONT-STYLE-BODY: normal;\n      --FONT-STYLE-BODY-ITALIC: Liquid error (snippets/css-variables line 245): font_modify can only be used with a font drop;\n      --FONT-ADJUST-BODY: 0.9;\n\n      --FONT-WEIGHT-HEADING: 700;\n      --FONT-WEIGHT-HEADING-BOLD: 700;\n\n      --FONT-STACK-HEADING: "Caslon Old Face", serif;\n      --FONT-STYLE-HEADING: normal;\n      --FONT-STYLE-HEADING-ITALIC: Liquid error (snippets/css-variables line 253): font_modify can only be used with a font drop;\n      --FONT-ADJUST-HEADING: 0.75;\n\n      --FONT-STACK-NAV: "Neue Haas Unica", sans-serif;\n      --FONT-STYLE-NAV: normal;\n      --FONT-STYLE-NAV-ITALIC: Liquid error (snippets/css-variables line 258): font_modify can only be used with a font drop;\n      --FONT-ADJUST-NAV: 0.75;\n\n      --FONT-WEIGHT-NAV: 400;\n      --FONT-WEIGHT-NAV-BOLD: 500;\n\n      --FONT-SIZE-BASE: 0.9rem;\n      --FONT-SIZE-BASE-PERCENT: 0.9;\n\n      --ICO-SELECT: url("cdn/shop/t/151/assets/ico-select.svg@v=115630813262522069291699441056");\n\n      /* === Parallax ===*/\n      --PARALLAX-STRENGTH-MIN: 125.0%;\n      --PARALLAX-STRENGTH-MAX: 135.0%;\n      --gutter: 60px;\n      --grid: repeat(4, minmax(0, 1fr));\n      --grid-tablet: repeat(3, minmax(0, 1fr));\n      --grid-small: repeat(2, minmax(0, 1fr));\n      --grid-mobile: repeat(1, minmax(0, 1fr));\n      --gap: 20px;\n      --base-animation-delay: 0ms;\n    }\n  '
+    }}
+  />
+  <link
+    href="cdn/shop/t/151/assets/theme.css@v=150447602840016411881700499020.css"
+    rel="stylesheet"
+    type="text/css"
+    media="all"
+  />
+   <link href="cdn/shop/t/151/assets/theme.css@v=150447602840016411881700499020.css" rel="stylesheet" type="text/css"
+    media="all" /> 
+  <script src="cdn/shop/t/151/assets/lazysizes.js@v=111431644619468174291699441056" async></script>
+  <script src="cdn/shop/t/151/assets/vendor.js@v=13180339602732822851699441056" defer></script>
+  <script src="cdn/shop/t/151/assets/theme.js@v=3037200527243251081699441056" defer></script> 
+    <main role="main" id="MainContent" className="main-content">
+      <div
+        id="shopify-section-template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5"
+        className="shopify-section"
+      >
+        {/* /sections/section-collection.liquid */}
+        <style
+          data-shopify=""
+          dangerouslySetInnerHTML={{
+            __html:
+              "\n          #Collection--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5 {\n            --PT: 0px;\n            --PB: 0px;\n\n            --grid: repeat(3, minmax(0, 1fr));\n            --grid-tablet: repeat(3, minmax(0, 1fr));\n            --grid-small: repeat(2, minmax(0, 1fr));\n            --grid-mobile: repeat(2, minmax(0, 1fr));\n          }\n        "
+          }}
+        />
+        <section
+          id="Collection--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5"
+          className="index-products section-padding layout--grid"
+          data-section-id="template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5"
+          data-section-type="product-grid"
+        >
+          <div className="grid-container">
+            <div className="product-grid-outer">
+              <div
+                className="product-grid product-grid--vertical   product-grid--borderless"
+                data-options='{"watchCSS": true, "cellAlign": "left", "pageDots": false, "prevNextButtons": true,  "wrapAround": false, "groupCells": true}'
+                data-arrow-position-middle=""
+              >
+                <div
+                  className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                  data-product-grid-item=""
+                  data-slide={0}
+                  data-slide-index={0}
+                >
+                  <div
+                    className="product-item__image double__image"
+                    data-product-image=""
+                  >
+                    <a
+                      className="product-link"
+                      href="products/brothers-dopp-kit-duo-brownish.html"
+                      aria-label="Brothers Dopp Kit Duo . Brownish"
+                      data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+                    >
+                      <div
+                        className="product-item__bg lazyload"
+                        data-grid-slide=""
+                        data-aos="img-in"
+                        data-aos-delay={0}
+                        data-aos-duration={800}
+                        data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                        data-aos-easing="ease-out-quart"
+                        data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/iz0k3r2kovmnorizaaxw.png"
+                      >
+                        &nbsp;
+                      </div>
+                      <div
+                        className="product-item__bg__under lazyload"
+                        data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png"
+                      >
+                        &nbsp;
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="product-information"
+                    data-aos="fade"
+                    data-aos-delay={0}
+                    data-aos-duration={800}
+                    data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                    data-product-information=""
+                  >
+                    <a
+                      className="product-link product-link--info"
+                      href="products/brothers-dopp-kit-duo-brownish.html"
+                      aria-label="Brothers Dopp Kit Duo . Brownish"
+                      data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+                    >
+                      <p className="product__grid__title product__grid__element">
+                        <span className="product__grid__title__default product__grid__element__default">
+                          Brothers Dopp Kit Duo . Brownish
+                        </span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                  data-product-grid-item=""
+                  data-slide={0}
+                  data-slide-index={0}
+                >
+                  <div
+                    className="product-item__image double__image"
+                    data-product-image=""
+                  >
+                    <a
+                      className="product-link"
+                      href="products/brothers-dopp-kit-duo-brownish.html"
+                      aria-label="Brothers Dopp Kit Duo . Brownish"
+                      data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+                    >
+                      <div
+                        className="product-item__bg lazyload"
+                        data-grid-slide=""
+                        data-aos="img-in"
+                        data-aos-delay={0}
+                        data-aos-duration={800}
+                        data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                        data-aos-easing="ease-out-quart"
+                        data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png"
+                      >
+                        &nbsp;
+                      </div>
+                      <div
+                        className="product-item__bg__under lazyload"
+                        data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png"
+                      >
+                        &nbsp;
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="product-information"
+                    data-aos="fade"
+                    data-aos-delay={0}
+                    data-aos-duration={800}
+                    data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                    data-product-information=""
+                  >
+                    <a
+                      className="product-link product-link--info"
+                      href="products/brothers-dopp-kit-duo-brownish.html"
+                      aria-label="Brothers Dopp Kit Duo . Brownish"
+                      data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+                    >
+                      <p className="product__grid__title product__grid__element">
+                        <span className="product__grid__title__default product__grid__element__default">
+                          Brothers Dopp Kit Duo . Brownish
+                        </span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                  data-product-grid-item=""
+                  data-slide={0}
+                  data-slide-index={0}
+                >
+                  <div
+                    className="product-item__image double__image"
+                    data-product-image=""
+                  >
+                    <a
+                      className="product-link"
+                      href="products/brothers-dopp-kit-duo-brownish.html"
+                      aria-label="Brothers Dopp Kit Duo . Brownish"
+                      data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+                    >
+                      <div
+                        className="product-item__bg lazyload"
+                        data-grid-slide=""
+                        data-aos="img-in"
+                        data-aos-delay={0}
+                        data-aos-duration={800}
+                        data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                        data-aos-easing="ease-out-quart"
+                        data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/vcksftyynug5e5kilqmi.png"
+                      >
+                        &nbsp;
+                      </div>
+                      <div
+                        className="product-item__bg__under lazyload"
+                        data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png"
+                      >
+                        &nbsp;
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="product-information"
+                    data-aos="fade"
+                    data-aos-delay={0}
+                    data-aos-duration={800}
+                    data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                    data-product-information=""
+                  >
+                    <a
+                      className="product-link product-link--info"
+                      href="products/brothers-dopp-kit-duo-brownish.html"
+                      aria-label="Brothers Dopp Kit Duo . Brownish"
+                      data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+                    >
+                      <p className="product__grid__title product__grid__element">
+                        <span className="product__grid__title__default product__grid__element__default">
+                          Brothers Dopp Kit Duo . Brownish
+                        </span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                  data-product-grid-item=""
+                  data-slide={0}
+                  data-slide-index={0}
+                >
+                  <div
+                    className="product-item__image double__image"
+                    data-product-image=""
+                  >
+                    <a
+                      className="product-link"
+                      href="products/brothers-dopp-kit-duo-brownish.html"
+                      aria-label="Brothers Dopp Kit Duo . Brownish"
+                      data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+                    >
+                      <div
+                        className="product-item__bg lazyload"
+                        data-grid-slide=""
+                        data-aos="img-in"
+                        data-aos-delay={0}
+                        data-aos-duration={800}
+                        data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                        data-aos-easing="ease-out-quart"
+                        data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ltelwy1fcjhrvdvixk0o.png"
+                      >
+                        &nbsp;
+                      </div>
+                      <div
+                        className="product-item__bg__under lazyload"
+                        data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png"
+                      >
+                        &nbsp;
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="product-information"
+                    data-aos="fade"
+                    data-aos-delay={0}
+                    data-aos-duration={800}
+                    data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+                    data-product-information=""
+                  >
+                    <a
+                      className="product-link product-link--info"
+                      href="products/brothers-dopp-kit-duo-brownish.html"
+                      aria-label="Brothers Dopp Kit Duo . Brownish"
+                      data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+                    >
+                      <p className="product__grid__title product__grid__element">
+                        <span className="product__grid__title__default product__grid__element__default">
+                          Brothers Dopp Kit Duo . Brownish
+                        </span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main> 
+</>
 
-
-
-    </>
   )
 }
 

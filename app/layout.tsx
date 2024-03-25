@@ -25,7 +25,7 @@ export default function RootLayout({
  
 
   return (
-    <html lang='en'> 
+    <html className="no-js no-touch supports-no-cookies" lang="en"> 
     <>
   <meta content="text/html; charset=utf-8" httpEquiv="Content-Type" />
   <meta content="en" httpEquiv="Content-Language" />
@@ -89,6 +89,15 @@ export default function RootLayout({
   <link href="https://assets.bellroy.com" rel="preconnect" />
   <link href="https://bellroy.imgix.net" rel="preconnect" /> 
   
+
+
+
+
+
+
+
+
+
   <link
     href="css/webfonts-3e3c2400.css"
     rel="preload"
@@ -105,7 +114,9 @@ export default function RootLayout({
   />
 
 <link href="https://fonts.cdnfonts.com/css/lato" rel="stylesheet"/> 
-       
+ 
+
+
   
 </>
 
