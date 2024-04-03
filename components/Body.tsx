@@ -199,6 +199,15 @@ const Body = () => {
 
 
  
+      <style
+  dangerouslySetInnerHTML={{
+    __html: "\n.sywCarousel{\n      background-color: #e9e9e9;\n}\n"
+  }}
+/>
+
+
+
+
 
 
 

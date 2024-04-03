@@ -3,11 +3,11 @@ import Script from 'next/script'
 import { useState, useEffect } from "react";
 
 export default function Test() {
-  const defaultBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1706618069/vk4gzhgwsevm9zrpbxny.png';
-  const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711373327/hjhkow54t3f48zcnkica.webp';
+  const defaultBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995659/ucucpbynvkx8apzpumx7.png';
+  const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059974/y2p6kgtjvkjyzzvpjvml.webp';
 
-  const defaultBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1706623399/gzonaqpkl2ly8qhh77pk.png';
-  const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711373328/jdwkhpih0srupeboaayf.webp';
+  const defaultBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995658/muorsebafne0soej61os.png';
+  const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059974/o2rbyhdf3p7af8599hf5.webp';
  
 
 
@@ -93,7 +93,7 @@ export default function Test() {
                             backgroundPosition: 'center',
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
-                            transition: 'background-image 0.15s ease-in-out',
+                            backgroundRepeat: "no-repeat"
                         }}
                         onMouseEnter={() => setBgImage(hoverBgImage)}
                         onMouseLeave={() => setBgImage(defaultBgImage)}  >
@@ -147,7 +147,7 @@ export default function Test() {
                             backgroundPosition: 'center',
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
-                            transition: 'background-image 0.15s ease-in-out',
+                            backgroundRepeat: "no-repeat"
                         }}
                         onMouseEnter={() => setBgImage1(hoverBgImage1)}
                         onMouseLeave={() => setBgImage1(defaultBgImage1)}  >

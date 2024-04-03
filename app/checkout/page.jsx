@@ -2,6 +2,7 @@
 import React from 'react'
 import { useCart } from '../context/CartContext';
 import OrderButton from '../../components/OrderButton';
+import GoogleAddress from '../../components/GoogleAddress';
 import { useState, useEffect } from "react";
 
 const page = () => {
@@ -9,6 +10,25 @@ const page = () => {
     const [localQuantities, setLocalQuantities] = useState(quantities);
     const [errors, setErrors] = useState({});
     const [value, setValue] = useState('');
+    const [address, setAddress] = useState(null);
+
+
+
+
+    const handleAddressChange = (newValue) => {
+      setAddress(newValue);
+
+      setInputs((prevValues) => ({
+        ...prevValues,
+        address: newValue.label,
+    }));
+    };
+
+ 
+
+
+ 
+ 
     const [inputs, setInputs] = useState({
         email: "",
         fname: "",
@@ -16,9 +36,9 @@ const page = () => {
         phone: "",
         street: "",
         address: "",
-        city: "",
-        country: "",
-        zip: "",
+        // city: "",
+        // country: "",
+        // zip: "",
     });
 
 
@@ -80,12 +100,12 @@ const page = () => {
     };
 
 
-    const handleSelectChange = (event) => {
-        setInputs((prevValues) => ({
-            ...prevValues,
-            country: event.target.value,
-        }));
-    };
+    // const handleSelectChange = (event) => {
+    //     setInputs((prevValues) => ({
+    //         ...prevValues,
+    //         country: event.target.value,
+    //     }));
+    // };
 
 
 
@@ -96,11 +116,7 @@ const page = () => {
  
 
 
-
-
-
-
-
+ 
 
 
 
@@ -139,7 +155,7 @@ const page = () => {
             />
 
 
-
+ 
 
             {cart && cart.length > 0 ? (
                 <div className="Checkout">
@@ -208,7 +224,7 @@ const page = () => {
                                                 onChange={handleTextboxChange('phone')}
                                             />
                                         </div>
-                                        <div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingStreetAddressOne">
+                                        {/* <div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingStreetAddressOne">
                                             <label>Delivery address*</label>
                                             <input
                                                 type="text"
@@ -218,6 +234,10 @@ const page = () => {
                                                 value={inputs.street}
                                                 onChange={handleTextboxChange('street')}
                                             />
+                                        </div> */}
+                                        <div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingStreetAddressOne">
+                                            <label>Delivery address*</label>
+                                            <GoogleAddress onChange={handleAddressChange} />
                                         </div>
                                         <div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingStreetAddressTwo">
                                             <input
@@ -225,11 +245,12 @@ const page = () => {
                                                 id="shipping_street_address_2"
                                                 autoComplete="shipping address-line2"
                                                 maxLength={60}
-                                                value={inputs.address}
-                                                onChange={handleTextboxChange('address')}
+                                                value={inputs.street}
+                                                onChange={handleTextboxChange('street')}
+                                                placeholder='Apt, Suite, etc'
                                             />
                                         </div>
-                                        <div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingCity">
+                                        {/*<div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingCity">
                                             <label>Suburb/town*</label>
                                             <input
                                                 type="text"
@@ -240,7 +261,7 @@ const page = () => {
                                                 onChange={handleTextboxChange('city')}
                                             />
                                         </div>
-                                        <div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingRegion">
+                                         <div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingRegion">
                                             <label>State/territory*</label>
                                             <span className="Checkout_Form_FieldWrapper_SelectWrapper">
 
@@ -260,7 +281,7 @@ const page = () => {
                                                     <option value="Western Australia">Western Australia</option>
                                                 </select>
                                             </span>
-                                        </div>
+                                        </div> 
                                         <div className="Checkout_Form_FieldWrapper Checkout_Form_FieldWrapper-ShippingPostCode">
                                             <label>Postcode/ZIP Code*</label>
                                             <input
@@ -271,7 +292,7 @@ const page = () => {
                                                 value={inputs.zip}
                                                 onChange={handleTextboxChange('zip')}
                                             />
-                                        </div>
+                                        </div>*/}
 
                                     </div>
 

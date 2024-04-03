@@ -90,9 +90,7 @@ export default function RootLayout({
   <link href="https://bellroy.imgix.net" rel="preconnect" /> 
   
 
-
-
-
+ 
 
 
 

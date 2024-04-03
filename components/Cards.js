@@ -3,17 +3,17 @@ import Script from 'next/script'
 import { useState, useEffect } from "react";
 
 export default function Test() {
-  const defaultBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/iz0k3r2kovmnorizaaxw.png';
-  const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711367853/kelhihw2p0pqumoewjnq.webp';
+  const defaultBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995092/t2cllgo8jfsiwjek97np.png';
+  const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712060162/fyfvqc5ewr2aqccfsflp.webp';
 
-  const defaultBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png';
-  const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711368097/nopsu9bei41ad1hwyac0.webp';
+  const defaultBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995189/sjxpxomewix3dw7ydnmj.png';
+  const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/sa4bgzzhte0ycx5leejc.webp';
 
-  const defaultBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/vcksftyynug5e5kilqmi.png';
-  const hoverBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711369315/m6nrdfd9aondrwsyk0yk.webp';
+  const defaultBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711547493/nirvjkbqlgulzel9tkw2.png';
+  const hoverBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/en6tiwnle1k7jed0jam8.webp';
 
-  const defaultBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ltelwy1fcjhrvdvixk0o.png';
-  const hoverBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711369589/hmlcyr8qotxwlsfqsr0u.webp';
+  const defaultBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995824/uwn5sss3aitbeaku3ova.png';
+  const hoverBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/yrt9da39oomvcjklvi6c.webp';
 
 
   const [bgImage, setBgImage] = useState(defaultBgImage);
@@ -99,8 +99,8 @@ export default function Test() {
                             backgroundSize: 'contain',
                             backgroundPosition: 'center',
                             width: '100%', // Adjust as needed
-                            height: '100%', // Adjust as needed
-                            transition: 'background-image 0.15s ease-in-out',
+                            height: '100%', // Adjust as needed 
+                            backgroundRepeat: "no-repeat"
                         }}
                         onMouseEnter={() => setBgImage(hoverBgImage)}
                         onMouseLeave={() => setBgImage(defaultBgImage)}  >
@@ -154,7 +154,7 @@ export default function Test() {
                             backgroundPosition: 'center',
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
-                            transition: 'background-image 0.15s ease-in-out',
+                            backgroundRepeat: "no-repeat"
                         }}
                         onMouseEnter={() => setBgImage1(hoverBgImage1)}
                         onMouseLeave={() => setBgImage1(defaultBgImage1)}  >
@@ -208,7 +208,7 @@ export default function Test() {
                             backgroundPosition: 'center',
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
-                            transition: 'background-image 0.15s ease-in-out',
+                            backgroundRepeat: "no-repeat"
                         }}
                         onMouseEnter={() => setBgImage2(hoverBgImage2)}
                         onMouseLeave={() => setBgImage2(defaultBgImage2)}  >
@@ -268,7 +268,7 @@ export default function Test() {
                             backgroundPosition: 'center',
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
-                            transition: 'background-image 0.15s ease-in-out',
+                            backgroundRepeat: "no-repeat"
                         }}
                         onMouseEnter={() => setBgImage3(hoverBgImage3)}
                         onMouseLeave={() => setBgImage3(defaultBgImage3)}  >

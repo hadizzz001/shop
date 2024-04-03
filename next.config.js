@@ -11,6 +11,7 @@ const nextConfig = {
         ignoreBuildErrors: true, 
       },
       experimental: { serverActions: true },
+      
 }
 
 module.exports = nextConfig

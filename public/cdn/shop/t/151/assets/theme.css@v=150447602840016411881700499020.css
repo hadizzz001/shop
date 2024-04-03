@@ -5377,7 +5377,7 @@ a.review {
 
   .product-grid:not(.product-grid--slider) .collection-item,
   .product-grid:not(.product-grid--slider) .product-item {
-    width: 100%
+    width: 120%
   }
 }
 
@@ -5658,7 +5658,7 @@ a.review {
  
 .product-item__image {
   display: block;
-  padding-top: var(--PRODUCT-GRID-ASPECT-RATIO);
+  padding-top: 105%;
   height: 0;
   position: relative;
   overflow: hidden;
@@ -5820,7 +5820,7 @@ a.review {
 .product__grid__title {
   position: relative;
   font-weight: var(--FONT-WEIGHT-BODY);
-  font-size: calc(1rem * var(--FONT-ADJUST-BODY));
+  font-size: calc(1.3rem * var(--FONT-ADJUST-BODY));
   color: var(--text-dark);
   margin: 7px 0 0;
   transition: color .3s
