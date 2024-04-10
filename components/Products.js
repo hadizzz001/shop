@@ -66,6 +66,14 @@ function Products() {
   }}
 />
 
+<style
+  dangerouslySetInnerHTML={{
+    __html:
+      "\n   @media screen and (max-width: 600px) {\n  .product-grid--borderless{\n    display: grid !important;\n\n  }\n  .productTabs__tabs__tab{\n    height:130px !important;\n  }\n   }\n"
+  }}
+/>
+
+
 
 
             <div className="productTabs">

@@ -108,7 +108,7 @@ const Dropzone1 = ({ className }) => {
         })}
       >
         <input {...getInputProps({ name: 'file' })} />
-        <div className='flex flex-col items-center justify-center gap-4 text-white'>
+        <div className='flex flex-col items-center justify-center gap-4 text-black'>
           <ArrowUpTrayIcon className='h-5 w-5 fill-current' />
           {isDragActive ? (
             <p>Drop the PDF here ...</p>
@@ -124,7 +124,7 @@ const Dropzone1 = ({ className }) => {
           <button
             style={{ height: "50px", width: "100px" }}
             type='submit'
-            className='ml-auto mt-1 rounded-md border px-3 text-[12px] font-bold uppercase tracking-wider text-stone-500 text-white'
+            className='ml-auto mt-1 rounded-md border px-3 text-[12px] font-bold uppercase tracking-wider text-stone-500 text-black'
           >
             Upload
           </button>

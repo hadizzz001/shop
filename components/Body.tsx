@@ -6,6 +6,8 @@ import Work from './Work';
 import Contact from './Contact';
 import Feature from './Feature';
 import Design from './Design';
+import Review from './Review';
+import Rate from './Rate';
 
 
 
@@ -149,6 +151,9 @@ const Body = () => {
 <Work/>
 <Contact/>
 <Feature/>
+
+<Review />
+      <Rate />
 
           <style
             type="text/css"

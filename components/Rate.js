@@ -54,23 +54,44 @@ export default function Rate() {
 
     return (
         <>
+<style
+  dangerouslySetInnerHTML={{
+    __html:
+      "\n.custom-header-1 {\n    background-color: #231f20 ;\n}\n\n\n    \n  "
+  }}
+/>
+
+<style
+  dangerouslySetInnerHTML={{
+    __html:
+      "\n.myTextt {\n        display: inline-flex;\n    transform-style: preserve-3d;\n    backface-visibility: hidden;\n    transition: transform .4s ease, background-color .4s ease;\n    height: 42px;\n    border-radius: 4px;\n    margin: 0;\n    background-color: #fff;\n    border: 1px solid #FFF;\n    padding: 3px;\n    box-shadow: 0 17px 9px -15px rgb(0 0 0 / 50%);\n}\n\n\n    \n  "
+  }}
+/>
+
+
+<style
+  dangerouslySetInnerHTML={{
+    __html: "\n.custom-header-1 {\n    height: 310px; \n}\n\n\n    \n  "
+  }}
+/>
+
 
             <div className="custom-header-1">
                 <div className="container-xl">
                     <br />
-                    <h4 className="text-center text-white pt-3">Leave Review</h4>
+                    <h4 className="text-center pt-3" style={{color: "#fff"}}>Leave Review</h4>
                 </div>
             </div>
-            <div className="container-xl bg-white custom-page-1 mt-5">
+            <div className="container-xl  custom-page-1 " style={{background: "#f4f4f4", maxWidth:"700px",marginBottom: "3em"}}>
                 <div>
                     <div className="pl-5 pt-4 pr-5">
-                        <form onSubmit={handleSubmit}>
-                            <div className="row">
-                                <div className="col-md-8">
+                        <form onSubmit={handleSubmit} style={{textAlign:"center"}}>
+                            <div className="">
+                                <div className="">
                                     <div className="form-group row">
                                         <div className="col-sm-12">
                                             <input
-                                                className="form-control"
+                                                className="form-control myTextt"
                                                 name="name"
                                                 type="text"
                                                 placeholder="Name"
@@ -80,11 +101,11 @@ export default function Rate() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-8">
+                                <div className="">
                                     <div className="form-group row">
                                         <div className="col-sm-12">
                                             <textarea
-                                                className="form-control form-control-text-area"
+                                                className="form-control form-control-text-area myTextt"
                                                 name="description"
                                                 placeholder="Message"
                                                 rows={9}
@@ -105,7 +126,7 @@ export default function Rate() {
                             </div>
                             <div className="form-group row pt-2">
                                 <div className="col-sm-12">
-                                    <button type="submit" className="btn btn-2 pr-5 pl-5 float-right">
+                                    <button type="submit" className="klaviyo_submit_button" style={{padding: "1em", minWidth: "10%" }}>
                                         Send
                                     </button>
                                 </div>

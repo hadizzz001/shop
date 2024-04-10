@@ -9,9 +9,11 @@ import axios from "axios";
 import { useSearchParams } from 'next/navigation'
 import { fetchTemp4, fetchTemp1 } from '@/utils'
 import Dropzone1 from '../../components/Dropzone1'
+import Dropzone from '../../components/Dropzone'
+import Dropzonee from '../../components/Dropzonee'
 import { useCart } from '../context/CartContext';
 import { useBooleanValue } from '../context/CartBoolContext';
-import { useMyContext } from '../context/PDFContext'; 
+import { useMyContext } from '../context/PDFContext';
 
 
 const page = () => {
@@ -22,6 +24,8 @@ const page = () => {
   const [allTemp2, setTemp2] = useState()
   const [value, setValue] = useState('');
   const [inputs, setInputs] = useState({});
+  const [imgz, setImgs] = useState('');
+  const [imgzz, setImgss] = useState('');
   let b
   let b2
   const searchParams = useSearchParams()
@@ -32,11 +36,13 @@ const page = () => {
   const { isBooleanValue, setBooleanValue } = useBooleanValue();
   const targetRef = useRef(null);
   const [errors, setErrors] = useState({});
-  const isInCart = cart?.some((item) => item.id === search); 
+  const isInCart = cart?.some((item) => item.id === search);
   const specificItem = cart?.find((cartItem) => String(cartItem.id) === String(search));
   const { myString, stringSaved, saveString, deleteString } = useMyContext();
 
-
+  useEffect(() => {
+    setInputs((prevState) => ({ ...prevState, imgz: imgz[0], imgzz: imgzz[0] }));
+  }, [imgz , imgzz])
 
 
   function setCart() {
@@ -48,11 +54,11 @@ const page = () => {
   }
 
 
- 
 
-  if (stringSaved){
-    setInputs({pdf: myString}) 
-    deleteString() 
+
+  if (stringSaved) {
+    setInputs({ pdf: myString })
+    deleteString()
     addToCart(allTemp1, inputs, 1);
     window.location.replace(`/product?id=${search}&custom=1`);
   }
@@ -63,11 +69,11 @@ const page = () => {
 
 
 
-    const a = async () => {
-      b = await fetchTemp4(search)
-      setTemp1(b)
+  const a = async () => {
+    b = await fetchTemp4(search)
+    setTemp1(b)
 
-    }
+  }
   useEffect(() => {
     a()
   }, [])
@@ -146,7 +152,7 @@ const page = () => {
 
 
 
-  function handleClickc() { 
+  function handleClickc() {
     var cartb = document.getElementById("cartid");
     var cartb2 = document.getElementById("cartid2");
     setBooleanValue(!isBooleanValue);
@@ -183,6 +189,24 @@ const page = () => {
   };
 
 
+
+  const handleImgChange = (url) => {
+    if (url) {
+      setImgs(url);
+    }
+  }
+
+
+
+
+  const handleImgChangee = (url) => {
+    if (url) {
+      setImgss(url);
+    }
+  }
+
+
+
   useEffect(() => {
     const newErrors = {};
     cart?.forEach((item) => {
@@ -202,11 +226,11 @@ const page = () => {
   if (ttype == 'Business Cards') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
-          <div className="form-group row">
-            <div className="col-sm-12">
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className="form-group ">
+            <div className="">
               <input
                 className="form-control"
                 name="fullname"
@@ -219,8 +243,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="companyname"
@@ -231,8 +255,8 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="contactnumber"
@@ -244,8 +268,8 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="email"
@@ -256,8 +280,8 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="website"
@@ -268,32 +292,58 @@ const page = () => {
               />
             </div>
           </div>
+
+
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
+
+
+
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose Back picture</p>
+              <Dropzonee HandleImagesChange={handleImgChangee} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
+
+
+          
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Reviews Cards') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
-          <div className="form-group row">
-            <div className="col-sm-12">
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className="form-group ">
+            <div className="">
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name="plateform"
@@ -306,7 +356,7 @@ const page = () => {
                 Google
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name="plateform"
@@ -319,7 +369,7 @@ const page = () => {
               </label>
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name="plateform"
@@ -341,8 +391,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="link"
@@ -354,31 +404,50 @@ const page = () => {
             </div>
 
           </div>
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
+
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose Back picture</p>
+              <Dropzonee HandleImagesChange={handleImgChangee} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
         </div>
 
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Social Media Cards') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
-          <div className="form-group row">
-            <div className="col-sm-12">
-              <label style={{ color: 'white', display: "block" }}>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className="form-group ">
+            <div className="">
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -391,7 +460,7 @@ const page = () => {
                 Instagram
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -404,7 +473,7 @@ const page = () => {
               </label>
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -416,7 +485,7 @@ const page = () => {
                 X
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -430,7 +499,7 @@ const page = () => {
 
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -444,8 +513,8 @@ const page = () => {
             </div>
           </div>
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="link"
@@ -457,31 +526,48 @@ const page = () => {
             </div>
           </div>
 
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
 
+            </div>
+          </div>
+
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose Back picture</p>
+              <Dropzonee HandleImagesChange={handleImgChangee} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Medical ID Cards') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
+      <div className="">
+        <div className=""></div>
+        <div className="">
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="patientname"
@@ -494,8 +580,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="contactname"
@@ -509,8 +595,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="contactnumber"
@@ -527,8 +613,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="age"
@@ -542,8 +628,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="condition"
@@ -557,8 +643,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="allergies"
@@ -572,10 +658,10 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='gender'
@@ -588,7 +674,7 @@ const page = () => {
                 Male
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='gender'
@@ -604,33 +690,50 @@ const page = () => {
           </div>
 
 
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
 
+            </div>
+          </div>
+
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose Back picture</p>
+              <Dropzonee HandleImagesChange={handleImgChangee} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
 
 
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Pets Tags') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
+      <div className="">
+        <div className=""></div>
+        <div className="">
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="ownername"
@@ -643,8 +746,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="contactnumber"
@@ -658,8 +761,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="email"
@@ -672,8 +775,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="owneraddress"
@@ -688,33 +791,46 @@ const page = () => {
 
 
 
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
+
+
+
+
 
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Reviews Tags') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
-          <div className="form-group row">
-            <div className="col-sm-12">
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className="form-group ">
+            <div className="">
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -727,7 +843,7 @@ const page = () => {
                 Google
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -740,7 +856,7 @@ const page = () => {
               </label>
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -762,8 +878,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="link"
@@ -775,31 +891,41 @@ const page = () => {
             </div>
 
           </div>
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
         </div>
 
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Social Media Tags') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
-          <div className="form-group row">
-            <div className="col-sm-12">
-              <label style={{ color: 'white', display: "block" }}>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className="form-group ">
+            <div className="">
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -812,7 +938,7 @@ const page = () => {
                 Instagram
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -825,7 +951,7 @@ const page = () => {
               </label>
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -837,7 +963,7 @@ const page = () => {
                 X
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -851,7 +977,7 @@ const page = () => {
 
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -865,8 +991,8 @@ const page = () => {
             </div>
           </div>
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="link"
@@ -878,31 +1004,41 @@ const page = () => {
             </div>
           </div>
 
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
+
 
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Medical ID Tags') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
+      <div className="">
+        <div className=""></div>
+        <div className="">
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="patientname"
@@ -915,8 +1051,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="age"
@@ -930,8 +1066,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="condition"
@@ -945,8 +1081,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="allergies"
@@ -960,10 +1096,10 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='gender'
@@ -976,7 +1112,7 @@ const page = () => {
                 Male
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='gender'
@@ -996,8 +1132,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="contactname"
@@ -1010,8 +1146,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="contactnumber"
@@ -1025,34 +1161,42 @@ const page = () => {
           </div>
 
 
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
 
+            </div>
+          </div>
 
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Review Stands') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
-          <div className="form-group row">
-            <div className="col-sm-12">
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className="form-group ">
+            <div className="">
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1065,7 +1209,7 @@ const page = () => {
                 Google
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1078,7 +1222,7 @@ const page = () => {
               </label>
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1100,8 +1244,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="link"
@@ -1113,19 +1257,30 @@ const page = () => {
             </div>
 
           </div>
+
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
         </div>
 
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
@@ -1134,12 +1289,12 @@ const page = () => {
   } else if (ttype == 'Business Cards Stickers') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
+      <div className="">
+        <div className=""></div>
+        <div className="">
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="ownername"
@@ -1152,8 +1307,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 value={value}
@@ -1167,8 +1322,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="email"
@@ -1181,8 +1336,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="owneraddress"
@@ -1196,34 +1351,46 @@ const page = () => {
 
 
 
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
+
+
+
 
 
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Reviews Stickers') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
-          <div className="form-group row">
-            <div className="col-sm-12">
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className="form-group ">
+            <div className="">
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1236,7 +1403,7 @@ const page = () => {
                 Google
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name="plateform"
@@ -1249,7 +1416,7 @@ const page = () => {
               </label>
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name="plateform"
@@ -1271,8 +1438,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="link"
@@ -1284,31 +1451,42 @@ const page = () => {
             </div>
 
           </div>
+
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
         </div>
 
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Social Media Stickers') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
-          <div className="form-group row">
-            <div className="col-sm-12">
-              <label style={{ color: 'white', display: "block" }}>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className="form-group ">
+            <div className="">
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1321,7 +1499,7 @@ const page = () => {
                 Instagram
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1334,7 +1512,7 @@ const page = () => {
               </label>
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1346,7 +1524,7 @@ const page = () => {
                 X
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1360,7 +1538,7 @@ const page = () => {
 
 
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='plateform'
@@ -1374,8 +1552,8 @@ const page = () => {
             </div>
           </div>
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="link"
@@ -1388,30 +1566,41 @@ const page = () => {
           </div>
 
 
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+
+            </div>
+          </div>
+
+
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
   } else if (ttype == 'Medical ID Stickers') {
     content = <form onSubmit={handleSubmit}>
 
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4">
+      <div className="">
+        <div className=""></div>
+        <div className="">
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="patientname"
@@ -1424,8 +1613,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="age"
@@ -1439,8 +1628,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="condition"
@@ -1454,8 +1643,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="allergies"
@@ -1469,10 +1658,10 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='gender'
@@ -1485,7 +1674,7 @@ const page = () => {
                 Male
               </label>
 
-              <label style={{ color: 'white', display: "block" }}>
+              <label style={{ display: "block" }}>
                 <input
                   type="radio"
                   name='gender'
@@ -1505,8 +1694,8 @@ const page = () => {
 
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="contactname"
@@ -1519,8 +1708,8 @@ const page = () => {
           </div>
 
 
-          <div className="form-group row pt-2">
-            <div className="col-sm-12">
+          <div className="form-group  pt-2">
+            <div className="">
               <input
                 className="form-control"
                 name="contactnumber"
@@ -1534,20 +1723,28 @@ const page = () => {
           </div>
 
 
+          <div className="form-group  pt-2">
+            <div className="">
+              <p>Choose front picture</p>
+              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
 
+            </div>
+          </div>
 
         </div>
-        <div className="col-md-4"></div>
+        <div className=""></div>
 
       </div>
-      <div className="row">
-        <div className="col-md-5"></div>
-        <div className="col-md-2">
-          <button type="submit" className="klaviyo_submit_button" style={{ padding: "1.5em", borderRadius: "0" }}>
-            Add
-          </button>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <span className="ProvidersSingleProduct--selected">
+            <button type="submit" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} >
+              <span>ADD TO CART</span>
+            </button>
+          </span>
         </div>
-        <div className="col-md-5"></div>
+        <div className=""></div>
       </div>
       <br />
     </form>;
@@ -1561,6 +1758,14 @@ const page = () => {
 
   return (
     <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html:
+            "\n\n.uploadcare--widget__button, .uploadcare--widget__button:hover {\n\tpadding: 10px;\n\tbackground-color: #d7d7d7; \n  color: #212529;\n  width:100%;\n}\n\n.uploadcare--widget__button:hover {\n\tbackground-color: #c1c1c1;\n  \n}\n\n\n"
+        }}
+      />
+
+
 
 
       <div className="ProductDetailWrapper">
@@ -1688,16 +1893,29 @@ const page = () => {
                     <span className="ProvidersIfSelectedProductMatchesFilter">
                       <p>
                         {desc}
-                      </p>
+                      </p><br/>
                     </span>
                   </div>
 
-                  <span className="ProvidersSingleProduct--selected">
-                    <button className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} onClick={setCart}>
-                      <span>ADD TO CART</span>
-                    </button>
-                  </span>
-                  <div>
+                  <div className="bagsFeaturesGrid__gridWrapper">
+
+
+
+                    {isInCart ? (
+                      specificItem && (!specificItem.additionalInfo || Object.keys(specificItem.additionalInfo).length === 0) ? (
+                        content
+                      ) : (
+                        <p style={{ color: "#4acb4a", textAlign: "center", fontSize: "2em", fontWeight: "bolder" }}>Done!</p>
+                      )
+
+                    ) : (
+                      content
+                    )}
+
+                  </div>
+
+
+                  {/* <div>
                     <div className="ShipsInDays">
                       <span className="ShipsInDays_Message">
                         <unsafe-html>
@@ -1705,7 +1923,7 @@ const page = () => {
                         </unsafe-html>
                       </span>
                     </div>
-                  </div>
+                  </div> */}
 
                   <span className="ProvidersIfSelectedProductMatchesFilter">
 
@@ -1725,12 +1943,12 @@ const page = () => {
                       </label>
                       <div className="DynamicAccordion_Tab_Details">
                         <div className="Specifications_Content">
-                          <div className="Specifications_Content_Row">
+                          <div className="Specifications_Content_">
                             <div>
                               <span>Dimensions: 95 x 80mm</span>
                             </div>
                           </div>
-                          <div className="Specifications_Content_Row">
+                          <div className="Specifications_Content_">
                             <div>
                               <span className="ProvidersIfSelectedProductMatchesFilter">
                                 <p>
@@ -1773,10 +1991,10 @@ const page = () => {
                   <style
                     dangerouslySetInnerHTML={{
                       __html:
-                        ".bagsFeaturesGrid{margin:0 auto;padding:30px 5%;background:#111622}.bagsFeaturesGrid__gridWrapper{max-width:1150px;margin:0 auto}.bagsFeaturesGrid__title{-webkit-font-smoothing:antialiased;text-align:center;padding:0 0 25px;margin:0 auto;color:#fff}.bagsFeaturesGrid__feature{background:inherit;display:grid;grid-template-rows:auto;align-items:center;padding:5px 0}.bagsFeaturesGrid__feature--text{-webkit-font-smoothing:antialiased;text-align:center;padding:15px 0 20px;grid-row:2}.bagsFeaturesGrid__feature--text a{color:inherit}.bagsFeaturesGrid__feature--text h3{color:#fff;padding-bottom:10px}.bagsFeaturesGrid__feature--text p{color:#eee}.bagsFeaturesGrid__feature--image{position:relative;width:100%;min-height:62vw}@media (min-width: 811px){.bagsFeaturesGrid__feature--image{min-height:28vw}}@media (min-width: 1460px){.bagsFeaturesGrid__feature--image{min-height:409px}}.bagsFeaturesGrid__feature--image img{width:100%;display:block}.bagsFeaturesGrid__feature--image--logo{position:absolute;bottom:3.5%;right:8%;width:15vw}.bagsFeaturesGrid__feature--image--logo img{width:100%}.bagsFeaturesGrid__feature--text--logo{width:100px;padding-top:30px}.bagsFeaturesGrid__feature--text--logo img{width:100%}@media (min-width: 811px){.bagsFeaturesGrid{padding:75px 10%}.bagsFeaturesGrid__title{padding:0 0 60px}.bagsFeaturesGrid__feature{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;padding:30px 0}.bagsFeaturesGrid__feature--image--logo{width:7vw}.bagsFeaturesGrid__feature .left{padding-right:15%}.bagsFeaturesGrid__feature .right{padding-left:15%}.bagsFeaturesGrid__feature--text{-webkit-font-smoothing:antialiased;text-align:left;padding:0;grid-row:auto}}\n"
+                        ".bagsFeaturesGrid{margin:0 auto;padding:30px 5%;background:#111622}.bagsFeaturesGrid__gridWrapper{max-width:1150px;margin:0 auto}.bagsFeaturesGrid__title{-webkit-font-smoothing:antialiased;text-align:center;padding:0 0 25px;margin:0 auto;color:#fff}.bagsFeaturesGrid__feature{background:inherit;display:grid;grid-template-s:auto;align-items:center;padding:5px 0}.bagsFeaturesGrid__feature--text{-webkit-font-smoothing:antialiased;text-align:center;padding:15px 0 20px;grid-:2}.bagsFeaturesGrid__feature--text a{color:inherit}.bagsFeaturesGrid__feature--text h3{color:#fff;padding-bottom:10px}.bagsFeaturesGrid__feature--text p{color:#eee}.bagsFeaturesGrid__feature--image{position:relative;width:100%;min-height:62vw}@media (min-width: 811px){.bagsFeaturesGrid__feature--image{min-height:28vw}}@media (min-width: 1460px){.bagsFeaturesGrid__feature--image{min-height:409px}}.bagsFeaturesGrid__feature--image img{width:100%;display:block}.bagsFeaturesGrid__feature--image--logo{position:absolute;bottom:3.5%;right:8%;width:15vw}.bagsFeaturesGrid__feature--image--logo img{width:100%}.bagsFeaturesGrid__feature--text--logo{width:100px;padding-top:30px}.bagsFeaturesGrid__feature--text--logo img{width:100%}@media (min-width: 811px){.bagsFeaturesGrid{padding:75px 10%}.bagsFeaturesGrid__title{padding:0 0 60px}.bagsFeaturesGrid__feature{display:grid;grid-template-columns:1fr 1fr;grid-template-s:auto;padding:30px 0}.bagsFeaturesGrid__feature--image--logo{width:7vw}.bagsFeaturesGrid__feature .left{padding-right:15%}.bagsFeaturesGrid__feature .right{padding-left:15%}.bagsFeaturesGrid__feature--text{-webkit-font-smoothing:antialiased;text-align:left;padding:0;grid-:auto}}\n"
                     }}
                   />
-                  <div ref={targetRef} id='Customization' className="bagsFeaturesGrid">
+                  {/* <div ref={targetRef} id='Customization' className="bagsFeaturesGrid">
                     <div className="bagsFeaturesGrid__gridWrapper">
                       <h2 className="bagsFeaturesGrid__title br_text-3xl-serif">
                         Customization
@@ -1795,12 +2013,12 @@ const page = () => {
                       )}
 
                     </div>
-                  </div>
+                  </div> */}
 
                   <style
                     dangerouslySetInnerHTML={{
                       __html:
-                        ".ProductTile-SliderContainer--YMAL .ProductTile-SliderContainer-Title{height:auto;text-align:center;padding-bottom:10px}.ProductTile-SliderContainer--YMAL.ProductTile-SliderContainer{padding:40px 0 10px;background-color:#e9e9e9 ;display:flex;flex-direction:column;align-items:center}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev-arrow,.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next-arrow{height:25px;width:25px;border-top:2px solid #999;border-right:2px solid #999}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next-arrow{transform:rotate(45deg);margin:0 15px 0 0}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev-arrow{transform:rotate(225deg);margin:0 0 0 15px}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev,.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next{height:430px;width:80px;cursor:pointer;background-color:transparent;transition:opacity .3s ease;display:none;border:none;padding:0;appearance:none;-webkit-appearance:none}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev[disabled],.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next[disabled]{opacity:0;pointer-events:none}@media (min-width: 700px){.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev,.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next{display:flex;align-items:center;justify-content:center}}@media (min-width: 811px){.ProductTile-SliderContainer--YMAL .ProductTile-SliderContainer-Title{padding-bottom:30px}}.ProductTile-SliderContainer--YMAL .productRangeSlider{display:flex;align-items:center;max-width:1340px;width:100%;padding:5px;justify-content:space-between;margin:0 auto;min-height:145px}\n"
+                        ".ProductTile-SliderContainer--YMAL .ProductTile-SliderContainer-Title{height:auto;text-align:center;padding-bottom:10px}.ProductTile-SliderContainer--YMAL.ProductTile-SliderContainer{padding:40px 0 10px;background-color:#e9e9e9 ;display:flex;flex-direction:column;align-items:center}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev-ar,.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next-ar{height:25px;width:25px;border-top:2px solid #999;border-right:2px solid #999}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next-ar{transform:rotate(45deg);margin:0 15px 0 0}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev-ar{transform:rotate(225deg);margin:0 0 0 15px}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev,.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next{height:430px;width:80px;cursor:pointer;background-color:transparent;transition:opacity .3s ease;display:none;border:none;padding:0;appearance:none;-webkit-appearance:none}.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev[disabled],.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next[disabled]{opacity:0;pointer-events:none}@media (min-width: 700px){.ProductTile-SliderContainer--YMAL .ProductTile-Slider-prev,.ProductTile-SliderContainer--YMAL .ProductTile-Slider-next{display:flex;align-items:center;justify-content:center}}@media (min-width: 811px){.ProductTile-SliderContainer--YMAL .ProductTile-SliderContainer-Title{padding-bottom:30px}}.ProductTile-SliderContainer--YMAL .productRangeSlider{display:flex;align-items:center;max-width:1340px;width:100%;padding:5px;justify-content:space-between;margin:0 auto;min-height:145px}\n"
                     }}
                   />
                   <div
@@ -1823,7 +2041,7 @@ const page = () => {
 
 
                     {allTemp2 && allTemp2?.length > 0 ? (
-                      <section style={{maxWidth:"100%"}}>
+                      <section style={{ maxWidth: "100%" }}>
 
                         <Swiper
                           spaceBetween={50}

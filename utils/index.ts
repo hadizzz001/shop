@@ -36,5 +36,10 @@ export async function fetchTemp4(id:any) {
 }
 
 
+export async function fetchRate() { 
+    const response = await fetch('/api/rate' , { next: { revalidate: 0 } }); 
+    const result = await response.json();  
+    return result.posts;
+}
  
  

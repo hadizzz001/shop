@@ -2,7 +2,7 @@
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
-import { fetchTemp1 } from '@/utils'
+import { fetchRate } from '@/utils'
 import { useState, useEffect } from "react";
 
 
@@ -15,7 +15,7 @@ const Review = async () => {
     const [allTemp, setTemp] = useState<any>()
 
     const a = async () => {
-        const b = await fetchTemp1()
+        const b = await fetchRate()
         setTemp(b) 
     }
     useEffect(() => {
@@ -44,9 +44,9 @@ const Review = async () => {
                     allTemp.map((post: any) => (
                         <div>
                             <center>
-                                <article className='container'>
+                                <article className='container' style={{maxWidth: "500px"}}>
                                     <div className="flex items-center mb-4" style={{ display: "inline" }}>
-                                        <img className="w-10 h-10 rounded-full" src="https://www.svgrepo.com/show/527946/user-circle.svg" alt="" />
+                                        <img className="w-20 h-20 rounded-full" src="https://www.svgrepo.com/show/527946/user-circle.svg" alt="" />
                                         <div className="font-medium dark:text-white">
                                             <p>{post.name}</p>
                                             <p>{
@@ -60,7 +60,7 @@ const Review = async () => {
 
                                     {Array.from({ length: post.stars }, (_, index) => (
                                         <div className="flex items-center mb-1 space-x-1 rtl:space-x-reverse" style={{ display: "inline-flex" }}>
-                                            <svg className="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <svg className="w-6 h-6 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                             </svg>
                                         </div>

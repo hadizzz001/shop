@@ -68,12 +68,14 @@ export default function Test() {
                   className="product-grid product-grid--vertical   product-grid--borderless"
                   data-options='{"watchCSS": true, "cellAlign": "left", "pageDots": false, "prevNextButtons": true,  "wrapAround": false, "groupCells": true}'
                   data-arrow-position-middle=""
+                  style={{display:"grid"}}
                 >
                   <div
                     className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
                     data-product-grid-item=""
                     data-slide={0}
                     data-slide-index={0}
+                    // style={{width:"100%"}}
                   >
                     <div
                       className="product-item__image double__image"
@@ -128,6 +130,7 @@ export default function Test() {
                     data-product-grid-item=""
                     data-slide={0}
                     data-slide-index={0}
+                    // style={{width:"100%"}}
                   >
                     <div
                       className="product-item__image double__image"
