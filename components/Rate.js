@@ -82,7 +82,7 @@ export default function Rate() {
                     <h4 className="text-center pt-3" style={{color: "#fff"}}>Leave Review</h4>
                 </div>
             </div>
-            <div className="container-xl  custom-page-1 " style={{background: "#f4f4f4", maxWidth:"700px",marginBottom: "3em"}}>
+            <div className="container-xl  custom-page-1 " style={{background: "#f4f4f4", maxWidth:"700px"}}>
                 <div>
                     <div className="pl-5 pt-4 pr-5">
                         <form onSubmit={handleSubmit} style={{textAlign:"center"}}>
@@ -108,7 +108,7 @@ export default function Rate() {
                                                 className="form-control form-control-text-area myTextt"
                                                 name="description"
                                                 placeholder="Message"
-                                                rows={9}
+                                                rows={3}
                                                 required
                                                 onChange={handleChange}
                                                 defaultValue={""}

@@ -41,5 +41,11 @@ export async function fetchRate() {
     const result = await response.json();  
     return result.posts;
 }
+
+export async function fetchRate1(name:any) { 
+    const response = await fetch(`/api/rate1/${name}` , { next: { revalidate: 0 } }); 
+    const result = await response.json();  
+    return result.posts;
+}
  
  

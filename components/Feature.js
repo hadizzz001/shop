@@ -31,7 +31,7 @@ export default function Feature() {
 
 
 <Image
-      src={isMobile ? 'https://res.cloudinary.com/duppvjinz/image/upload/v1710874487/obtihy1lopxtbgybyycp.webp' : 'https://res.cloudinary.com/duppvjinz/image/upload/v1710874485/qlksgtnn1jiqc5m64rpr.webp'}
+      src={isMobile ? 'https://res.cloudinary.com/duppvjinz/image/upload/v1713684310/vucgss7numl5vsct8j17.jpg' : 'https://res.cloudinary.com/duppvjinz/image/upload/v1712835088/yac6eqgyeqicl7yidib2.webp'}
       width="0" // Adjust the width as needed for the phone image
       height="0" // Adjust the height as needed for the phone image
       sizes="100vw"

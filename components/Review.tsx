@@ -37,7 +37,7 @@ const Review = async () => {
 
 
     return (
-        <div style={{ marginTop: "10em", marginBottom: "10em" }}>
+        <div style={{ marginTop: "1em", marginBottom: "1em" }}>
             <Carousel autoPlay infiniteLoop interval={3000} showArrows={false} showStatus={false} showIndicators={false} showThumbs={false} >
                 {allTemp && allTemp?.length > 0 ? (
 
