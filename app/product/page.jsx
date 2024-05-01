@@ -39,6 +39,7 @@ const page = () => {
   const isInCart = cart?.some((item) => item.id === search);
   const specificItem = cart?.find((cartItem) => String(cartItem.id) === String(search));
   const { myString, stringSaved, saveString, deleteString } = useMyContext();
+  const router = useRouter();
 
   useEffect(() => {
     setInputs((prevState) => ({ ...prevState, imgz: imgz[0], imgzz: imgzz[0] }));
@@ -205,7 +206,9 @@ const page = () => {
     }
   }
 
-
+  const gotocart = () => { 
+    router.push('/checkout');
+  };
 
   useEffect(() => {
     const newErrors = {};
@@ -1905,7 +1908,22 @@ const page = () => {
                       specificItem && (!specificItem.additionalInfo || Object.keys(specificItem.additionalInfo).length === 0) ? (
                         content
                       ) : (
+                        <>
+                        
                         <p style={{ color: "#4acb4a", textAlign: "center", fontSize: "2em", fontWeight: "bolder" }}>Done!</p>
+                        <div className="">
+                        <div className=""></div>
+                        <div className="">
+                          <span className="ProvidersSingleProduct--selected">
+                            <button type="button" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} onClick={gotocart} >
+                              <span>CHECKOUT NOW</span>
+                            </button>
+                          </span>
+                        </div>
+                        <div className=""></div>
+                      </div>
+                      <br />
+                      </>
                       )
 
                     ) : (

@@ -382,7 +382,7 @@ blockquote {
     font-size: 18px;
     line-height: 27px;
     font-weight: 700;
-    color: #26256c;
+    color: transparent;
     font-style: normal;
     padding: 56px 35px;
     position: relative;
@@ -841,7 +841,7 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
     outline: 0;
-    background-color: #26256c;
+    background-color: transparent;
     color: #fff;
 }
 
@@ -893,7 +893,7 @@ a:hover,
 a:focus,
 a:active {
     outline: 0;
-    color: #26256c;
+    color: transparent;
     text-decoration: none;
 }
 
@@ -960,7 +960,7 @@ h6 a {
 }
 
 .text-dark {
-    color: #26256c !important;
+    color: transparent !important;
 }
 
 .text-light {
@@ -976,7 +976,7 @@ h6 a {
 }
 
 .dark-color {
-    color: #26256c !important;
+    color: transparent !important;
 }
 
 .bg-accent {
@@ -984,7 +984,7 @@ h6 a {
 }
 
 .bg-dark {
-    background-color: #26256c !important;
+    background-color: transparent !important;
 }
 
 .bg-light {
@@ -3552,8 +3552,8 @@ h6 a {
 .input-black input,
 .input-black textarea {
     background-color: transparent;
-    border-color: #26256c;
-    color: #26256c;
+    border-color: transparent;
+    color: transparent;
 }
 
 @media (max-width: 991px) {
@@ -3680,7 +3680,7 @@ h6 a {
     height: 0;
     transform: translate(-50%, -50%);
     transition: 0.5s ease-in-out;
-    background-color: #26256c;
+    background-color: transparent;
     z-index: -1;
     border-radius: 100%;
     opacity: 0.5;
@@ -3713,7 +3713,7 @@ h6 a {
     font-family: "Core Icon" !important;
     font-weight: normal;
     font-size: 22px !important;
-    color: #26256c !important;
+    color: transparent !important;
     line-height: 60px !important;
 }
 
@@ -3928,7 +3928,7 @@ blockquote.has-text-align-right:before {
 
 .post-password-form label {
     font-weight: bolder;
-    color: #26256c;
+    color: transparent;
 }
 
 form.login .lost_password {
@@ -4237,7 +4237,7 @@ ol.wp-block-latest-comments li {
 }
 
 #site-logo .site-logo-text {
-    color: #26256c;
+    color: transparent;
     font-size: 24px;
     line-height: 40px;
     font-weight: 700;
@@ -4266,7 +4266,7 @@ ol.wp-block-latest-comments li {
 .hbt-style-2 .header-button.master-button a { color: #fff; }
 .hbt-style-3 .header-button.master-button { background-color: transparent; border: 1px solid #ff4f5b; line-height: 44px !important; }
 .hbt-style-3 .header-button.master-button a { color: #ff4f5b; }
-.hbt-style-3 .header-button.master-button:hover { border-color: #26256c; }
+.hbt-style-3 .header-button.master-button:hover { border-color: transparent; }
 
 .hbt-style-4 .header-button.master-button { background-color: #8844ee; }
 .hbt-style-4 .header-button.master-button a { color: #fff; }
@@ -4419,7 +4419,7 @@ ol.wp-block-latest-comments li {
 }
 
 #main-nav>ul>li:hover>a>span {
-    color: #26256c;
+    color: transparent;
 }
 
 #main-nav>ul>li>a {
@@ -4448,7 +4448,7 @@ ol.wp-block-latest-comments li {
 #main-nav>ul>li.current-menu-item>a>span,
 #main-nav>ul>li>a:hover>span,
 #main-nav>ul>li.current-menu-parent>a>span {
-    color: #26256c;
+    color: transparent;
 }
 
 #main-nav>ul>li.current-menu-item>a>span:before,
@@ -4511,7 +4511,7 @@ ol.wp-block-latest-comments li {
 }
 
 #main-nav .sub-menu li a:hover {
-    color: #26256c;
+    color: transparent;
 }
 
 #main-nav .sub-menu li a:after {
@@ -4850,7 +4850,7 @@ html.disable-scroll {
     left: 0;
     width: 100%;
     padding: 20%;
-    stroke: #26256c;
+    stroke: transparent;
     stroke-width: 2;
     fill: none;
 }
@@ -4905,7 +4905,7 @@ html.disable-scroll {
 .mobile-button:before,
 .mobile-button:after,
 .mobile-button span {
-    background-color: #26256c;
+    background-color: transparent;
     transition: all ease 0.3s;
 }
 
@@ -5094,7 +5094,7 @@ html.disable-scroll {
 }
 
 .header-style-2 #site-header.fixed-hide {
-    background-color: #26256c;
+    background-color: transparent;
 }
 
 /* Overwrite */
@@ -5287,7 +5287,7 @@ html.disable-scroll {
 }
 
 #featured-title #breadcrumbs a {
-    color: #26256c;
+    color: transparent;
 }
 
 #featured-title #breadcrumbs a:hover {
@@ -5304,7 +5304,7 @@ html.disable-scroll {
 #featured-title #breadcrumbs .breadcrumb-trail>a:before {
     content: "\/";
     font-size: 16px;
-    color: #26256c;
+    color: transparent;
     line-height: normal;
     position: absolute;
     right: 12px;
@@ -5396,7 +5396,7 @@ html.disable-scroll {
 }
 
 .hentry .page-links a:hover>span {
-    color: #26256c;
+    color: transparent;
 }
 
 .hentry .page-links a>span {
@@ -5562,7 +5562,7 @@ html.disable-scroll {
 }
 
 .hentry .post-title a {
-    color: #26256c;
+    color: transparent;
 }
 
 .hentry .post-title a:hover {
@@ -6015,7 +6015,7 @@ html.disable-scroll {
 .comments-area .comments-title,
 .comments-area .comment-reply-title {
     font-size: 20px;
-    color: #26256c;
+    color: transparent;
     margin: 50px 0 32px;
 }
 
@@ -6115,7 +6115,7 @@ html.disable-scroll {
 .comment-reply-link:hover,
 .comment-edit-link:hover,
 #cancel-comment-reply-link:hover {
-    color: #26256c;
+    color: transparent;
 }
 
 #cancel-comment-reply-link {
@@ -6185,7 +6185,7 @@ html.disable-scroll {
 }
 
 #comments .comment-respond input[type="submit"]:hover {
-    background-color: #26256c !important;
+    background-color: transparent !important;
 }
 
 .logged-in-as {
@@ -6199,7 +6199,7 @@ html.disable-scroll {
 }
 
 .logged-in-as a:hover {
-    color: #26256c;
+    color: transparent;
 }
 
 /* Search Page
@@ -6413,7 +6413,7 @@ html.disable-scroll {
 
 #sidebar .widget .widget-title {
     font-size: 20px;
-    color: #26256c;
+    color: transparent;
     margin: 0 0 25px 0;
 }
  
@@ -6527,7 +6527,7 @@ html.disable-scroll {
 
 .widget.widget_calendar a:hover,
 .widget.widget_calendar tbody #today:hover {
-    color: #26256c;
+    color: transparent;
 }
  
 /* Widget: Information */
@@ -6615,7 +6615,7 @@ html.disable-scroll {
 }
 
 .widget.widget_twitter .author a {
-    color: #26256c;
+    color: transparent;
     font-size: 17px;
 }
 
@@ -6679,7 +6679,7 @@ html.disable-scroll {
 }
 
 .widget.widget_search .search-form .search-submit:hover svg {
-    stroke: #26256c;
+    stroke: transparent;
 }
  
 /* Widget: Socials */
@@ -6694,7 +6694,7 @@ html.disable-scroll {
     display: inline-block;
     text-align: center;
     margin-right: 18px;
-    color: #26256c;
+    color: transparent;
 }
 
 .widget.widget_socials .socials a:hover {
@@ -6737,7 +6737,7 @@ html.disable-scroll {
 }
 
 .widget.widget_recent_posts h3 a {
-    color: #26256c;
+    color: transparent;
 }
 
 .widget.widget_recent_posts h3 a:hover {
@@ -7159,7 +7159,7 @@ html.disable-scroll {
 }
 
 .info-wrap ul li div {
-    color: #26256c;
+    color: transparent;
     min-width: 170px;
 }
 
@@ -8468,7 +8468,7 @@ ul.products .product {
     line-height: 50px;
     text-align: center;
     content: "\e98e";
-    color: #26256c;
+    color: transparent;
     font-family: 'Feather';
     font-size: 20px;
     position: absolute;
@@ -8531,7 +8531,7 @@ ul.products .product {
 }
 
 .woo-single-post-class .summary h1 {
-    color: #26256c;
+    color: transparent;
     font-size: 28px;
     line-height: 40px;
     margin: 0 0 16px;
@@ -8559,7 +8559,7 @@ ul.products .product {
     line-height: 30px;
     margin: 0 0 36px;
     position: relative;
-    color: #26256c;
+    color: transparent;
 }
 
 .woo-single-post-class .summary .price del {
@@ -8592,7 +8592,7 @@ ul.products .product {
 
 .woo-single-post-class .summary .cart table .label {
     width: 85px;
-    color: #26256c;
+    color: transparent;
     text-transform: uppercase;
 }
 
@@ -8638,7 +8638,7 @@ ul.products .product {
 }
 
 .woo-single-post-class .summary .cart .quantity .qty_button:hover {
-    color: #26256c;
+    color: transparent;
     background-color: #f1f1f1;
 }
 
@@ -8679,7 +8679,7 @@ ul.products .product {
 }
 
 .woo-single-post-class .woocommerce-grouped-product-list-item__label a {
-    color: #26256c;
+    color: transparent;
 }
 
 .woo-single-post-class .woocommerce-grouped-product-list-item__label a:hover {
@@ -8697,7 +8697,7 @@ ul.products .product {
 
 .woo-single-post-class .summary .product_meta .sku_wrapper {
     display: block;
-    color: #26256c;
+    color: transparent;
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 15px;
@@ -8713,7 +8713,7 @@ ul.products .product {
 }
 
 .woo-single-post-class .summary .product_meta>span .title {
-    color: #26256c;
+    color: transparent;
     font-weight: 500;
 }
 
@@ -8764,7 +8764,7 @@ ul.products .product {
 
 .woo-single-post-class .woocommerce-tabs ul li:hover>a,
 .woo-single-post-class .woocommerce-tabs ul li.active>a {
-    color: #26256c;
+    color: transparent;
 }
 
 .woo-single-post-class .woocommerce-tabs ul li:after {
@@ -8848,7 +8848,7 @@ ul.products .product {
 
 .woo-single-post-class .woocommerce-tabs .entry-content .meta strong {
     font-size: 18px;
-    color: #26256c;
+    color: transparent;
     margin: 0;
     display: inline-block;
     font-weight: 700;
@@ -8883,7 +8883,7 @@ ul.products .product {
     line-height: 30px;
     font-weight: 700;
     font-family: "Inter";
-    color: #26256c;
+    color: transparent;
     display: block;
     margin: 60px 0 20px;
 }
@@ -9008,12 +9008,12 @@ ul.products .product {
 }
 
 .woocommerce-page .shop_table.cart .product-subtotal {
-    color: #26256c;
+    color: transparent;
 }
 
 .woocommerce-page .shop_table.cart th {
     font-size: 16px;
-    color: #26256c;
+    color: transparent;
     font-weight: 500;
 }
 
@@ -9057,7 +9057,7 @@ ul.products .product {
 }
 
 .woocommerce-page .shop_table.cart .product-remove a:hover:after {
-    color: #26256c;
+    color: transparent;
 }
 
 .woocommerce-page .shop_table.cart .cart_item .product-thumbnail img {
@@ -9135,7 +9135,7 @@ ul.products .product {
 
 .woocommerce-page .cart_totals .shop_table th {
     font-size: 17px;
-    color: #26256c;
+    color: transparent;
     padding: 14px 20px;
 }
 
@@ -9143,7 +9143,7 @@ ul.products .product {
 .woocommerce-page .cart_totals .shop_table .order-total td,
 .woocommerce-page .cart_totals .shop_table .tax-rate td {
     text-align: right;
-    color: #26256c;
+    color: transparent;
 }
 
 .woocommerce-page .cart_totals p,
@@ -9170,7 +9170,7 @@ ul.products .product {
 .woocommerce-page input[type="button"]:hover,
 .woocommerce-page input[type="reset"]:hover,
 .woocommerce-page input[type="submit"]:hover {
-    background-color: #26256c !important;
+    background-color: transparent !important;
 }
 
 .woocommerce-page .return-to-shop a {
@@ -9183,7 +9183,7 @@ ul.products .product {
 }
 
 .woocommerce-page .return-to-shop a:hover {
-    background-color: #26256c;
+    background-color: transparent;
     color: #fff;
 }
 
@@ -9309,7 +9309,7 @@ ul.products .product {
 
 .woocommerce-checkout-review-order table th {
     font-size: 18px;
-    color: #26256c;
+    color: transparent;
     padding: 18px 30px;
 }
 
@@ -9321,7 +9321,7 @@ ul.products .product {
 .woocommerce-checkout-review-order .cart-subtotal td,
 .woocommerce-checkout-review-order .order-total {
     font-size: 16px;
-    color: #26256c;
+    color: transparent;
 }
 
 .woocommerce-checkout #payment ul.payment_methods {
@@ -9391,7 +9391,7 @@ ul.products .product {
 }
 
 #payment #place_order:hover {
-    background-color: #26256c !important;
+    background-color: transparent !important;
 }
 
 .woocommerce-page .myaccount_user+h2,
@@ -9408,7 +9408,7 @@ ul.products .product {
 .woocommerce-page .woocommerce-MyAccount-content legend {
     border: 0;
     font-size: 18px;
-    color: #26256c;
+    color: transparent;
     padding-top: 20px;
     margin: 0;
 }
@@ -9589,7 +9589,7 @@ ul.products .product {
 .woocommerce-page .woocommerce-message a,
 .woocommerce-page .woocommerce-info a,
 .woocommerce-page .woocommerce-error a {
-    color: #26256c;
+    color: transparent;
     text-decoration: underline;
     padding: 0 8px;
 }
@@ -9598,7 +9598,7 @@ ul.products .product {
 .woocommerce-page .woocommerce-info a:hover,
 .woocommerce-page .woocommerce-error a:hover {
     opacity: 0.7;
-    color: #26256c !important;
+    color: transparent !important;
     background-color: transparent !important;
 }
 
@@ -9716,7 +9716,7 @@ form.register .input-submit~span.lost_password a {
     font-size: 16px;
     line-height: 1.4;
     font-weight: 500;
-    color: #26256c;
+    color: transparent;
 }
 
 .product_list_widget del .amount {
@@ -9953,7 +9953,7 @@ form.register .input-submit~span.lost_password a {
 .widget_shopping_cart_content ul li .product-name {
     font-size: 16px;
     font-weight: 500;
-    color: #26256c;
+    color: transparent;
 }
 
 .widget_shopping_cart_content ul li a:hover {
@@ -10001,12 +10001,12 @@ form.register .input-submit~span.lost_password a {
     border-top: 1px solid #f8f9fa;
     border-bottom: 1px solid #f8f9fa;
     font-size: 18px;
-    color: #26256c;
+    color: transparent;
     text-align: center;
 }
 
 .widget_shopping_cart_content .total strong {
-    color: #26256c;
+    color: transparent;
     font-weight: 500;
 }
 
@@ -10023,7 +10023,7 @@ form.register .input-submit~span.lost_password a {
 
 .widget_shopping_cart_content .buttons>a {
     text-align: center;
-    color: #26256c;
+    color: transparent;
     background-color: #e7e7e7;
     padding: 8px 0;
     border-radius: 3px;
@@ -10041,7 +10041,7 @@ form.register .input-submit~span.lost_password a {
 .widget_shopping_cart_content .buttons a:hover {
     opacity: 0.7;
     color: #fff;
-    background-color: #26256c !important;
+    background-color: transparent !important;
 }
 
 .pswp--open {
@@ -10619,7 +10619,7 @@ form.register .input-submit~span.lost_password a {
 
 .master-button.btn-dark {
     color: #fff;
-    background-color: #26256c;
+    background-color: transparent;
 }
 
 .master-button.btn-light {
@@ -10642,7 +10642,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-button.btn-outline:hover {
-    border-color: #26256c;
+    border-color: transparent;
 }
 
 .master-button {
@@ -10653,17 +10653,17 @@ form.register .input-submit~span.lost_password a {
 
 .master-button.btn-accent-2 { color: #fff; background-color: #7d8dff; }
 .master-button.btn-outline-2 { color: #7d8dff; background-color: transparent; border: 1px solid #7d8dff; }
-.master-button.btn-outline-2:hover { border-color: #26256c; }
+.master-button.btn-outline-2:hover { border-color: transparent; }
 
 .master-button.btn-accent-3 { color: #fff; background-color: #ff4f5b; }
 .master-button.btn-outline-3 { color: #ff4f5b; background-color: transparent; border: 1px solid #ff4f5b; }
-.master-button.btn-outline-3:hover { border-color: #26256c; }
+.master-button.btn-outline-3:hover { border-color: transparent; }
 
 .master-button.btn-accent-4 {background-image: linear-gradient(to right, #7d8dff 0%, #f85acb  100%)}
 
 .master-button.btn-accent-5 { color: #fff; background-color: #8844ee; }
 .master-button.btn-outline-5 { color: #8844ee; background-color: transparent; border: 1px solid #8844ee; }
-.master-button.btn-outline-5:hover { border-color: #26256c; }
+.master-button.btn-outline-5:hover { border-color: transparent; }
 
 
 /* Effect */
@@ -10682,7 +10682,7 @@ form.register .input-submit~span.lost_password a {
     height: 0;
     transform: translate(-50%, -50%);
     transition: 0.5s ease-in-out;
-    background-color: #26256c;
+    background-color: transparent;
     z-index: -1;
     border-radius: 100%;
     opacity: 0.5;
@@ -11768,7 +11768,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-progress-bar .title {
-    color: #26256c;
+    color: transparent;
 }
 
 .master-progress-bar .percent {
@@ -12172,7 +12172,7 @@ form.register .input-submit~span.lost_password a {
     font-size: 42px;
     line-height: 1;
     font-weight: 500;
-    color: #26256c;
+    color: transparent;
     margin-bottom: 8px;
 }
 
@@ -12193,7 +12193,7 @@ form.register .input-submit~span.lost_password a {
 
 .master-accordions .title .arrow {
     position: absolute;
-    color: #26256c;
+    color: transparent;
     font-size: 16px;
     right: 0;
 
@@ -12218,7 +12218,7 @@ form.register .input-submit~span.lost_password a {
     font-size: 18px;
     line-height: 27px;
     font-weight: 700;
-    color: #26256c;
+    color: transparent;
     cursor: pointer;
     padding: 26px 0;
 }
@@ -12236,7 +12236,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-accordions .item.active .arrow {
-    color: #26256c;
+    color: transparent;
 }
 
 .master-accordions .item.active .arrow:after {
@@ -12403,7 +12403,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .sep-full-screen.dark .master-tabs .tab-link-wrap:after {
-    background-color: #26256c;
+    background-color: transparent;
 }
 
 @media screen and (max-width: 575px) {
@@ -12552,7 +12552,7 @@ form.register .input-submit~span.lost_password a {
 
 .master-subscribe-form.style-3 button:hover {
     color: #fff;
-    background-color: #26256c;
+    background-color: transparent;
 }
 
 @media (max-width: 1024px) {
@@ -12853,7 +12853,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .info-wrap ul li div {
-    color: #26256c;
+    color: transparent;
     min-width: 170px;
 }
 
@@ -13061,7 +13061,7 @@ form.register .input-submit~span.lost_password a {
 .master-price-box .price {
     font-size: 42px;
     line-height: 50px;
-    color: #26256c;
+    color: transparent;
     font-weight: 600;
     padding: 20px 0;
     border-top: 1px solid #e7e7e7;
@@ -13288,7 +13288,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-team-carousel .master-team .socials-wrap a:hover {
-    background-color: #26256c;
+    background-color: transparent;
 }
 
 .master-team-carousel .master-team .desc {
@@ -13320,7 +13320,7 @@ form.register .input-submit~span.lost_password a {
 .master-testimonial .name {
     font-size: 16px;
     margin-bottom: 2px;
-    color: #26256c;
+    color: transparent;
 }
 
 .master-testimonial .role {
