@@ -13,7 +13,10 @@ function Checkout({ personal }) {
 	const options = {
 		mode: 'payment',
 		currency: 'usd',
-		amount: 100,
+		amount: 100, 
+		layout: {
+			type: 'tabs',
+		  },
  
 	}
 	return (
