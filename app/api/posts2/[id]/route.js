@@ -7,7 +7,7 @@ export const GET = async (request, { params }) => {
 
     const posts = await prisma.post.findMany({
       where: {
-        title: {  contains: id }
+        title: {  contains: id ,  mode: 'insensitive' }
       }
     });
 

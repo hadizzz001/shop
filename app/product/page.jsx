@@ -170,6 +170,7 @@ const page = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addToCart(allTemp1, inputs, 1);
+    handleClickc()
   };
 
   const handleChange = (e) => {

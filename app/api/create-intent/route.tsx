@@ -24,8 +24,7 @@ const createOrder = async (personal:any, info:any) => {
 
   // return order;
   console.log(order);
-};
-
+}; 
 
 export async function POST(request: any) {
   const data: any = await request.json();
@@ -34,12 +33,11 @@ export async function POST(request: any) {
   const amount = data.amount;
 
  
-  await createOrder(personal, info);
+  await createOrder(personal, info); 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
         amount: amount * 100,
-        currency: 'usd',
-        automatic_payment_methods: {enabled: true},
+        currency: 'usd',  
     });
     return NextResponse.json(paymentIntent.client_secret, { status: 200 });
   } catch (error: any) {

@@ -48,7 +48,7 @@ function AutocompleteComponent({ onAddressSelect }) {
     }, [onAddressSelect]);
 
     return (
-        <p className="form-row form-row-wide address-field wfacp-form-control-wrapper wfacp-col-left-half wfacp_field_required validate-required" id="shipping_address_1_field" data-priority={50}>
+        <p className="form-row form-row-wide address-field wfacp-form-control-wrapper wfacp-col-left-half wfacp_field_required validate-required" >
             <label htmlFor="shipping_address_1" className="wfacp-form-control-label">
                 Street address&nbsp;<abbr className="required" title="required">*</abbr>
             </label>
@@ -56,12 +56,7 @@ function AutocompleteComponent({ onAddressSelect }) {
                 <input
                     ref={autocompleteRef}
                     type="text"
-                    className="input-text wfacp-form-control"
-                    name="shipping_address_1"
-                    id="shipping_address_1"
-                    placeholder="Street address *"
-                    defaultValue=""
-                    autoComplete="address-line1"
+                    className="input-text wfacp-form-control"  
                 />
             </span>
             <span className="wfacp_inline_error" data-key="shipping_address_1_field"></span>

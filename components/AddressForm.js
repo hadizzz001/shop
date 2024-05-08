@@ -40,10 +40,10 @@ function AddressForm({ onAddressData }) {
             </p>
             <p className="form-row form-row-wide address-field wfacp-form-control-wrapper wfacp-col-left-half wfacp_field_required validate-required">
                 <label htmlFor="suburb" className="wfacp-form-control-label">
-                    Suburb&nbsp;<abbr className="required" title="required">*</abbr>
+                    Suburb&nbsp;<abbr className="required" title="required"></abbr>
                 </label>
                 <span className="woocommerce-input-wrapper">
-                    <input type="text" className="input-text wfacp-form-control" name="suburb" id="suburb" placeholder="Suburb *" value={address.suburb} readOnly />
+                    <input type="text" className="input-text wfacp-form-control" name="suburb" id="suburb" placeholder="Suburb" value={address.suburb} readOnly />
                 </span>
             </p>
 

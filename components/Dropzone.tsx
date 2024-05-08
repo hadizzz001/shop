@@ -20,6 +20,13 @@ const ImageForm = ({defaultValue,HandleImagesChange}:IImageForm) => {
         <Box sx={{
             pt: '1.5em'
         }}> 
+<style
+  dangerouslySetInnerHTML={{
+    __html:
+      "\n  .uploadcare--button_primary {\n    background-color: #ea6a2b !important; \n}\n"
+  }}
+/>
+
 
 
 {load && <Widget

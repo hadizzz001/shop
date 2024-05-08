@@ -21,7 +21,7 @@ const Body = () => {
 
     const a = async () => {
         if (search) {
-            b = await fetchTemp3(search)
+            b = await fetchTemp3(search.toLowerCase())
             setTemp(b)
         }
         else if (search1) {

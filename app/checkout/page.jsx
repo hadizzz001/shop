@@ -203,10 +203,7 @@ const page = () => {
   };
 
 
-  const isComponentDisabled = Object.values(inputs).some((value) => value.trim() === '');
-
-
-
+ 
 
 
 
@@ -5873,7 +5870,7 @@ const page = () => {
                                 <div className="elementor-button-wrapper">
                                   <a
                                     className="elementor-button elementor-button-link elementor-size-sm"
-                                    href="https://yourcard.au/shop"
+                                    href="/shop"
                                   >
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">
