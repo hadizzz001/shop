@@ -11,7 +11,7 @@ export async function POST(request: any) {
   // Send the email with the provided HTML content
   await resend.emails.send({
     from: "info@socialbang.hadizproductions.com",
-    to: "alihadimedlej001@gmail.com",
+    to: "info@socialtapnfc.au",
     subject: "New Order",
     html: htmlContent
   });
