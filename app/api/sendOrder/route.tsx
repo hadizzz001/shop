@@ -10,8 +10,8 @@ export async function POST(request: any) {
 
   // Send the email with the provided HTML content
   await resend.emails.send({
-    from: "info@socialbang.hadizproductions.com",
-    to: "info@socialtapnfc.au",
+    from: "info@socialtapnfc.au",
+    to: "socialtapnfc.au@gmail.com",
     subject: "New Order",
     html: htmlContent
   });

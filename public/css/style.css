@@ -400,7 +400,7 @@ blockquote:before {
     top: 0;
     width: 6px;
     height: 100%;
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 blockquote cite {
@@ -821,7 +821,7 @@ input[type="submit"] {
     line-height: 28px;
     font-weight: 500;
     color: #fff;
-    background-color: #4732d7;
+    background-color: #fff;
     padding: 9px 36px;
     border-radius: 30px;
     display: inline-block;
@@ -883,7 +883,7 @@ input[type="submit"]:focus {
 /* Links */
 
 a {
-    color: #4732d7;
+    color: #fff;
     outline: 0;
     text-decoration: none;
     transition: all ease 0.3s;
@@ -972,7 +972,7 @@ h6 a {
 }
 
 .accent-color {
-    color: #4732d7;
+    color: #fff;
 }
 
 .dark-color {
@@ -980,7 +980,7 @@ h6 a {
 }
 
 .bg-accent {
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .bg-dark {
@@ -1000,7 +1000,7 @@ h6 a {
 }
 
 .border-accent {
-    border-color: #4732d7;
+    border-color: #fff;
 }
 
 .display-none,
@@ -1123,7 +1123,7 @@ h6 a {
     bottom: 0;
     width: 100%;
     height: 1px;
-    border-bottom: 1px solid #4732d7;
+    border-bottom: 1px solid #fff;
 }
 
 .underline-dotted:after {
@@ -3747,7 +3747,7 @@ h6 a {
 }
 
 .post.sticky {
-    border-color: #4732d7;
+    border-color: #fff;
 }
 
 .aligncenter {
@@ -4244,7 +4244,7 @@ ol.wp-block-latest-comments li {
 }
 
 #site-logo .site-logo-text:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* Button */
@@ -4260,7 +4260,7 @@ ol.wp-block-latest-comments li {
 .header-button.master-button { padding: 0 60px; height: 46px; line-height: 46px; }
 
 
-.hbt-style-1 .header-button.master-button { background-color: #4732d7; }
+.hbt-style-1 .header-button.master-button { background-color: #fff; }
 .hbt-style-1 .header-button.master-button a { color: #fff; }
 .hbt-style-2 .header-button.master-button { background-color: #7d8dff; }
 .hbt-style-2 .header-button.master-button a { color: #fff; }
@@ -4354,7 +4354,7 @@ ol.wp-block-latest-comments li {
 }
 
 .header-socials a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* Menu */
@@ -4856,7 +4856,7 @@ html.disable-scroll {
 }
 
 #main-nav-mobi .search-form .search-submit:hover {
-    stroke: #4732d7;
+    stroke: #fff;
 }
 
 #main-nav-mobi .ext>.cart-info svg {
@@ -5035,7 +5035,7 @@ html.disable-scroll {
 .header-style-1 .header-search-trigger svg,
 .header-style-1 .nav-top-cart-wrapper .nav-cart-trigger svg { fill: none; stroke: #5e709d; stroke-width: 2; }
 .header-style-1 .header-search-trigger:hover svg,
-.header-style-1 .nav-top-cart-wrapper .nav-cart-trigger:hover svg { stroke: #4732d7; }
+.header-style-1 .nav-top-cart-wrapper .nav-cart-trigger:hover svg { stroke: #fff; }
 
 /* Header Float */
 
@@ -5062,7 +5062,7 @@ html.disable-scroll {
 .header-style-3 .header-search-trigger svg,
 .header-style-3 .nav-top-cart-wrapper .nav-cart-trigger svg { fill: none; stroke: #5e709d; stroke-width: 2; }
 .header-style-3 .header-search-trigger:hover svg,
-.header-style-3 .nav-top-cart-wrapper .nav-cart-trigger:hover svg { stroke: #4732d7; }
+.header-style-3 .nav-top-cart-wrapper .nav-cart-trigger:hover svg { stroke: #fff; }
 
 .header-style-2 .mobile-button:before,
 .header-style-2 .mobile-button:after,
@@ -5177,7 +5177,7 @@ html.disable-scroll {
 }
 
 .search-style-fullscreen .search-submit:hover svg {
-    stroke: #4732d7;
+    stroke: #fff;
 }
 
 .search-style-fullscreen .search-close {
@@ -5390,7 +5390,7 @@ html.disable-scroll {
     font-size: 15px;
     border-radius: 3px;
     border: 1px solid #e7e7e7;
-    color: #4732d7;
+    color: #fff;
     text-align: center;
     margin: 0 3px;
 }
@@ -5454,7 +5454,7 @@ html.disable-scroll {
 
 .post-media .slick-prev:hover,
 .post-media .slick-next:hover {
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .post-media .slick-dots {
@@ -5494,7 +5494,7 @@ html.disable-scroll {
 
 .post-media .slick-dots li.slick-active:after {
     opacity: 1;
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .post-media.custom-cat {
@@ -5510,7 +5510,7 @@ html.disable-scroll {
     line-height: 40px;
     color: #fff;
     padding: 0 31px;
-    background-color: #4732d7;
+    background-color: #fff;
     text-transform: uppercase;
     font-weight: 500;
     border-top-right-radius: 5px;
@@ -5529,7 +5529,7 @@ html.disable-scroll {
     height: 72px;
     border-radius: 3px;
     background-color: #fff;
-    color: #4732d7;
+    color: #fff;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
@@ -5566,7 +5566,7 @@ html.disable-scroll {
 }
 
 .hentry .post-title a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .hentry .post-title-inner {
@@ -5642,7 +5642,7 @@ html.disable-scroll {
 }
 
 .hentry .post-meta a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* Post excerpt */
@@ -5746,7 +5746,7 @@ html.disable-scroll {
 
 .hentry .post-tags a:hover {
     color: #fff;
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .hentry .post-tags a:first-child {
@@ -5812,7 +5812,7 @@ html.disable-scroll {
 }
 
 .hentry .post-author .author-socials .socials a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* Next Post */
@@ -5858,7 +5858,7 @@ html.disable-scroll {
 }
 #post-nav .link:hover,
 #post-nav .content-wrap h4:hover a {
-    color: #4732d7;
+    color: #fff;
 }
 
 #post-nav .link {
@@ -5925,7 +5925,7 @@ html.disable-scroll {
 }
 
 .related-news .post-item .post-categories a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .related-news .post-item .text-wrap h3 {
@@ -5935,7 +5935,7 @@ html.disable-scroll {
 }
 
 .related-news .post-item .text-wrap h3 a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .related-news .post-item .text-wrap .post-date {
@@ -5994,7 +5994,7 @@ html.disable-scroll {
 
 .related-news .related-post .slick-next:hover:before,
 .related-news .related-post .slick-prev:hover:before {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* Comments */
@@ -6109,7 +6109,7 @@ html.disable-scroll {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.2px;
-    color: #4732d7;
+    color: #fff;
 }
 
 .comment-reply-link:hover,
@@ -6139,7 +6139,7 @@ html.disable-scroll {
 
 .unapproved {
     display: block;
-    color: #4732d7;
+    color: #fff;
     font-size: 14px;
     font-style: italic;
 }
@@ -6194,7 +6194,7 @@ html.disable-scroll {
 }
 
 .logged-in-as a {
-    color: #4732d7;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -6359,7 +6359,7 @@ html.disable-scroll {
 .widget.widget_recent_entries ul li a:hover,
 .widget.widget_recent_comments ul li a:hover,
 .widget.widget_rss ul li a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .widget.widget_categories ul li a,
@@ -6402,7 +6402,7 @@ html.disable-scroll {
 }
 
 #sidebar .widget.widget_calendar caption {
-    color: #4732d7;
+    color: #fff;
 }
 
 .widget.widget_rss .rssSummary {
@@ -6444,7 +6444,7 @@ html.disable-scroll {
 }
 
 .widget.widget_latest_posts .categories a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .widget.widget_latest_posts .thumb {
@@ -6468,7 +6468,7 @@ html.disable-scroll {
 
 .widget.widget_latest_posts .current .post-title a,
 .widget.widget_latest_posts .post-title:hover a {
-    color: #4732d7;
+    color: #fff;
 }
 
 .widget.widget_latest_posts .entry-date {
@@ -6490,7 +6490,7 @@ html.disable-scroll {
 
 .widget.widget_nav_menu .menu>li.current-menu-item>a,
 .widget.widget_nav_menu .menu>li.current-menu-item {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* Widget: Calendar */
@@ -6521,7 +6521,7 @@ html.disable-scroll {
 
 .widget.widget_calendar a,
 .widget.widget_calendar tbody #today {
-    color: #4732d7;
+    color: #fff;
     display: block;
 }
 
@@ -6574,7 +6574,7 @@ html.disable-scroll {
     position: absolute;
     right: 0;
     bottom: 0;
-    background-color: #4732d7;
+    background-color: #fff;
     transition: width 0.5s cubic-bezier(0.35, 0.7, 0.35, 1) 0s;
 }
 
@@ -6698,7 +6698,7 @@ html.disable-scroll {
 }
 
 .widget.widget_socials .socials a:hover {
-    color: #4732d7;
+    color: #fff;
 }
  
 /* Widget: Recent News Advanced  */
@@ -6741,7 +6741,7 @@ html.disable-scroll {
 }
 
 .widget.widget_recent_posts h3 a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .widget.widget_recent_posts .recent-news .texts {
@@ -6749,7 +6749,7 @@ html.disable-scroll {
 }
 
 .widget.widget_recent_posts .post-author {
-    color: #4732d7;
+    color: #fff;
     font-size: 12px;
     margin-right: 27px;
     position: relative;
@@ -6761,7 +6761,7 @@ html.disable-scroll {
 }
 
 .widget.widget_recent_posts .post-author a {
-    color: #4732d7;
+    color: #fff;
 }
 
 .widget.widget_recent_posts .post-author:hover {
@@ -6966,7 +6966,7 @@ html.disable-scroll {
 
 .widget.widget_tag_cloud .tagcloud a:hover {
     color: #fff;
-    background-color: #4732d7;
+    background-color: #fff;
 }
  
 
@@ -7002,7 +7002,7 @@ html.disable-scroll {
     z-index: 1;
     content: "\f1d8";
     font-family: "Font Awesome 5 Free";
-    color: #4732d7;
+    color: #fff;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -7057,7 +7057,7 @@ html.disable-scroll {
 .widget.widget_banner .btn a {
     font-size: 15px;
     font-weight: 500;
-    background-color: #4732d7;
+    background-color: #fff;
     padding: 14px 24px;
     border-radius: 8px;
     display: inline-block;
@@ -7550,14 +7550,14 @@ html.disable-scroll {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #4732d7;
+    background-color: #fff;
     z-index: -1;
     transition: all ease 0.3s;
     border-radius: 10px;
 }
 
 #scroll-top:hover:before {
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 #scroll-top.show {
@@ -7623,9 +7623,9 @@ html.disable-scroll {
 .woocommerce-pagination .page-numbers li .page-numbers:hover,
 .sublime-pagination ul li .page-numbers.current,
 .woocommerce-pagination .page-numbers li .page-numbers.current {
-    border-color: #4732d7;
+    border-color: #fff;
     color: #fff;
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .project-nav .sublime-pagination {
@@ -7699,7 +7699,7 @@ html.disable-scroll {
 }
 
 .no-results-content .search-form .search-submit:hover svg {
-    stroke: #4732d7;
+    stroke: #fff;
 }
 
 /* Media Queries
@@ -8151,7 +8151,7 @@ p.stars span a:focus {
 }
 
 .woocommerce-page .woocommerce-MyAccount-content .woocommerce-info .button {
-    color: #4732d7;
+    color: #fff;
     background-color: transparent;
 }
 
@@ -8249,7 +8249,7 @@ ul.products .product {
 }
 
 .products li h2:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .products li .add_to_cart_button {
@@ -8274,7 +8274,7 @@ ul.products .product {
 .products li .product-info .button,
 .products li .product-info .added_to_cart {
     text-transform: uppercase;
-    color: #4732d7;
+    color: #fff;
     font-size: 14px;
     position: relative;
     padding-right: 14px;
@@ -8412,7 +8412,7 @@ ul.products .product {
 }
 
 .products li .product-cat:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .products li .star-rating {
@@ -8482,7 +8482,7 @@ ul.products .product {
 }
 
 .woo-single-post-class .images .woocommerce-product-gallery__trigger:hover:after {
-    color: #4732d7;
+    color: #fff;
 }
 
 .woo-single-post-class .images .woocommerce-product-gallery__trigger img {
@@ -8683,7 +8683,7 @@ ul.products .product {
 }
 
 .woo-single-post-class .woocommerce-grouped-product-list-item__label a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .woo-single-post-class .summary .product_meta {
@@ -8722,7 +8722,7 @@ ul.products .product {
 }
 
 .woo-single-post-class .summary .product_meta>span a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .woo-single-post-class .summary .product_meta>span a:first-child {
@@ -8774,7 +8774,7 @@ ul.products .product {
     width: 0;
     height: 2px;
     content: '';
-    background-color: #4732d7;
+    background-color: #fff;
     transition: 0.5s;
 }
 
@@ -9030,7 +9030,7 @@ ul.products .product {
 }
 
 .woocommerce-page .shop_table.cart .product-name a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .woocommerce-page .shop_table.cart .product-remove a {
@@ -9179,7 +9179,7 @@ ul.products .product {
     border-radius: 3px;
     font-weight: 500;
     color: #fff;
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .woocommerce-page .return-to-shop a:hover {
@@ -9643,7 +9643,7 @@ form.register .input-submit~span.pull-left {
 
 form.login .input-submit~span.lost_password a,
 form.register .input-submit~span.lost_password a {
-    color: #4732d7;
+    color: #fff;
 }
 
 .woocommerce-MyAccount-navigation {
@@ -9685,7 +9685,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .woocommerce-MyAccount-navigation ul li.is-active {
-    background-color: #4732d7;
+    background-color: #fff;
     padding: 15px 10px 15px 20px;
 }
 
@@ -9738,7 +9738,7 @@ form.register .input-submit~span.lost_password a {
 
 .product_list_widget .product-title:hover,
 .widget_recent_reviews .product_list_widget a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .product_list_widget .star-rating,
@@ -9783,7 +9783,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .widget_product_categories ul li a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* Widget price filter */
@@ -9807,7 +9807,7 @@ form.register .input-submit~span.lost_password a {
     padding: 0 40px;
     height: 48px;
     line-height: 48px;
-    border: 1px solid #4732d7;
+    border: 1px solid #fff;
     background-color: transparent !important;
     color: #5e709d;
     display: block;
@@ -9816,7 +9816,7 @@ form.register .input-submit~span.lost_password a {
 
 .widget_price_filter .price_slider_amount .button:hover {
     opacity: 1;
-    background-color: #4732d7;
+    background-color: #fff;
     color: #fff;
 }
 
@@ -9842,7 +9842,7 @@ form.register .input-submit~span.lost_password a {
     z-index: 1;
     display: block;
     border: 0;
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .widget_price_filter .ui-slider-horizontal .ui-slider-range {
@@ -9910,7 +9910,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .widget.widget_product_search .woocommerce-product-search .search-submit:hover:before {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* Widget Mini Cart */
@@ -9957,12 +9957,12 @@ form.register .input-submit~span.lost_password a {
 }
 
 .widget_shopping_cart_content ul li a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .widget_shopping_cart_content ul li a.remove {
     font-size: 22px;
-    color: #4732d7;
+    color: #fff;
     position: absolute;
     right: 0;
     top: 17px;
@@ -10034,7 +10034,7 @@ form.register .input-submit~span.lost_password a {
 
 .widget_shopping_cart_content .buttons a.checkout {
     float: right;
-    background-color: #4732d7;
+    background-color: #fff;
     color: #fff;
 }
 
@@ -10429,7 +10429,7 @@ form.register .input-submit~span.lost_password a {
     width: 4px;
     height: 4px;
     border-radius: 2px;
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .master-heading .divider:after { left: 11px; }
@@ -10527,7 +10527,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-link:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .master-link:hover .icon {
@@ -10569,7 +10569,7 @@ form.register .input-submit~span.lost_password a {
     color: #fff;
     font-weight: 500;
     transition: all ease 0.35s;
-    background-color: #4732d7;
+    background-color: #fff;
     font-size: 16px;
     padding: 11px 42px;
     letter-spacing: 0.2px;
@@ -10613,7 +10613,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-button.btn-white {
-    color: #4732d7;
+    color: #fff;
     background-color: #fff;
 }
 
@@ -10628,9 +10628,9 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-button.btn-outline {
-    color: #4732d7;
+    color: #fff;
     background-color: transparent;
-    border: 1px solid #4732d7;
+    border: 1px solid #fff;
 }
 
 .master-button:hover {
@@ -10746,7 +10746,7 @@ form.register .input-submit~span.lost_password a {
     display: inline-block;
     transition: 0.35s;
     line-height: 1;
-    color: #4732d7;
+    color: #fff;
 }
 
 .master-icon svg {
@@ -10898,7 +10898,7 @@ form.register .input-submit~span.lost_password a {
     content: "";
     width: calc(100%);
     height: 0;
-    background-color: #4732d7;
+    background-color: #fff;
     transition: all ease 0.35s;
 }
 
@@ -11453,7 +11453,7 @@ form.register .input-submit~span.lost_password a {
     width: 8px;
     height: 8px;
     opacity: 1;
-    border: 1px solid #4732d7;
+    border: 1px solid #fff;
     background-color: transparent;
     transition: all 0.3s ease;
     border-radius: 0;
@@ -11465,7 +11465,7 @@ form.register .input-submit~span.lost_password a {
     margin-bottom: -2px;
     width: 12px;
     height: 12px;
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 
@@ -11732,14 +11732,14 @@ form.register .input-submit~span.lost_password a {
 
 .master-quote .name a {
     display: inline-block;
-    color: #4732d7;
+    color: #fff;
 }
 
 .master-quote .name a:before {
     content: "";
     width: 12px;
     height: 2px;
-    background-color: #4732d7;
+    background-color: #fff;
     position: absolute;
     left: 0;
     top: 50%;
@@ -11747,7 +11747,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-quote .name a:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .master-quote .role {
@@ -11787,7 +11787,7 @@ form.register .input-submit~span.lost_password a {
 .master-progress-bar .progress {
     height: 100%;
     width: 0;
-    background-color: #4732d7;
+    background-color: #fff;
     transition: all 0.6s linear;
 }
 
@@ -12153,7 +12153,7 @@ form.register .input-submit~span.lost_password a {
 .master-counter .icon-wrap {
     font-size: 18px;
     line-height: normal;
-    color: #4732d7;
+    color: #fff;
     margin-bottom: 24px;
 }
 
@@ -12320,7 +12320,7 @@ form.register .input-submit~span.lost_password a {
     bottom: 0;
     right: 0;
     width: 0;
-    background-color: #4732d7;
+    background-color: #fff;
     transition: all ease 0.35s;
 }
 
@@ -12460,14 +12460,14 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-subscribe-form button {
-    background-color: #4732d7;
+    background-color: #fff;
     color: #fff;
     border-radius: 3px;
 }
 
 .master-subscribe-form button:hover {
     background-color: #fff;
-    color: #4732d7;
+    color: #fff;
     border-color: #fff;
 }
 
@@ -12546,7 +12546,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-subscribe-form.style-3 button {
-    color: #4732d7;
+    color: #fff;
     background-color: #f2e1c2;
 }
 
@@ -12600,7 +12600,7 @@ form.register .input-submit~span.lost_password a {
     height: 150px;
 }
 
-.wpcf7 .cf7-style-1 .wpcf7-submit { background-color: transparent; color: #4732d7; border :1px solid #4732d7; width: 160px; float: right }
+.wpcf7 .cf7-style-1 .wpcf7-submit { background-color: transparent; color: #fff; border :1px solid #fff; width: 160px; float: right }
 .wpcf7 .cf7-style-1 .wpcf7-submit:hover { opacity: 0.7; }
 
 .wpcf7 .wpcf7-not-valid-tip { font-size: 14px; }
@@ -12657,7 +12657,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .coming-soon .master-demo-box .image-wrap {
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 .coming-soon .master-demo-box .image-wrap img {
@@ -12820,7 +12820,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-project:hover .headline-2 a {
-    color: #4732d7;
+    color: #fff;
 }
 
 .title-color-2 .flickity-slider .master-project:first-child .headline-2 a,
@@ -12927,7 +12927,7 @@ form.register .input-submit~span.lost_password a {
 
 .projects-filter .cbp-filter-item:hover,
 .projects-filter .cbp-filter-item.cbp-filter-item-active {
-    color: #4732d7;
+    color: #fff;
 }
 
 .projects-filter .cbp-filter-counter {
@@ -13032,7 +13032,7 @@ form.register .input-submit~span.lost_password a {
 
 
 .news-style-1 .master-news:hover .headline-2 a {
-    color: #4732d7;
+    color: #fff;
 }
 
 .news-style-1.color-style-2 .flickity-slider .master-news:first-child .content-wrap .master-button,
@@ -13112,7 +13112,7 @@ form.register .input-submit~span.lost_password a {
     position: absolute;
     left: 0;
     top: 3px;
-    color: #4732d7;
+    color: #fff;
 }
 
 .pricebox-style-1 .master-price-box {
@@ -13231,7 +13231,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-team .team-name:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .master-team .socials-wrap a {
@@ -13243,12 +13243,12 @@ form.register .input-submit~span.lost_password a {
     text-align: center;
     border-radius: 50%;
     margin: 0 10px;
-    color: #4732d7;
-    border: 1px solid #4732d7;
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .master-team .socials-wrap a:hover {
-    background-color: #4732d7;
+    background-color: #fff;
     color: #fff;
 }
 
@@ -13256,7 +13256,7 @@ form.register .input-submit~span.lost_password a {
 
 .master-team-carousel .master-team .content-wrap {
     padding: 33px 35px 26px;
-    background-color: #4732d7;
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -13660,7 +13660,7 @@ form.register .input-submit~span.lost_password a {
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #4732d7;
+    color: #fff;
     margin-bottom: 22px;
 }
 
@@ -13845,7 +13845,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-slick-slider .slick-dots>li.slick-active>button:after {
-    background-color: #4732d7;
+    background-color: #fff;
 }
 
 @media screen and (max-width: 575px) {
@@ -13907,7 +13907,7 @@ form.register .input-submit~span.lost_password a {
     font-weight: 500;
     text-align: center;
     background-color: rgba(54, 61, 72, 0.2);
-    color: #4732d7;
+    color: #fff;
     z-index: 1;
 }
 
@@ -14104,7 +14104,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-project-widget .widget-project-related .project-title:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 .master-project-widget .widget-project-related .project-cat {
@@ -14117,7 +14117,7 @@ form.register .input-submit~span.lost_password a {
 }
 
 .master-project-widget .widget-project-related .project-cat:hover {
-    color: #4732d7;
+    color: #fff;
 }
 
 /* widget socials */
@@ -14137,8 +14137,8 @@ form.register .input-submit~span.lost_password a {
 
 .master-project-widget .widget-socials a:hover {
     color: #fff;
-    background-color: #4732d7;
-    border-color: #4732d7;
+    background-color: #fff;
+    border-color: #fff;
 }
 
 /* ----------------------------------------

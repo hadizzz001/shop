@@ -39,7 +39,7 @@ export default function RootLayout({
     Social Tap
   </title>
   <meta
-    content="Bellroy aims to slim your wallet with designs that balance storage and access. Move the slider to see how much you could slim your wallet – and pocket."
+    content="At Social Tap, we're reshaping the way businesses connect."
     name="description"
     property=""
   />
@@ -56,7 +56,7 @@ export default function RootLayout({
   />
   <meta content="website" name="" property="og:type" />
   <meta
-    content="Bellroy aims to slim your wallet with designs that balance storage and access. Move the slider to see how much you could slim your wallet – and pocket."
+    content="At Social Tap, we're reshaping the way businesses connect."
     name=""
     property="og:description"
   />

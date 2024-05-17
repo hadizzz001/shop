@@ -23,9 +23,10 @@ const page = () => {
   const [allTemp1, setTemp1] = useState()
   const [allTemp2, setTemp2] = useState()
   const [value, setValue] = useState('');
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({style: 'white'});
   const [imgz, setImgs] = useState('');
   const [imgzz, setImgss] = useState('');
+  const [selectedOption, setSelectedOption] = useState('white');
   let b
   let b2
   const searchParams = useSearchParams()
@@ -43,16 +44,9 @@ const page = () => {
 
   useEffect(() => {
     setInputs((prevState) => ({ ...prevState, imgz: imgz[0], imgzz: imgzz[0] }));
-  }, [imgz , imgzz])
+  }, [imgz, imgzz])
 
 
-  function setCart() {
-    addToCart(allTemp1, inputs, 1);
-    if (targetRef.current) {
-      targetRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-    handleClickc()
-  }
 
 
 
@@ -102,6 +96,41 @@ const page = () => {
       }
     }
   }, [cat])
+
+
+
+
+
+
+
+
+
+
+  const fetchPrice = async () => {
+    const response = await fetchTemp4(search);
+    setTemp1(response);
+  };
+
+  useEffect(() => {
+    fetchPrice();
+  }, []);
+
+  const handleSelectChange = (event) => {
+    const newOption = event.target.value;
+    setSelectedOption(newOption);
+
+    if (!allTemp1) return;
+
+    const currentPrice = parseInt(allTemp1.price, 10);
+
+    if (newOption === 'black') {
+      setTemp1(prevState => ({ ...prevState, price: `${currentPrice + 5}` }));
+      setInputs(prevState => ({ ...prevState, style: 'black' }))
+    } else {
+      fetchPrice();
+      setInputs(prevState => ({ ...prevState, style: 'white' }))
+    }
+  };
 
 
 
@@ -207,7 +236,7 @@ const page = () => {
     }
   }
 
-  const gotocart = () => { 
+  const gotocart = () => {
     router.push('/checkout');
   };
 
@@ -220,6 +249,17 @@ const page = () => {
     });
     setErrors(newErrors);
   }, [cart]);
+
+
+
+
+
+  useEffect(() => {
+    console.log(inputs);
+  }, [inputs]);
+
+
+
 
 
 
@@ -319,7 +359,7 @@ const page = () => {
           </div>
 
 
-          
+
         </div>
         <div className=""></div>
 
@@ -405,6 +445,17 @@ const page = () => {
                 onChange={handleChange}
                 required
               />
+            </div>
+
+          </div>
+
+          <div className="form-group  pt-2">
+            <div className="">
+            <p className='mb-2'>Style</p>
+              <select value={selectedOption} onChange={handleSelectChange} style={{ width: '100%',padding: '.5em'}}>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+              </select>
             </div>
 
           </div>
@@ -1897,7 +1948,7 @@ const page = () => {
                     <span className="ProvidersIfSelectedProductMatchesFilter">
                       <p>
                         {desc}
-                      </p><br/>
+                      </p><br />
                     </span>
                   </div>
 
@@ -1910,21 +1961,21 @@ const page = () => {
                         content
                       ) : (
                         <>
-                        
-                        <p style={{ color: "#4acb4a", textAlign: "center", fontSize: "2em", fontWeight: "bolder" }}>Done!</p>
-                        <div className="">
-                        <div className=""></div>
-                        <div className="">
-                          <span className="ProvidersSingleProduct--selected">
-                            <button type="button" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} onClick={gotocart} >
-                              <span>CHECKOUT NOW</span>
-                            </button>
-                          </span>
-                        </div>
-                        <div className=""></div>
-                      </div>
-                      <br />
-                      </>
+
+                          <p style={{ color: "#4acb4a", textAlign: "center", fontSize: "2em", fontWeight: "bolder" }}>Done!</p>
+                          <div className="">
+                            <div className=""></div>
+                            <div className="">
+                              <span className="ProvidersSingleProduct--selected">
+                                <button type="button" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }} onClick={gotocart} >
+                                  <span>CHECKOUT NOW</span>
+                                </button>
+                              </span>
+                            </div>
+                            <div className=""></div>
+                          </div>
+                          <br />
+                        </>
                       )
 
                     ) : (

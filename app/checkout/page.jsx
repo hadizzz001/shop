@@ -8,9 +8,10 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { fetchRate1 } from '@/utils'
 import { LoadScript } from '@react-google-maps/api';
 import AddressForm from '../../components/AddressForm';
-import Checkout from '../../components/Checkout';
-import WrappedCheckoutForm from '../../components/CardElement';
+// import Checkout from '../../components/Checkout';
+// import WrappedCheckoutForm from '../../components/CardElement';
 import { useCart } from '../context/CartContext';
+import ElementsForm from "@/components/ElementsForm";
 
 
 const page = () => {
@@ -351,7 +352,7 @@ const page = () => {
                                 <style
                                   dangerouslySetInnerHTML={{
                                     __html:
-                                      "body #wfacp-e-form  #payment li.wc_payment_method input.input-radio:checked::before{background-color:#4732D7;}body #wfacp-e-form  #payment.wc_payment_method input[type=radio]:checked:before{background-color:#4732D7;}body #wfacp-e-form  button[type=submit]:not(.white):not(.black){background-color:#4732D7;}body #wfacp-e-form  button[type=button]:not(.white):not(.black){background-color:#4732D7;}body #wfacp-e-form .wfacp-coupon-section .wfacp-coupon-page .wfacp-coupon-field-btn{background-color:#4732D7;}body #wfacp-e-form input[type=checkbox]:checked{background-color:#4732D7;}body #wfacp-e-form #payment input[type=checkbox]:checked{background-color:#4732D7;}body #wfacp-e-form .wfacp_main_form.woocommerce .woocommerce-input-wrapper .wfacp-form-control:checked{background-color:#4732D7;}body #wfacp-e-form .wfacp_main_form.woocommerce input[type=checkbox]:checked{background-color:#4732D7;}body #wfacp-e-form .wfacp_main_form .button.button#place_order{background-color:#4732D7;}body #wfacp-e-form .wfacp_main_form .button.wfacp_next_page_button{background-color:#4732D7;}body #wfacp-e-form .wfacp_main_form  .wfacp_payment #ppcp-hosted-fields .button{background-color:#4732D7;}body #wfacp-e-form .form-row:not(.woocommerce-invalid-required-field) .wfacp-form-control:not(.input-checkbox):focus{border-color:#4732D7 ;}body #wfacp-e-form  p.form-row:not(.woocommerce-invalid-required-field) .wfacp-form-control:not(.input-checkbox):focus{box-shadow:0 0 0 1px #4732D7 ;}body #wfacp-e-form .wfacp_main_form .form-row:not(.woocommerce-invalid-required-field) .woocommerce-input-wrapper .select2-container .select2-selection--single .select2-selection__rendered:focus{border-color:#4732D7 ;}body #wfacp-e-form .wfacp_main_form.woocommerce .form-row:not(.woocommerce-invalid-required-field) .woocommerce-input-wrapper .select2-container .select2-selection--single .select2-selection__rendered:focus{box-shadow:0 0 0 1px #4732D7;}body #wfacp-e-form .wfacp_main_form .form-row:not(.woocommerce-invalid-required-field) .woocommerce-input-wrapper .select2-container .select2-selection--single:focus>span.select2-selection__rendered{box-shadow:0 0 0 1px #4732D7 ;}body #wfacp-e-form .wfacp_main_form.woocommerce #payment li.wc_payment_method input.input-radio:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form.woocommerce #payment.wc_payment_method input[type=radio]:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form.woocommerce input[type=radio]:checked{border-color:#4732D7;}body #wfacp-e-form input[type=radio]:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form.woocommerce #add_payment_method #payment ul.payment_methods li input[type=radio]:checked{border-color:#4732D7;}body #wfacp-e-form #payment ul.payment_methods li input[type=radio]:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form.woocommerce .woocommerce-cart #payment ul.payment_methods li input[type=radio]:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form.woocommerce .woocommerce-checkout #payment ul.payment_methods li input[type=radio]:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form.woocommerce #wfacp_checkout_form input[type=radio]:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp-form input[type=checkbox]:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form #payment input[type=checkbox]:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form .woocommerce-input-wrapper .wfacp-form-control:checked{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form input[type=checkbox]:checked{border-width: 8px;}body #wfacp-e-form .wfacp_main_form.woocommerce .form-row:not(.woocommerce-invalid-required-field) .woocommerce-input-wrapper .select2-container .select2-selection--single:focus>span.select2-selection__rendered{border-color:#4732D7;}body #wfacp-e-form .wfacp_main_form #payment li.wc_payment_method input.input-radio:checked{border-width:5px;}body #wfacp-e-form .wfacp_main_form #payment.wc_payment_method input[type=radio]:checked{border-width:5px;}body #wfacp-e-form .wfacp_main_form input[type=radio]:checked{border-width:5px;}body #wfacp-e-form .wfacp_main_form #add_payment_method #payment ul.payment_methods li input[type=radio]:checked{border-width:5px;}body #wfacp-e-form .wfacp_main_form input[type=checkbox]:after{display: block;}body #wfacp-e-form .wfacp_main_form input[type=checkbox]:before{display: none;}body #wfacp-e-form #payment li.wc_payment_method input.input-radio:checked::before{display:none;}body #wfacp-e-form #payment.wc_payment_method input[type=radio]:checked:before{display:none;}body #wfacp-e-form input[type=radio]:checked:before{display:none;}body #wfacp-e-form .wfacp_main_form.woocommerce input[type=radio]:checked:before{display:none;}"
+                                      "body #wfacp-e-form  #payment li.wc_payment_method input.input-radio:checked::before{background-color:#fff;}body #wfacp-e-form  #payment.wc_payment_method input[type=radio]:checked:before{background-color:#fff;}body #wfacp-e-form  button[type=submit]:not(.white):not(.black){background-color:#fff;}body #wfacp-e-form  button[type=button]:not(.white):not(.black){background-color:#fff;}body #wfacp-e-form .wfacp-coupon-section .wfacp-coupon-page .wfacp-coupon-field-btn{background-color:#fff;}body #wfacp-e-form input[type=checkbox]:checked{background-color:#fff;}body #wfacp-e-form #payment input[type=checkbox]:checked{background-color:#fff;}body #wfacp-e-form .wfacp_main_form.woocommerce .woocommerce-input-wrapper .wfacp-form-control:checked{background-color:#fff;}body #wfacp-e-form .wfacp_main_form.woocommerce input[type=checkbox]:checked{background-color:#fff;}body #wfacp-e-form .wfacp_main_form .button.button#place_order{background-color:#fff;}body #wfacp-e-form .wfacp_main_form .button.wfacp_next_page_button{background-color:#fff;}body #wfacp-e-form .wfacp_main_form  .wfacp_payment #ppcp-hosted-fields .button{background-color:#fff;}body #wfacp-e-form .form-row:not(.woocommerce-invalid-required-field) .wfacp-form-control:not(.input-checkbox):focus{border-color:#fff ;}body #wfacp-e-form  p.form-row:not(.woocommerce-invalid-required-field) .wfacp-form-control:not(.input-checkbox):focus{box-shadow:0 0 0 1px #fff ;}body #wfacp-e-form .wfacp_main_form .form-row:not(.woocommerce-invalid-required-field) .woocommerce-input-wrapper .select2-container .select2-selection--single .select2-selection__rendered:focus{border-color:#fff ;}body #wfacp-e-form .wfacp_main_form.woocommerce .form-row:not(.woocommerce-invalid-required-field) .woocommerce-input-wrapper .select2-container .select2-selection--single .select2-selection__rendered:focus{box-shadow:0 0 0 1px #fff;}body #wfacp-e-form .wfacp_main_form .form-row:not(.woocommerce-invalid-required-field) .woocommerce-input-wrapper .select2-container .select2-selection--single:focus>span.select2-selection__rendered{box-shadow:0 0 0 1px #fff ;}body #wfacp-e-form .wfacp_main_form.woocommerce #payment li.wc_payment_method input.input-radio:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form.woocommerce #payment.wc_payment_method input[type=radio]:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form.woocommerce input[type=radio]:checked{border-color:#fff;}body #wfacp-e-form input[type=radio]:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form.woocommerce #add_payment_method #payment ul.payment_methods li input[type=radio]:checked{border-color:#fff;}body #wfacp-e-form #payment ul.payment_methods li input[type=radio]:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form.woocommerce .woocommerce-cart #payment ul.payment_methods li input[type=radio]:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form.woocommerce .woocommerce-checkout #payment ul.payment_methods li input[type=radio]:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form.woocommerce #wfacp_checkout_form input[type=radio]:checked{border-color:#fff;}body #wfacp-e-form .wfacp-form input[type=checkbox]:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form #payment input[type=checkbox]:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form .woocommerce-input-wrapper .wfacp-form-control:checked{border-color:#fff;}body #wfacp-e-form .wfacp_main_form input[type=checkbox]:checked{border-width: 8px;}body #wfacp-e-form .wfacp_main_form.woocommerce .form-row:not(.woocommerce-invalid-required-field) .woocommerce-input-wrapper .select2-container .select2-selection--single:focus>span.select2-selection__rendered{border-color:#fff;}body #wfacp-e-form .wfacp_main_form #payment li.wc_payment_method input.input-radio:checked{border-width:5px;}body #wfacp-e-form .wfacp_main_form #payment.wc_payment_method input[type=radio]:checked{border-width:5px;}body #wfacp-e-form .wfacp_main_form input[type=radio]:checked{border-width:5px;}body #wfacp-e-form .wfacp_main_form #add_payment_method #payment ul.payment_methods li input[type=radio]:checked{border-width:5px;}body #wfacp-e-form .wfacp_main_form input[type=checkbox]:after{display: block;}body #wfacp-e-form .wfacp_main_form input[type=checkbox]:before{display: none;}body #wfacp-e-form #payment li.wc_payment_method input.input-radio:checked::before{display:none;}body #wfacp-e-form #payment.wc_payment_method input[type=radio]:checked:before{display:none;}body #wfacp-e-form input[type=radio]:checked:before{display:none;}body #wfacp-e-form .wfacp_main_form.woocommerce input[type=radio]:checked:before{display:none;}"
                                   }}
                                 />
                                 <style
@@ -559,16 +560,12 @@ const page = () => {
 
                                                 >
                                                   <li className="iti__country iti__standard" tabIndex={-1} id="iti-0__item-af" role="option" data-dial-code={93} onClick={handleClickzx} data-country-code="af" aria-selected="false" >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__af" />
-                                                    </div>
+ 
                                                     <span className="iti__country-name">Afghanistan (‫افغانستان‬‎)</span>
                                                     <span className="iti__dial-code">+93</span>
                                                   </li>
                                                   <li className="iti__country iti__standard" tabIndex={-1} id="iti-0__item-ax" role="option" data-dial-code={358} onClick={handleClickzx} data-country-code="ax" aria-selected="false" >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ax" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">Åland Islands</span>
                                                     <span className="iti__dial-code">+358</span>
                                                   </li>
@@ -581,9 +578,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="al"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__al" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Albania (Shqipëri)
                                                     </span>
@@ -600,9 +595,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="dz"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__dz" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Algeria (‫الجزائر‬‎)
                                                     </span>
@@ -619,9 +612,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="as"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__as" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       American Samoa
                                                     </span>
@@ -638,9 +629,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ad"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ad" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Andorra
                                                     </span>
@@ -657,9 +646,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ao"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ao" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Angola
                                                     </span>
@@ -676,9 +663,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ai"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ai" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Anguilla
                                                     </span>
@@ -695,9 +680,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ag"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ag" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Antigua and Barbuda
                                                     </span>
@@ -714,9 +697,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ar"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ar" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Argentina
                                                     </span>
@@ -733,9 +714,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="am"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__am" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Armenia (Հայաստան)
                                                     </span>
@@ -752,9 +731,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="aw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__aw" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Aruba
                                                     </span>
@@ -771,9 +748,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="au"
                                                     aria-selected="true"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__au" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Australia
                                                     </span>
@@ -790,9 +765,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="at"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__at" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Austria (Österreich)
                                                     </span>
@@ -809,9 +782,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="az"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__az" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Azerbaijan (Azərbaycan)
                                                     </span>
@@ -828,9 +799,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bs"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bs" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Bahamas
                                                     </span>
@@ -847,9 +816,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bh"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bh" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Bahrain (‫البحرين‬‎)
                                                     </span>
@@ -866,9 +833,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bd"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bd" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Bangladesh (বাংলাদেশ)
                                                     </span>
@@ -885,9 +850,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bb"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bb" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Barbados
                                                     </span>
@@ -904,9 +867,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="by"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__by" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Belarus (Беларусь)
                                                     </span>
@@ -923,9 +884,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="be"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__be" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Belgium (België)
                                                     </span>
@@ -942,9 +901,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bz"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bz" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Belize
                                                     </span>
@@ -961,9 +918,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bj"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bj" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Benin (Bénin)
                                                     </span>
@@ -980,9 +935,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bm" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Bermuda
                                                     </span>
@@ -999,9 +952,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bt"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bt" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Bhutan (འབྲུག)
                                                     </span>
@@ -1018,9 +969,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bo"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bo" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Bolivia
                                                     </span>
@@ -1037,9 +986,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ba"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ba" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Bosnia and Herzegovina (Босна и
                                                       Херцеговина)
@@ -1057,9 +1004,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bw" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Botswana
                                                     </span>
@@ -1076,9 +1021,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="br"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__br" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Brazil (Brasil)
                                                     </span>
@@ -1095,9 +1038,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="io"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__io" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       British Indian Ocean Territory
                                                     </span>
@@ -1114,9 +1055,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="vg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__vg" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       British Virgin Islands
                                                     </span>
@@ -1133,9 +1072,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bn" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Brunei
                                                     </span>
@@ -1152,9 +1089,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bg" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Bulgaria (България)
                                                     </span>
@@ -1171,9 +1106,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bf"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bf" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Burkina Faso
                                                     </span>
@@ -1190,9 +1123,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bi"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bi" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Burundi (Uburundi)
                                                     </span>
@@ -1209,9 +1140,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="kh"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__kh" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Cambodia (កម្ពុជា)
                                                     </span>
@@ -1228,9 +1157,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cm" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Cameroon (Cameroun)
                                                     </span>
@@ -1247,9 +1174,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ca"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ca" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Canada
                                                     </span>
@@ -1266,9 +1191,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cv"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cv" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Cape Verde (Kabu Verdi)
                                                     </span>
@@ -1285,9 +1208,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bq"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bq" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Caribbean Netherlands
                                                     </span>
@@ -1304,9 +1225,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ky"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ky" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Cayman Islands
                                                     </span>
@@ -1323,9 +1242,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cf"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cf" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Central African Republic
                                                       (République centrafricaine)
@@ -1343,9 +1260,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="td"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__td" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Chad (Tchad)
                                                     </span>
@@ -1362,9 +1277,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cl"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cl" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Chile
                                                     </span>
@@ -1381,9 +1294,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cn" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       China (中国)
                                                     </span>
@@ -1400,9 +1311,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cx"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cx" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Christmas Island
                                                     </span>
@@ -1419,9 +1328,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cc"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cc" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Cocos (Keeling) Islands
                                                     </span>
@@ -1438,9 +1345,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="co"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__co" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Colombia
                                                     </span>
@@ -1457,9 +1362,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="km"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__km" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Comoros (‫جزر القمر‬‎)
                                                     </span>
@@ -1476,9 +1379,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cd"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cd" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Congo (DRC) (Jamhuri ya
                                                       Kidemokrasia ya Kongo)
@@ -1496,9 +1397,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cg" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Congo (Republic)
                                                       (Congo-Brazzaville)
@@ -1516,9 +1415,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ck"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ck" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Cook Islands
                                                     </span>
@@ -1535,9 +1432,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cr" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Costa Rica
                                                     </span>
@@ -1554,9 +1449,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ci"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ci" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Côte d’Ivoire
                                                     </span>
@@ -1573,9 +1466,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="hr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__hr" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Croatia (Hrvatska)
                                                     </span>
@@ -1592,9 +1483,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cu"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cu" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Cuba
                                                     </span>
@@ -1611,9 +1500,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cw" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Curaçao
                                                     </span>
@@ -1630,9 +1517,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cy"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cy" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Cyprus (Κύπρος)
                                                     </span>
@@ -1649,9 +1534,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="cz"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__cz" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Czech Republic (Česká republika)
                                                     </span>
@@ -1668,9 +1551,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="dk"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__dk" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Denmark (Danmark)
                                                     </span>
@@ -1687,9 +1568,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="dj"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__dj" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Djibouti
                                                     </span>
@@ -1706,9 +1585,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="dm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__dm" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Dominica
                                                     </span>
@@ -1725,9 +1602,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="do"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__do" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Dominican Republic (República
                                                       Dominicana)
@@ -1745,9 +1620,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ec"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ec" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Ecuador
                                                     </span>
@@ -1764,9 +1637,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="eg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__eg" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Egypt (‫مصر‬‎)
                                                     </span>
@@ -1783,9 +1654,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sv"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sv" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       El Salvador
                                                     </span>
@@ -1802,9 +1671,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gq"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gq" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Equatorial Guinea (Guinea
                                                       Ecuatorial)
@@ -1822,9 +1689,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="er"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__er" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Eritrea
                                                     </span>
@@ -1841,9 +1706,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ee"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ee" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Estonia (Eesti)
                                                     </span>
@@ -1860,9 +1723,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sz"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sz" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Eswatini
                                                     </span>
@@ -1879,9 +1740,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="et"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__et" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Ethiopia
                                                     </span>
@@ -1898,9 +1757,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="fk"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__fk" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Falkland Islands (Islas
                                                       Malvinas)
@@ -1918,9 +1775,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="fo"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__fo" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Faroe Islands (Føroyar)
                                                     </span>
@@ -1937,9 +1792,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="fj"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__fj" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Fiji
                                                     </span>
@@ -1956,9 +1809,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="fi"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__fi" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Finland (Suomi)
                                                     </span>
@@ -1975,9 +1826,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="fr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__fr" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       France
                                                     </span>
@@ -1994,9 +1843,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gf"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gf" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       French Guiana (Guyane française)
                                                     </span>
@@ -2013,9 +1860,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pf"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pf" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       French Polynesia (Polynésie
                                                       française)
@@ -2033,9 +1878,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ga"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ga" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Gabon
                                                     </span>
@@ -2052,9 +1895,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gm" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Gambia
                                                     </span>
@@ -2071,9 +1912,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ge"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ge" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Georgia (საქართველო)
                                                     </span>
@@ -2090,9 +1929,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="de"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__de" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Germany (Deutschland)
                                                     </span>
@@ -2109,9 +1946,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gh"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gh" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Ghana (Gaana)
                                                     </span>
@@ -2128,9 +1963,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gi"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gi" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Gibraltar
                                                     </span>
@@ -2147,9 +1980,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gr" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Greece (Ελλάδα)
                                                     </span>
@@ -2166,9 +1997,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gl"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gl" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Greenland (Kalaallit Nunaat)
                                                     </span>
@@ -2185,9 +2014,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gd"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gd" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Grenada
                                                     </span>
@@ -2204,9 +2031,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gp"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gp" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Guadeloupe
                                                     </span>
@@ -2223,9 +2048,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gu"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gu" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Guam
                                                     </span>
@@ -2242,9 +2065,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gt"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gt" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Guatemala
                                                     </span>
@@ -2261,9 +2082,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gg" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Guernsey
                                                     </span>
@@ -2280,9 +2099,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gn" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Guinea (Guinée)
                                                     </span>
@@ -2299,9 +2116,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gw" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Guinea-Bissau (Guiné Bissau)
                                                     </span>
@@ -2318,9 +2133,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gy"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gy" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Guyana
                                                     </span>
@@ -2337,9 +2150,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ht"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ht" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Haiti
                                                     </span>
@@ -2356,9 +2167,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="hn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__hn" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Honduras
                                                     </span>
@@ -2375,9 +2184,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="hk"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__hk" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Hong Kong (香港)
                                                     </span>
@@ -2393,10 +2200,7 @@ const page = () => {
                                                     data-dial-code={36}
                                                     onClick={handleClickzx} data-country-code="hu"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__hu" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Hungary (Magyarország)
                                                     </span>
@@ -2412,10 +2216,7 @@ const page = () => {
                                                     data-dial-code={354}
                                                     onClick={handleClickzx} data-country-code="is"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__is" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Iceland (Ísland)
                                                     </span>
@@ -2431,10 +2232,7 @@ const page = () => {
                                                     data-dial-code={91}
                                                     onClick={handleClickzx} data-country-code="in"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__in" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       India (भारत)
                                                     </span>
@@ -2450,10 +2248,7 @@ const page = () => {
                                                     data-dial-code={62}
                                                     onClick={handleClickzx} data-country-code="id"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__id" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Indonesia
                                                     </span>
@@ -2469,10 +2264,7 @@ const page = () => {
                                                     data-dial-code={98}
                                                     onClick={handleClickzx} data-country-code="ir"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ir" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Iran (‫ایران‬‎)
                                                     </span>
@@ -2488,10 +2280,7 @@ const page = () => {
                                                     data-dial-code={964}
                                                     onClick={handleClickzx} data-country-code="iq"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__iq" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Iraq (‫العراق‬‎)
                                                     </span>
@@ -2507,10 +2296,7 @@ const page = () => {
                                                     data-dial-code={353}
                                                     onClick={handleClickzx} data-country-code="ie"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ie" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Ireland
                                                     </span>
@@ -2526,10 +2312,7 @@ const page = () => {
                                                     data-dial-code={44}
                                                     onClick={handleClickzx} data-country-code="im"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__im" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Isle of Man
                                                     </span>
@@ -2545,10 +2328,7 @@ const page = () => {
                                                     data-dial-code={972}
                                                     onClick={handleClickzx} data-country-code="il"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__il" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Israel (‫ישראל‬‎)
                                                     </span>
@@ -2564,10 +2344,7 @@ const page = () => {
                                                     data-dial-code={39}
                                                     onClick={handleClickzx} data-country-code="it"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__it" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Italy (Italia)
                                                     </span>
@@ -2583,10 +2360,7 @@ const page = () => {
                                                     data-dial-code={1}
                                                     onClick={handleClickzx} data-country-code="jm"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__jm" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Jamaica
                                                     </span>
@@ -2602,10 +2376,7 @@ const page = () => {
                                                     data-dial-code={81}
                                                     onClick={handleClickzx} data-country-code="jp"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__jp" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Japan (日本)
                                                     </span>
@@ -2621,10 +2392,7 @@ const page = () => {
                                                     data-dial-code={44}
                                                     onClick={handleClickzx} data-country-code="je"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__je" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Jersey
                                                     </span>
@@ -2640,10 +2408,7 @@ const page = () => {
                                                     data-dial-code={962}
                                                     onClick={handleClickzx} data-country-code="jo"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__jo" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Jordan (‫الأردن‬‎)
                                                     </span>
@@ -2659,10 +2424,7 @@ const page = () => {
                                                     data-dial-code={7}
                                                     onClick={handleClickzx} data-country-code="kz"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__kz" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Kazakhstan (Казахстан)
                                                     </span>
@@ -2678,10 +2440,7 @@ const page = () => {
                                                     data-dial-code={254}
                                                     onClick={handleClickzx} data-country-code="ke"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ke" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Kenya
                                                     </span>
@@ -2697,10 +2456,7 @@ const page = () => {
                                                     data-dial-code={686}
                                                     onClick={handleClickzx} data-country-code="ki"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ki" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Kiribati
                                                     </span>
@@ -2716,10 +2472,7 @@ const page = () => {
                                                     data-dial-code={965}
                                                     onClick={handleClickzx} data-country-code="kw"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__kw" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Kuwait (‫الكويت‬‎)
                                                     </span>
@@ -2735,10 +2488,7 @@ const page = () => {
                                                     data-dial-code={996}
                                                     onClick={handleClickzx} data-country-code="kg"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__kg" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Kyrgyzstan (Кыргызстан)
                                                     </span>
@@ -2754,10 +2504,7 @@ const page = () => {
                                                     data-dial-code={856}
                                                     onClick={handleClickzx} data-country-code="la"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__la" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Laos (ລາວ)
                                                     </span>
@@ -2773,10 +2520,7 @@ const page = () => {
                                                     data-dial-code={371}
                                                     onClick={handleClickzx} data-country-code="lv"
                                                     aria-selected="false"
-                                                  >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__lv" />
-                                                    </div>
+                                                  > 
                                                     <span className="iti__country-name">
                                                       Latvia (Latvija)
                                                     </span>
@@ -2793,9 +2537,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="lb"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__lb" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Lebanon (‫لبنان‬‎)
                                                     </span>
@@ -2812,9 +2554,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ls"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ls" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Lesotho
                                                     </span>
@@ -2831,9 +2571,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="lr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__lr" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Liberia
                                                     </span>
@@ -2850,9 +2588,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ly"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ly" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Libya (‫ليبيا‬‎)
                                                     </span>
@@ -2869,9 +2605,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="li"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__li" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Liechtenstein
                                                     </span>
@@ -2888,9 +2622,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="lt"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__lt" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Lithuania (Lietuva)
                                                     </span>
@@ -2907,9 +2639,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="lu"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__lu" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Luxembourg
                                                     </span>
@@ -2926,9 +2656,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mo"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mo" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Macau (澳門)
                                                     </span>
@@ -2945,9 +2673,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mg" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Madagascar (Madagasikara)
                                                     </span>
@@ -2964,9 +2690,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mw" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Malawi
                                                     </span>
@@ -2983,9 +2707,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="my"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__my" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Malaysia
                                                     </span>
@@ -3002,9 +2724,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mv"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mv" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Maldives
                                                     </span>
@@ -3021,9 +2741,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ml"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ml" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Mali
                                                     </span>
@@ -3040,9 +2758,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mt"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mt" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Malta
                                                     </span>
@@ -3059,9 +2775,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mh"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mh" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Marshall Islands
                                                     </span>
@@ -3078,9 +2792,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mq"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mq" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Martinique
                                                     </span>
@@ -3097,9 +2809,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mr" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Mauritania (‫موريتانيا‬‎)
                                                     </span>
@@ -3116,9 +2826,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mu"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mu" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Mauritius (Moris)
                                                     </span>
@@ -3135,9 +2843,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="yt"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__yt" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Mayotte
                                                     </span>
@@ -3154,9 +2860,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mx"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mx" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Mexico (México)
                                                     </span>
@@ -3173,9 +2877,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="fm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__fm" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Micronesia
                                                     </span>
@@ -3192,9 +2894,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="md"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__md" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Moldova (Republica Moldova)
                                                     </span>
@@ -3211,9 +2911,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mc"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mc" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Monaco
                                                     </span>
@@ -3230,9 +2928,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mn" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Mongolia (Монгол)
                                                     </span>
@@ -3249,9 +2945,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="me"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__me" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Montenegro (Crna Gora)
                                                     </span>
@@ -3268,9 +2962,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ms"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ms" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Montserrat
                                                     </span>
@@ -3287,9 +2979,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ma"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ma" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Morocco (‫المغرب‬‎)
                                                     </span>
@@ -3306,9 +2996,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mz"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mz" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Mozambique (Moçambique)
                                                     </span>
@@ -3325,9 +3013,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mm" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Myanmar (Burma) (မြန်မာ)
                                                     </span>
@@ -3344,9 +3030,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="na"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__na" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Namibia (Namibië)
                                                     </span>
@@ -3363,9 +3047,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="nr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__nr" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Nauru
                                                     </span>
@@ -3382,9 +3064,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="np"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__np" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Nepal (नेपाल)
                                                     </span>
@@ -3401,9 +3081,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="nl"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__nl" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Netherlands (Nederland)
                                                     </span>
@@ -3420,9 +3098,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="nc"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__nc" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       New Caledonia
                                                       (Nouvelle-Calédonie)
@@ -3440,9 +3116,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="nz"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__nz" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       New Zealand
                                                     </span>
@@ -3459,9 +3133,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ni"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ni" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Nicaragua
                                                     </span>
@@ -3478,9 +3150,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ne"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ne" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Niger (Nijar)
                                                     </span>
@@ -3497,9 +3167,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ng"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ng" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Nigeria
                                                     </span>
@@ -3516,9 +3184,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="nu"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__nu" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Niue
                                                     </span>
@@ -3535,9 +3201,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="nf"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__nf" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Norfolk Island
                                                     </span>
@@ -3554,9 +3218,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="kp"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__kp" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       North Korea (조선 민주주의 인민
                                                       공화국)
@@ -3574,9 +3236,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mk"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mk" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       North Macedonia (Македонија)
                                                     </span>
@@ -3593,9 +3253,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mp"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mp" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Northern Mariana Islands
                                                     </span>
@@ -3612,9 +3270,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="no"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__no" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Norway (Norge)
                                                     </span>
@@ -3631,9 +3287,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="om"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__om" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Oman (‫عُمان‬‎)
                                                     </span>
@@ -3650,9 +3304,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pk"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pk" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Pakistan (‫پاکستان‬‎)
                                                     </span>
@@ -3669,9 +3321,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pw" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Palau
                                                     </span>
@@ -3688,9 +3338,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ps"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ps" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Palestine (‫فلسطين‬‎)
                                                     </span>
@@ -3707,9 +3355,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pa"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pa" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Panama (Panamá)
                                                     </span>
@@ -3726,9 +3372,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pg" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Papua New Guinea
                                                     </span>
@@ -3745,9 +3389,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="py"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__py" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Paraguay
                                                     </span>
@@ -3764,9 +3406,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pe"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pe" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Peru (Perú)
                                                     </span>
@@ -3783,9 +3423,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ph"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ph" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Philippines
                                                     </span>
@@ -3802,9 +3440,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pl"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pl" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Poland (Polska)
                                                     </span>
@@ -3821,9 +3457,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pt"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pt" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Portugal
                                                     </span>
@@ -3840,9 +3474,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pr" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Puerto Rico
                                                     </span>
@@ -3859,9 +3491,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="qa"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__qa" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Qatar (‫قطر‬‎)
                                                     </span>
@@ -3878,9 +3508,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="re"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__re" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Réunion (La Réunion)
                                                     </span>
@@ -3897,9 +3525,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ro"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ro" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Romania (România)
                                                     </span>
@@ -3916,9 +3542,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ru"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ru" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Russia (Россия)
                                                     </span>
@@ -3935,9 +3559,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="rw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__rw" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Rwanda
                                                     </span>
@@ -3954,9 +3576,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="bl"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__bl" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Saint Barthélemy
                                                     </span>
@@ -3973,9 +3593,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sh"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sh" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Saint Helena
                                                     </span>
@@ -3992,9 +3610,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="kn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__kn" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Saint Kitts and Nevis
                                                     </span>
@@ -4011,9 +3627,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="lc"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__lc" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Saint Lucia
                                                     </span>
@@ -4030,9 +3644,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="mf"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__mf" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Saint Martin (Saint-Martin
                                                       (partie française))
@@ -4050,9 +3662,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="pm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__pm" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Saint Pierre and Miquelon
                                                       (Saint-Pierre-et-Miquelon)
@@ -4070,9 +3680,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="vc"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__vc" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Saint Vincent and the Grenadines
                                                     </span>
@@ -4089,9 +3697,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ws"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ws" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Samoa
                                                     </span>
@@ -4108,9 +3714,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sm" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       San Marino
                                                     </span>
@@ -4127,9 +3731,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="st"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__st" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       São Tomé and Príncipe (São Tomé
                                                       e Príncipe)
@@ -4147,9 +3749,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sa"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sa" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Saudi Arabia (‫المملكة العربية
                                                       السعودية‬‎)
@@ -4167,9 +3767,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sn" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Senegal (Sénégal)
                                                     </span>
@@ -4186,9 +3784,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="rs"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__rs" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Serbia (Србија)
                                                     </span>
@@ -4205,9 +3801,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sc"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sc" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Seychelles
                                                     </span>
@@ -4224,9 +3818,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sl"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sl" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Sierra Leone
                                                     </span>
@@ -4243,9 +3835,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sg" />
-                                                    </div>
+                                                  
                                                     <span className="iti__country-name">
                                                       Singapore
                                                     </span>
@@ -4262,9 +3852,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sx"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sx" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Sint Maarten
                                                     </span>
@@ -4281,9 +3869,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sk"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sk" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Slovakia (Slovensko)
                                                     </span>
@@ -4300,9 +3886,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="si"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__si" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Slovenia (Slovenija)
                                                     </span>
@@ -4319,9 +3903,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sb"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sb" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Solomon Islands
                                                     </span>
@@ -4338,9 +3920,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="so"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__so" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Somalia (Soomaaliya)
                                                     </span>
@@ -4357,9 +3937,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="za"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__za" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       South Africa
                                                     </span>
@@ -4376,9 +3954,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="kr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__kr" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       South Korea (대한민국)
                                                     </span>
@@ -4395,9 +3971,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ss"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ss" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       South Sudan (‫جنوب السودان‬‎)
                                                     </span>
@@ -4414,9 +3988,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="es"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__es" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Spain (España)
                                                     </span>
@@ -4433,9 +4005,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="lk"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__lk" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Sri Lanka (ශ්‍රී ලංකාව)
                                                     </span>
@@ -4452,9 +4022,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sd"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sd" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Sudan (‫السودان‬‎)
                                                     </span>
@@ -4471,9 +4039,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sr" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Suriname
                                                     </span>
@@ -4490,9 +4056,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sj"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sj" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Svalbard and Jan Mayen
                                                     </span>
@@ -4509,9 +4073,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="se"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__se" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Sweden (Sverige)
                                                     </span>
@@ -4528,9 +4090,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ch"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ch" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Switzerland (Schweiz)
                                                     </span>
@@ -4547,9 +4107,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="sy"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__sy" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Syria (‫سوريا‬‎)
                                                     </span>
@@ -4566,9 +4124,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tw" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Taiwan (台灣)
                                                     </span>
@@ -4585,9 +4141,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tj"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tj" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Tajikistan
                                                     </span>
@@ -4604,9 +4158,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tz"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tz" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Tanzania
                                                     </span>
@@ -4623,9 +4175,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="th"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__th" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Thailand (ไทย)
                                                     </span>
@@ -4642,9 +4192,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tl"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tl" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Timor-Leste
                                                     </span>
@@ -4661,9 +4209,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tg"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tg" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Togo
                                                     </span>
@@ -4680,9 +4226,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tk"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tk" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Tokelau
                                                     </span>
@@ -4699,9 +4243,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="to"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__to" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Tonga
                                                     </span>
@@ -4718,9 +4260,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tt"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tt" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Trinidad and Tobago
                                                     </span>
@@ -4737,9 +4277,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tn" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Tunisia (‫تونس‬‎)
                                                     </span>
@@ -4756,9 +4294,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tr"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tr" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Turkey (Türkiye)
                                                     </span>
@@ -4775,9 +4311,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tm" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Turkmenistan
                                                     </span>
@@ -4794,9 +4328,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tc"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tc" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Turks and Caicos Islands
                                                     </span>
@@ -4813,9 +4345,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="tv"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__tv" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Tuvalu
                                                     </span>
@@ -4832,9 +4362,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="vi"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__vi" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       U.S. Virgin Islands
                                                     </span>
@@ -4851,9 +4379,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ug"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ug" />
-                                                    </div>
+                                                   
                                                     <span className="iti__country-name">
                                                       Uganda
                                                     </span>
@@ -4870,9 +4396,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ua"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ua" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Ukraine (Україна)
                                                     </span>
@@ -4889,9 +4413,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ae"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ae" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       United Arab Emirates (‫الإمارات
                                                       العربية المتحدة‬‎)
@@ -4909,9 +4431,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="gb"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__gb" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       United Kingdom
                                                     </span>
@@ -4928,9 +4448,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="us"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__us" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       United States
                                                     </span>
@@ -4947,9 +4465,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="uy"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__uy" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Uruguay
                                                     </span>
@@ -4966,9 +4482,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="uz"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__uz" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Uzbekistan (Oʻzbekiston)
                                                     </span>
@@ -4985,9 +4499,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="vu"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__vu" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Vanuatu
                                                     </span>
@@ -5004,9 +4516,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="va"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__va" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Vatican City (Città del
                                                       Vaticano)
@@ -5024,9 +4534,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ve"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ve" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Venezuela
                                                     </span>
@@ -5043,9 +4551,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="vn"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__vn" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Vietnam (Việt Nam)
                                                     </span>
@@ -5062,9 +4568,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="wf"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__wf" />
-                                                    </div>
+                                                    
                                                     <span className="iti__country-name">
                                                       Wallis and Futuna
                                                       (Wallis-et-Futuna)
@@ -5082,9 +4586,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="eh"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__eh" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Western Sahara (‫الصحراء
                                                       الغربية‬‎)
@@ -5102,9 +4604,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="ye"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__ye" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Yemen (‫اليمن‬‎)
                                                     </span>
@@ -5121,9 +4621,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="zm"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__zm" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Zambia
                                                     </span>
@@ -5140,9 +4638,7 @@ const page = () => {
                                                     onClick={handleClickzx} data-country-code="zw"
                                                     aria-selected="false"
                                                   >
-                                                    <div className="iti__flag-box">
-                                                      <div className="iti__flag iti__zw" />
-                                                    </div>
+                                                     
                                                     <span className="iti__country-name">
                                                       Zimbabwe
                                                     </span>
@@ -5376,7 +4872,8 @@ const page = () => {
                                   </div>
                                 </form>
 
-                                <Checkout personal={inputs} />
+                                {/* <Checkout personal={inputs} /> */}
+                                <ElementsForm personal={inputs}/>
 
 
                               </div>
