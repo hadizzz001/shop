@@ -112,6 +112,12 @@ export default function Home() {
   }}
 />
 
+<style
+  dangerouslySetInnerHTML={{
+    __html: "\n.u-section-1 .u-btn-2 {\n margin: auto;\n}\n<style/>\n"
+  }}
+/>
+
 
 </>
 
