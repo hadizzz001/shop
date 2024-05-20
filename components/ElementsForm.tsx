@@ -251,7 +251,7 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
                 elements,
                 clientSecret,
                 confirmParams: {
-                    return_url: "https://socialbang.netlify.app/done",
+                    return_url: "https://socialtapnfc.au/done",
                     payment_method_data: {
                         billing_details: {
                             name: "Customer",

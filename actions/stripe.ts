@@ -35,11 +35,11 @@ export async function createCheckoutSession(
         },
       ],
       ...(ui_mode === "hosted" && {
-        success_url: "https://socialbang.netlify.app/done",
-        cancel_url: "https://socialbang.netlify.app/checkout",
+        success_url: "https://socialtapnfc.au/done",
+        cancel_url: "https://socialtapnfc.au/checkout",
       }),
       ...(ui_mode === "embedded" && {
-        return_url: "https://socialbang.netlify.app/done",
+        return_url: "https://socialtapnfc.au/done",
       }),
       ui_mode,
     });
