@@ -57,6 +57,7 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
 
     const stripe = useStripe();
     const elements = useElements();
+    const ttotal = finalTotal.totalPrice + personal.shipping
 
 
 
@@ -124,7 +125,8 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
                 },
 
                 body: JSON.stringify({
-                    data123: "abc",
+                    cart,
+                    personal,
                     htmlContent: `
                             <html>
                             <head>
@@ -229,7 +231,7 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
                               </div>
                               <div className="flex justify-between mb-2">
                               <span style="font-weight:bolder; font-size:25px">Total : </span>
-                              <span style="font-weight:bolder; font-size:25px">$ ${finalTotal.totalPrice + personal.shipping}</span>
+                              <span style="font-weight:bolder; font-size:25px">$ ${ttotal}</span>
                           </div>
                               
         

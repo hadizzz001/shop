@@ -373,18 +373,14 @@ a:hover {
 
 
 @media (min-width: 1300px) {
-  .wallet-image {
-    content: url("https://res.cloudinary.com/duppvjinz/image/upload/v1705952784/wvl2fayuv06gcds8jrmn.webp")
-  }
+   
 }
 
 
 
 
 @media (max-width: 1199px) {
-  .wallet-image {
-    content: url("https://res.cloudinary.com/duppvjinz/image/upload/v1710874485/driq7bfudzttnbkogjst.webp")
-  }
+  
 
   #PageMenuPreHeader {
     background-color: #fff
@@ -556,4 +552,21 @@ button:focus {
 
 
 
+
  
+.wallet-image {
+  display: none;
+}
+
+.wallet-image.desktop {
+  display: block;  
+}
+
+@media (max-width: 768px) {
+  .wallet-image.desktop {
+    display: none;
+  }
+  .wallet-image.mobile {
+    display: block;  
+  }
+}

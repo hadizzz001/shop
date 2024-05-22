@@ -1,27 +1,28 @@
 // "use client"; 
 import { fetchTemp } from '@/utils'
-import { useState, useEffect } from "react"; 
-import Products from './Products'; 
+import { useState, useEffect } from "react";
+import Products from './Products';
 import Work from './Work';
 import Contact from './Contact';
 import Feature from './Feature';
 import Design from './Design';
 import Review from './Review';
 import Rate from './Rate';
+import Image from 'next/image';
 
 
 
 const Body = () => {
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  },[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   return (
 
     <div>
-     
+
       <>
- 
+
 
         <div className="topBannerWrapper"></div>
 
@@ -42,7 +43,7 @@ const Body = () => {
             </div>
           </form>
         </div>
-         
+
         {/* Regular shipping rule applies */}
         <style
           type="text/css"
@@ -84,7 +85,7 @@ const Body = () => {
             __html:
               ".MiniCart_Cart_Accordion{position:relative;font-size:12px;line-height:15px;letter-spacing:0.5px;background-color:#ffffff}.MiniCart_Cart_Accordion-Toggle{position:absolute;opacity:0;height:0;width:0}.MiniCart_Cart_Accordion-Toggle:checked~p{display:block}.MiniCart_Cart_Accordion-Arrow{content:\" \";display:block;height:8px;width:8px;border-width:0 2px 2px 0;border-style:solid;transform:rotate(45deg);transform-origin:66% 66%;transition:transform 0.2s ease;position:absolute;top:10px;right:16px}.MiniCart_Cart_Accordion__MessageLabel{position:relative;display:flex;align-items:center;justify-content:center;border:none;width:100%;padding:7px 24px;cursor:pointer;z-index:1;background-color:transparent}.MiniCart_Cart_Accordion__MessageLabel:after{content:' ';height:8px;width:8px;border-width:0 2px 2px 0;border-style:solid;transform:rotate(45deg);transform-origin:66% 66%;transition:transform 0.2s ease;position:absolute;top:4px;right:8px;display:none}.MiniCart_Cart_Accordion-Toggle:checked~.MiniCart_Cart_Accordion-Arrow{transform:rotate(225deg)}@keyframes fadeInAnimation{0%{opacity:0}100%{opacity:1}}.MiniCart_Cart_Accordion__MessageLabel span{opacity:0}.MiniCart_Cart_Accordion__MessageLabel span{animation:fadeInAnimation ease 3s 1 forwards}\n"
           }}
-        /> 
+        />
         <div id="contentWrapper" />
         <style
           media="screen"
@@ -95,15 +96,26 @@ const Body = () => {
         />
         <div className="syw-container">
           <div className=" image-container">
-            <img
-              className="wallet-image"
-              alt="wallet-comparison" 
-              sizes="100%" />
+            
+            <Image
+              className="wallet-image desktop"
+              src="https://res.cloudinary.com/duppvjinz/image/upload/v1705952784/wvl2fayuv06gcds8jrmn.webp"
+              alt="background"
+              fill
+ 
+            />
+            <Image
+              className="wallet-image mobile"
+              src="https://res.cloudinary.com/duppvjinz/image/upload/v1710874485/driq7bfudzttnbkogjst.webp"
+              alt="background"
+              fill
+              
+            />
           </div>
 
-          
-          
-          
+
+
+
         </div>
         <style
           type="text/css"
@@ -112,7 +124,7 @@ const Body = () => {
               '.syw-usps{padding:20px 10px;background-color:#EFEFEF}.syw-usps>ul{padding:0;list-style-type:none;display:grid;grid-template-columns:repeat(3, 1fr);grid-gap:10px;max-width:550px;margin:0 auto}.syw-usps>ul>li{align-self:start;justify-self:center}.syw-usps>ul>li>.icon{background-color:#FFF;border-radius:50%;width:40px;height:40px;margin:0 auto;padding:8px;display:flex;justify-content:center;align-items:center}.syw-usps>ul>li>.icon>svg{height:95%;fill:#608A8C}.syw-usps>ul>li>span{display:block;font-family:"Lato", sans-serif;-webkit-font-smoothing:antialiased;font-size:12px;font-weight:bold;text-align:center;letter-spacing:1px;line-height:17px;color:#608A8C;padding-top:8px}.syw-usps>ul>li:first-child>span{padding:8px 14px 0}@media (min-width: 811px){.syw-usps{padding:16px 0}.syw-usps>ul{max-width:1000px}.syw-usps>ul>li{display:flex;align-items:center}.syw-usps>ul>li>.icon{width:58px;height:58px;padding:12px;background-color:unset}.syw-usps>ul>li>span{font-size:14px;padding-top:0;margin-left:5px;text-align:left}.syw-usps>ul>li:first-child>span{padding:0}}\n'
           }}
         />
-        
+
 
         <style
           type="text/css"
@@ -128,87 +140,87 @@ const Body = () => {
               ".ContentBlockLoader--syw-2020-below-fold{height:45vh;display:grid;align-items:center;text-align:center}@media (min-width: 701px){.ContentBlockLoader--syw-2020-below-fold{display:none}}\n"
           }}
         />
-        
-
-        
-
-<div id="usp-scroll-to"></div>
-
-          <Products /> 
-          <Design/>
-
-          <style
-            type="text/css"
-            dangerouslySetInnerHTML={{
-              __html:
-                ".sywMobileQuotes{background-color:#ea6a2b;padding:35px 0 0}.sywMobileQuotes__quoteIcon{max-width:35px;margin:0 auto}.sywMobileQuotes__quoteIcon img{width:100%}.sywMobileQuotes__title{text-align:center;color:#FFF;margin:25px auto 0}.sywMobileQuotes--quoteSlider{position:relative;background-color:transparent;color:#FFF;overflow:hidden;z-index:1}.sywMobileQuotes__content{text-align:center;display:flex;width:100%;overflow-x:scroll;scroll-snap-type:both mandatory;padding:15px 0 80px}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide{display:flex;flex-direction:column;justify-content:center;background-color:#ea6a2b;min-width:100%;scroll-snap-align:start;scroll-snap-stop:always;-webkit-overflow-scrolling:touch}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .logo{height:15vw;max-height:25px;margin:0 auto}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .logo>img{height:100%}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .text{padding:10px 20px 25px;max-width:375px;margin:0 auto}.sywMobileQuotes--quoteSlider .quoteDots{position:absolute;left:50%;bottom:10px;transform:translate(-50%);z-index:10;list-style:none;padding:0}.sywMobileQuotes--quoteSlider .quoteDots__dot{display:inline;margin:0 5px;padding:0;list-style:none;cursor:pointer}.sywMobileQuotes--quoteSlider .quoteDots__dot.quote_dot_active span{background:#FFF}.sywMobileQuotes--quoteSlider .quoteDots__dot span{display:inline-block;width:12px;height:12px;border:1px solid #FFF;border-radius:50%;pointer-event:none}@media (pointer: fine){.sywMobileQuotes__content{overflow-x:hidden;padding:40px 0 100px}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide{box-sizing:content-box}}@media (min-width: 769px){.sywMobileQuotes{display:none}}\n"
-            }}
-          />
 
 
 
 
-<Work/>
-<Contact/>
-<Feature/>
+        <div id="usp-scroll-to"></div>
 
-<Review />
-      <Rate />
+        <Products />
+        <Design />
 
-          <style
-            type="text/css"
-            dangerouslySetInnerHTML={{
-              __html:
-                ".sywPaymentOptions{background-color:transparent;color:#231f20;padding:30px 10px;text-align:center}.sywPaymentOptions>h2{margin:0 0 25px}.sywPaymentOptions>ul{padding:0;margin:0 auto;display:flex;flex-direction:row;align-items:center;justify-content:center;list-style:none}.sywPaymentOptions>ul>li{display:flex;margin:0 4%}.sywPaymentOptions>ul>li>img{max-height:22px;min-height:12px;height:3.5vw}.sywPaymentOptions>ul>li.mastercard>img{max-height:40px;min-height:23px}.sywPaymentOptions>ul>li.apple-pay>img,.sywPaymentOptions>ul>li.amex>img{min-height:16px}@media (min-width: 811px){.sywPaymentOptions>ul>li{display:flex;margin:0 2.8%}}\n"
-            }}
-          />
-          <div className="sywPaymentOptions">
-            <h2 className="br_text-2xl-serif md:br_text-3xl-serif">
-              Safe, easy payment options
-            </h2>
-            <ul>
-              <li>
-                <img
-                  className=" ls-is-cached lazyloaded"
-                  sizes="100vw"
-                  src="https://bellroy-cms-images.imgix.net/4420/payment-icons-visa.png?auto=format&fit=max"
-                />
-              </li>
-              <li className="mastercard">
-                <img
-                  className=" ls-is-cached lazyloaded"
-                  sizes="100vw"
-                  src="https://bellroy-cms-images.imgix.net/4423/payment-icons-mastercard-2.png?auto=format&fit=max"
-                />
-              </li>
-              <li>
-                <img
-                  className=" ls-is-cached lazyloaded"
-                  sizes="100vw"
-                  src="https://bellroy-cms-images.imgix.net/4421/payment-icons-paypal.png?auto=format&fit=max"
-                />
-              </li>
-              <li className="apple-pay">
-                <img
-                  className=" ls-is-cached lazyloaded"
-                  sizes="100vw"
-                  src="https://bellroy-cms-images.imgix.net/4422/payment-icons-applepay.png?auto=format&fit=max"
-                />
-              </li>
-            </ul>
-          </div>
-         
+        <style
+          type="text/css"
+          dangerouslySetInnerHTML={{
+            __html:
+              ".sywMobileQuotes{background-color:#ea6a2b;padding:35px 0 0}.sywMobileQuotes__quoteIcon{max-width:35px;margin:0 auto}.sywMobileQuotes__quoteIcon img{width:100%}.sywMobileQuotes__title{text-align:center;color:#FFF;margin:25px auto 0}.sywMobileQuotes--quoteSlider{position:relative;background-color:transparent;color:#FFF;overflow:hidden;z-index:1}.sywMobileQuotes__content{text-align:center;display:flex;width:100%;overflow-x:scroll;scroll-snap-type:both mandatory;padding:15px 0 80px}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide{display:flex;flex-direction:column;justify-content:center;background-color:#ea6a2b;min-width:100%;scroll-snap-align:start;scroll-snap-stop:always;-webkit-overflow-scrolling:touch}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .logo{height:15vw;max-height:25px;margin:0 auto}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .logo>img{height:100%}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .text{padding:10px 20px 25px;max-width:375px;margin:0 auto}.sywMobileQuotes--quoteSlider .quoteDots{position:absolute;left:50%;bottom:10px;transform:translate(-50%);z-index:10;list-style:none;padding:0}.sywMobileQuotes--quoteSlider .quoteDots__dot{display:inline;margin:0 5px;padding:0;list-style:none;cursor:pointer}.sywMobileQuotes--quoteSlider .quoteDots__dot.quote_dot_active span{background:#FFF}.sywMobileQuotes--quoteSlider .quoteDots__dot span{display:inline-block;width:12px;height:12px;border:1px solid #FFF;border-radius:50%;pointer-event:none}@media (pointer: fine){.sywMobileQuotes__content{overflow-x:hidden;padding:40px 0 100px}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide{box-sizing:content-box}}@media (min-width: 769px){.sywMobileQuotes{display:none}}\n"
+          }}
+        />
+
+
+
+
+        <Work />
+        <Contact />
+        <Feature />
+
+        <Review />
+        <Rate />
+
+        <style
+          type="text/css"
+          dangerouslySetInnerHTML={{
+            __html:
+              ".sywPaymentOptions{background-color:transparent;color:#231f20;padding:30px 10px;text-align:center}.sywPaymentOptions>h2{margin:0 0 25px}.sywPaymentOptions>ul{padding:0;margin:0 auto;display:flex;flex-direction:row;align-items:center;justify-content:center;list-style:none}.sywPaymentOptions>ul>li{display:flex;margin:0 4%}.sywPaymentOptions>ul>li>img{max-height:22px;min-height:12px;height:3.5vw}.sywPaymentOptions>ul>li.mastercard>img{max-height:40px;min-height:23px}.sywPaymentOptions>ul>li.apple-pay>img,.sywPaymentOptions>ul>li.amex>img{min-height:16px}@media (min-width: 811px){.sywPaymentOptions>ul>li{display:flex;margin:0 2.8%}}\n"
+          }}
+        />
+        <div className="sywPaymentOptions">
+          <h2 className="br_text-2xl-serif md:br_text-3xl-serif">
+            Safe, easy payment options
+          </h2>
+          <ul>
+            <li>
+              <img
+                className=" ls-is-cached lazyloaded"
+                sizes="100vw"
+                src="https://bellroy-cms-images.imgix.net/4420/payment-icons-visa.png?auto=format&fit=max"
+              />
+            </li>
+            <li className="mastercard">
+              <img
+                className=" ls-is-cached lazyloaded"
+                sizes="100vw"
+                src="https://bellroy-cms-images.imgix.net/4423/payment-icons-mastercard-2.png?auto=format&fit=max"
+              />
+            </li>
+            <li>
+              <img
+                className=" ls-is-cached lazyloaded"
+                sizes="100vw"
+                src="https://bellroy-cms-images.imgix.net/4421/payment-icons-paypal.png?auto=format&fit=max"
+              />
+            </li>
+            <li className="apple-pay">
+              <img
+                className=" ls-is-cached lazyloaded"
+                sizes="100vw"
+                src="https://bellroy-cms-images.imgix.net/4422/payment-icons-applepay.png?auto=format&fit=max"
+              />
+            </li>
+          </ul>
+        </div>
+
 
         <div id="EventStreamApp" />
       </>
 
 
- 
+
       <style
-  dangerouslySetInnerHTML={{
-    __html: "\n.sywCarousel{\n      background-color: #e9e9e9;\n}\n"
-  }}
-/>
+        dangerouslySetInnerHTML={{
+          __html: "\n.sywCarousel{\n      background-color: #e9e9e9;\n}\n"
+        }}
+      />
 
 
 
