@@ -3,23 +3,20 @@ import Script from 'next/script'
 import { useState, useEffect } from "react";
 
 export default function Test() {
-  const defaultBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995637/lyffhlucm3osr5rvshgz.png';
+  const defaultBgImage = 'https://ucarecdn.com/ccab78d6-d61f-4fa8-a342-1a9f7881a55b/men.webp';
   const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059946/bpurh03wrgfk8mduwirm.webp';
 
-  const defaultBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995636/rt2iun2g5kvwobqm66fo.png';
+  const defaultBgImage1 = 'https://ucarecdn.com/66a63ca6-41fc-46ea-a424-6111ef85a934/women.webp';
   const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059947/jgeahrt8hnnbopbjfzvl.webp';
 
-  const defaultBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995636/ljvxtzo1skko3xqhf0gf.png';
+  const defaultBgImage2 = 'https://ucarecdn.com/8bb5a37b-7c73-4d6c-8eb1-056c4c42fa69/baby.webp';
   const hoverBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059946/excnriwfzjkukzcnyfu1.webp';
 
-  const defaultBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995636/djiai7lbkwjptcj0j1a0.png';
-  const hoverBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059946/xp8e0eve37xolsvscksz.webp';
-
+ 
 
   const [bgImage, setBgImage] = useState(defaultBgImage);
   const [bgImage1, setBgImage1] = useState(defaultBgImage1);
-  const [bgImage2, setBgImage2] = useState(defaultBgImage2);
-  const [bgImage3, setBgImage3] = useState(defaultBgImage3);
+  const [bgImage2, setBgImage2] = useState(defaultBgImage2); 
 
   return (
     <>
@@ -87,7 +84,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Pets Tags"
+                        href="/search?type=Men Wear"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -100,9 +97,7 @@ export default function Test() {
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
                             backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage(hoverBgImage)}
-                        onMouseLeave={() => setBgImage(defaultBgImage)}  >
+                        }}  >
                           &nbsp;
                         </div> 
                       </a>
@@ -117,13 +112,13 @@ export default function Test() {
                     >
                       <a
                         className="product-link product-link--info"
-                        href="/search?type=Pets Tags"
+                        href="/search?type=Men Wear"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
                         <p className="product__grid__title product__grid__element">
                           <span className="product__grid__title__default product__grid__element__default">
-                          Pets Tags
+                          Men Wear
                           </span>
                         </p>
                       </a>
@@ -141,7 +136,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Reviews Tags"
+                        href="/search?type=Women Wear"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -154,9 +149,7 @@ export default function Test() {
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
                             backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage1(hoverBgImage1)}
-                        onMouseLeave={() => setBgImage1(defaultBgImage1)}  >
+                        }}  >
                           &nbsp;
                         </div> 
                       </a>
@@ -171,13 +164,13 @@ export default function Test() {
                     >
                       <a
                         className="product-link product-link--info"
-                        href="/search?type=Reviews Tags"
+                        href="/search?type=Women Wear"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
                         <p className="product__grid__title product__grid__element">
                           <span className="product__grid__title__default product__grid__element__default">
-                          Reviews Tags
+                          Women Wear
                           </span>
                         </p>
                       </a>
@@ -195,7 +188,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Social Media Tags"
+                        href="/search?type=Baby Wear"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -208,9 +201,7 @@ export default function Test() {
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
                             backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage2(hoverBgImage2)}
-                        onMouseLeave={() => setBgImage2(defaultBgImage2)}  >
+                        }}  >
                           &nbsp;
                         </div> 
                         <div
@@ -237,7 +228,7 @@ export default function Test() {
                       >
                         <p className="product__grid__title product__grid__element">
                           <span className="product__grid__title__default product__grid__element__default">
-                          Social Media Tags
+                          Baby Wear
                           </span>
                         </p>
                       </a>
@@ -249,60 +240,9 @@ export default function Test() {
                     data-slide={0}
                     data-slide-index={0}
                   >
-                    <div
-                      className="product-item__image double__image"
-                      data-product-image=""
-                    >
-                      <a
-                        className="product-link"
-                        href="/search?type=Medical ID Tags"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <div
-                          className="product-item__bg lazyload"
-                          style={{
-                            backgroundImage: `url('${bgImage3}')`,
-                            backgroundSize: 'contain',
-                            backgroundPosition: 'center',
-                            width: '100%', // Adjust as needed
-                            height: '100%', // Adjust as needed
-                            backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage3(hoverBgImage3)}
-                        onMouseLeave={() => setBgImage3(defaultBgImage3)}  >
-                          &nbsp;
-                        </div> 
-                        <div
-                          className="product-item__bg__under lazyload"
-                          data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png"
-                        >
-                          &nbsp;
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="product-information"
-                      data-aos="fade"
-                      data-aos-delay={0}
-                      data-aos-duration={800}
-                      data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                      data-product-information=""
-                    >
-                      <a
-                        className="product-link product-link--info"
-                        href="/search?type=Medical ID Cards"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <p className="product__grid__title product__grid__element">
-                          <span className="product__grid__title__default product__grid__element__default">
-                          Medical ID Tags
-                          </span>
-                        </p>
-                      </a>
-                    </div>
+                     
                   </div>
+ 
                 </div>
               </div>
             </div>

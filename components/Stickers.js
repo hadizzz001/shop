@@ -3,23 +3,11 @@ import Script from 'next/script'
 import { useState, useEffect } from "react";
 
 export default function Test() {
-  const defaultBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995646/im5yyqyvuzzz7sk3ih7f.png';
+  const defaultBgImage = 'https://ucarecdn.com/ec9b92c1-322a-49f8-94bd-bdad384ff2c4/picnict.webp';
   const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059983/gcou8xvn2pwzbs7n4z6b.webp';
 
-  const defaultBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995646/uos8aq1zx0ucqy3pxfbx.png';
-  const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059983/pzzky3yiatcxttowzwef.webp';
 
-  const defaultBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995646/lnezzzyplhj1ucwtujeg.png';
-  const hoverBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059982/qk6bf8t1xttkbza0pmco.webp';
-
-  const defaultBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995646/wjnkcqf0dnavjxaxgasa.png';
-  const hoverBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059983/y46irhatgetnxitwnoqk.webp';
-
-
-  const [bgImage, setBgImage] = useState(defaultBgImage);
-  const [bgImage1, setBgImage1] = useState(defaultBgImage1);
-  const [bgImage2, setBgImage2] = useState(defaultBgImage2);
-  const [bgImage3, setBgImage3] = useState(defaultBgImage3);
+  const [bgImage, setBgImage] = useState(defaultBgImage); 
 
   return (
     <>
@@ -88,7 +76,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Business Cards Stickers"
+                        href="/search?type=Picnic Supplies"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -101,9 +89,7 @@ export default function Test() {
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
                             backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage(hoverBgImage)}
-                        onMouseLeave={() => setBgImage(defaultBgImage)}  >
+                        }}  >
                           &nbsp;
                         </div> 
                       </a>
@@ -118,13 +104,13 @@ export default function Test() {
                     >
                       <a
                         className="product-link product-link--info"
-                        href="/search?type=Business Cards Stickers"
+                        href="/search?type=Picnic Supplies"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
                         <p className="product__grid__title product__grid__element">
                           <span className="product__grid__title__default product__grid__element__default">
-                          Business Cards Stickers
+                          Picnic Supplies
                           </span>
                         </p>
                       </a>
@@ -136,53 +122,7 @@ export default function Test() {
                     data-slide={0}
                     data-slide-index={0}
                   >
-                    <div
-                      className="product-item__image double__image"
-                      data-product-image=""
-                    >
-                      <a
-                        className="product-link"
-                        href="/search?type=Reviews Stickers"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <div
-                          className="product-item__bg lazyload"
-                          style={{
-                            backgroundImage: `url('${bgImage1}')`,
-                            backgroundSize: 'contain',
-                            backgroundPosition: 'center',
-                            width: '100%', // Adjust as needed
-                            height: '100%', // Adjust as needed
-                            backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage1(hoverBgImage1)}
-                        onMouseLeave={() => setBgImage1(defaultBgImage1)}  >
-                          &nbsp;
-                        </div> 
-                      </a>
-                    </div>
-                    <div
-                      className="product-information"
-                      data-aos="fade"
-                      data-aos-delay={0}
-                      data-aos-duration={800}
-                      data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                      data-product-information=""
-                    >
-                      <a
-                        className="product-link product-link--info"
-                        href="/search?type=Social Media Stickers"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <p className="product__grid__title product__grid__element">
-                          <span className="product__grid__title__default product__grid__element__default">
-                          Reviews Stickers
-                          </span>
-                        </p>
-                      </a>
-                    </div>
+                     
                   </div>
                   <div
                     className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
@@ -190,59 +130,7 @@ export default function Test() {
                     data-slide={0}
                     data-slide-index={0}
                   >
-                    <div
-                      className="product-item__image double__image"
-                      data-product-image=""
-                    >
-                      <a
-                        className="product-link"
-                        href="/search?type=Social Media Stickers"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <div
-                          className="product-item__bg lazyload"
-                          style={{
-                            backgroundImage: `url('${bgImage2}')`,
-                            backgroundSize: 'contain',
-                            backgroundPosition: 'center',
-                            width: '100%', // Adjust as needed
-                            height: '100%', // Adjust as needed
-                            backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage2(hoverBgImage2)}
-                        onMouseLeave={() => setBgImage2(defaultBgImage2)}  >
-                          &nbsp;
-                        </div> 
-                        <div
-                          className="product-item__bg__under lazyload"
-                          data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png"
-                        >
-                          &nbsp;
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="product-information"
-                      data-aos="fade"
-                      data-aos-delay={0}
-                      data-aos-duration={800}
-                      data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                      data-product-information=""
-                    >
-                      <a
-                        className="product-link product-link--info"
-                        href="/search?type=Medical ID Stickers"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <p className="product__grid__title product__grid__element">
-                          <span className="product__grid__title__default product__grid__element__default">
-                          Social Media Stickers
-                          </span>
-                        </p>
-                      </a>
-                    </div>
+                     
                   </div>
                   <div
                     className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
@@ -250,59 +138,8 @@ export default function Test() {
                     data-slide={0}
                     data-slide-index={0}
                   >
-                    <div
-                      className="product-item__image double__image"
-                      data-product-image=""
-                    >
-                      <a
-                        className="product-link"
-                        href="/search?type=Medical ID Stickers"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <div
-                          className="product-item__bg lazyload"
-                          style={{
-                            backgroundImage: `url('${bgImage3}')`,
-                            backgroundSize: 'contain',
-                            backgroundPosition: 'center',
-                            width: '100%', // Adjust as needed
-                            height: '100%', // Adjust as needed
-                            backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage3(hoverBgImage3)}
-                        onMouseLeave={() => setBgImage3(defaultBgImage3)}  >
-                          &nbsp;
-                        </div> 
-                        <div
-                          className="product-item__bg__under lazyload"
-                          data-bgset="https://res.cloudinary.com/duppvjinz/image/upload/v1706616165/ybufon0r8culqhhgiesf.png"
-                        >
-                          &nbsp;
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="product-information"
-                      data-aos="fade"
-                      data-aos-delay={0}
-                      data-aos-duration={800}
-                      data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                      data-product-information=""
-                    >
-                      <a
-                        className="product-link product-link--info"
-                        href="/search?type=Medical ID Cards"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <p className="product__grid__title product__grid__element">
-                          <span className="product__grid__title__default product__grid__element__default">
-                          Medical ID Stickers
-                          </span>
-                        </p>
-                      </a>
-                    </div>
+                  
+                     
                   </div>
                 </div>
               </div>

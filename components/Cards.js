@@ -3,16 +3,16 @@ import Script from 'next/script'
 import { useState, useEffect } from "react";
 
 export default function Test() {
-  const defaultBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995092/t2cllgo8jfsiwjek97np.png';
+  const defaultBgImage = 'https://ucarecdn.com/89550036-3e93-49ec-af7e-ef9043cae270/ha.webp';
   const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712060162/fyfvqc5ewr2aqccfsflp.webp';
 
-  const defaultBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995189/sjxpxomewix3dw7ydnmj.png';
+  const defaultBgImage1 = 'https://ucarecdn.com/3ae384bd-5669-462c-8a2a-0654fcf03067/oa.webp';
   const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/sa4bgzzhte0ycx5leejc.webp';
 
-  const defaultBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711547493/nirvjkbqlgulzel9tkw2.png';
+  const defaultBgImage2 = 'https://ucarecdn.com/37cd4780-cfcc-4b01-a560-9e17ea673787/ofa.webp';
   const hoverBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/en6tiwnle1k7jed0jam8.webp';
 
-  const defaultBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995824/uwn5sss3aitbeaku3ova.png';
+  const defaultBgImage3 = 'https://ucarecdn.com/aec52b90-b3cf-4840-92e8-c213c72f9e73/ma.webp';
   const hoverBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/yrt9da39oomvcjklvi6c.webp';
 
 
@@ -88,7 +88,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Business Cards"
+                        href="/search?type=Home Appliances"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -101,9 +101,7 @@ export default function Test() {
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed 
                             backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage(hoverBgImage)}
-                        onMouseLeave={() => setBgImage(defaultBgImage)}  >
+                        }} >
                           &nbsp;
                         </div> 
                       </a>
@@ -118,13 +116,13 @@ export default function Test() {
                     >
                       <a
                         className="product-link product-link--info"
-                        href="/search?type=Reviews Cards"
+                        href="/search?type=Outdoor Appliances"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
                         <p className="product__grid__title product__grid__element">
                           <span className="product__grid__title__default product__grid__element__default">
-                          Business Cards
+                          Home Appliances
                           </span>
                         </p>
                       </a>
@@ -142,7 +140,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Reviews Cards"
+                        href="/search?type=Outdoor Appliances"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -155,9 +153,7 @@ export default function Test() {
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
                             backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage1(hoverBgImage1)}
-                        onMouseLeave={() => setBgImage1(defaultBgImage1)}  >
+                        }}  >
                           &nbsp;
                         </div> 
                       </a>
@@ -172,13 +168,13 @@ export default function Test() {
                     >
                       <a
                         className="product-link product-link--info"
-                        href="/search?type=Reviews Cards"
+                        href="/search?type=Outdoor Appliances"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
                         <p className="product__grid__title product__grid__element">
                           <span className="product__grid__title__default product__grid__element__default">
-                          Reviews Cards
+                          Outdoor Appliances
                           </span>
                         </p>
                       </a>
@@ -196,7 +192,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Social Media Cards"
+                        href="/search?type=Office Appliances"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -209,9 +205,7 @@ export default function Test() {
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
                             backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage2(hoverBgImage2)}
-                        onMouseLeave={() => setBgImage2(defaultBgImage2)}  >
+                        }}  >
                           &nbsp;
                         </div> 
                         <div
@@ -232,13 +226,13 @@ export default function Test() {
                     >
                       <a
                         className="product-link product-link--info"
-                        href="/search?type=Medical ID Cards"
+                        href="/search?type=Miscellaneous Appliances"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
                         <p className="product__grid__title product__grid__element">
                           <span className="product__grid__title__default product__grid__element__default">
-                          Social Media Cards
+                          Office Appliances
                           </span>
                         </p>
                       </a>
@@ -256,7 +250,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Medical ID Cards"
+                        href="/search?type=Miscellaneous Appliances"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -269,9 +263,7 @@ export default function Test() {
                             width: '100%', // Adjust as needed
                             height: '100%', // Adjust as needed
                             backgroundRepeat: "no-repeat"
-                        }}
-                        onMouseEnter={() => setBgImage3(hoverBgImage3)}
-                        onMouseLeave={() => setBgImage3(defaultBgImage3)}  >
+                        }}  >
                           &nbsp;
                         </div> 
                         <div
@@ -292,13 +284,13 @@ export default function Test() {
                     >
                       <a
                         className="product-link product-link--info"
-                        href="/search?type=Medical ID Cards"
+                        href="/search?type=Miscellaneous Appliances"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
                         <p className="product__grid__title product__grid__element">
                           <span className="product__grid__title__default product__grid__element__default">
-                          Medical ID Cards
+                          Miscellaneous Appliances
                           </span>
                         </p>
                       </a>

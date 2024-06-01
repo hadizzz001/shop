@@ -42,7 +42,7 @@ export default function CheckoutForm(props: CheckoutFormProps): JSX.Element {
 
         <button
           className='w-full p-3 mt-4 text-white rounded-md'
-          style={{ background: "#ea6a2b" }}
+          style={{ background: "#ab695d" }}
           type="submit"
           disabled={loading}
         >

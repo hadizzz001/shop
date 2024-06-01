@@ -1,13 +1,12 @@
 // "use client"; 
 import { fetchTemp } from '@/utils'
 import { useState, useEffect } from "react";
-import Products from './Products';
-import Work from './Work';
-import Contact from './Contact';
-import Feature from './Feature';
+import Products from './Products'; 
+import Contact from './Contact'; 
 import Design from './Design';
 import Review from './Review';
 import Rate from './Rate';
+import Carousel from './Carousel';
 import Image from 'next/image';
 
 
@@ -87,14 +86,8 @@ const Body = () => {
           }}
         />
         <div id="contentWrapper" />
-        <style
-          media="screen"
-          dangerouslySetInnerHTML={{
-            __html:
-              '\n    .syw-container {\n      height: 110vw;\n      max-height: 90vh;\n      overflow: hidden;\n      position: relative;\n        -webkit-tap-highlight-color: transparent;\n      user-select: none;\n    }\n\n    .line-container {\n      width: 76vw;\n      height: 16px;\n      margin: 0 auto;\n      display: flex;\n      align-items: center;\n      max-width: 970px;\n\n      left: 50%;\n      bottom: 29%;\n      transform: translateX(-50%);\n      position: absolute;\n      z-index: 2;\n      touch-action: none;\n    }\n\n    .line,\n    .line2 {\n      background-color: #D1E1E4;\n      width: 100%;\n      height: 8px;\n      position: absolute;\n      top: 50%;\n      transform: translateY(-50%);\n    }\n\n    .line2 {\n      background-color: #357176;\n      width: 0;\n    }\n\n    .stop {\n      width: calc(100% / 11);\n      display: block;\n      height: 100%;\n      border-left: 2px solid #D1E1E4;\n      z-index: 1;\n      cursor: pointer;\n      transition: border .2s linear;\n    }\n\n    .stop.active {\n      border-left: 2px solid #357176;\n    }\n\n\n    .stop:nth-child(13) {\n      border-right: 2px solid #D1E1E4;\n    }\n\n    .knob {\n      width: 32px;\n      height: 38px;\n      z-index: 2;\n      cursor: grabbing;\n      cursor: grab;\n      background-color: #fff;\n      box-shadow: 0 0 5px rgb(0 0 0 / 20%);\n      border-radius: 4px;\n      transition: box-shadow .3s ease;\n      position: relative;\n    }\n\n    .knob.dragging {\n      cursor: grabbing;\n      font-size: 16px;\n    }\n\n    .knob-container {\n      width: 32px;\n      display: flex;\n      justify-content: flex-end;\n      position: absolute;\n      left: -16px;\n    }\n\n    .image-container {\n      position: relative;\n      z-index: 1;\n      width: 100%;\n      height: 100%;\n      top: 42%;\n      overflow: hidden;\n      transform: translate(-50%, -50%);\n      left: 50%;\n    }\n\n    .label {\n      position: absolute;\n      top: 35px;\n      color: #fff;\n      font-weight: bold;\n      font-size: 13px;\n      width: 0;\n      text-transform: uppercase;\n      font-family: Lato, sans-serif;\n      -webkit-font-smoothing: antialiased;\n      letter-spacing: .5px;\n      user-select: none;\n      pointer-events: none;\n    }\n\n    .label.empty {\n      left: 0;\n    }\n\n    .label.full {\n      right: 35px;\n    }\n\n    .syw-comparison-cards {\n      position: absolute;\n      bottom: calc(100% + 13px);\n      text-align: center;\n      white-space: nowrap;\n      font-weight: bold;\n      font-size: 14px;\n      color: #231f20;\n      transition: font-size .3s ease, top .3s ease;\n      transform: translate(-50%, 0);\n      left: 50%;\n      font-family: "Lato", sans-serif;\n      color: #336165;\n      letter-spacing: .5px;\n      font-weight: 700;\n      font-size: 14px;\n      white-space: nowrap;\n    }\n\n    @media (min-width: 768px) {\n      .image-container {\n        width: 100%;\n        height: 100%;\n        top: 49%;\n      }\n\n      .syw-container {\n        height: 100vw;\n      }\n\n      .line-container {\n        height: 32px;\n      }\n\n      .label {\n        top: unset;\n        bottom: 9px;\n        font-size: 18px;\n      }\n\n      .label.empty {\n        left: -100px;\n      }\n\n      .label.full {\n        right: -40px;\n      }\n\n      .syw-comparison-cards {\n        bottom: unset;\n        top: calc(100% + 12px);\n      }\n\n    }\n\n    @media (min-width: 1024px) {\n      .syw-container {\n        height: 55vw;\n        max-height: 80vh;\n      }\n\n      .line-container {\n        bottom: 180px;\n      }\n    }\n\n    .image-container img {\n      width: 100%;\n      transform: translateY(0%);\n    }\n\n    @keyframes color-in-stop {\n      100% {\n        border-left: 2px solid #357176;\n      }\n    }\n\n    .transition-grow {\n      transition: width ease 500ms;\n    }\n\n    .syw-header-content {\n      position: absolute;\n      top: 0;\n      width: 100%;\n      text-align: center;\n      z-index: 1;\n    }\n\n    .syw-header-content h1 {\n      color: #fff;\n      padding: 20px 0 0 0;\n      text-decoration: none;\n    }\n\n    .syw-header-content p {\n      color: #231f20;\n      text-align: center;\n      margin: 8vw 0 0 0;\n      padding: 0;\n      user-select: none;\n      z-index: 2;\n      transition: opacity 2s ease;\n    }\n\n    .syw-cta-mobile {\n      color: #336165;\n      text-align: center;\n      text-decoration: none;\n      line-height: 40px;\n      border: 0;\n      border-radius: 4px;\n      background-color: #FFF;\n      padding: 0 25px;\n      position: absolute;\n      display: block;\n      left: 50%;\n      bottom: 5%;\n      transform: translate(-50%, -50%);\n      display: block;\n      z-index: 1;\n      pointer-events: all;\n      box-shadow: 0px 17px 9px -15px rgb(0 0 0 / 50%);\n      transition: box-shadow .2s ease;\n    }\n\n    .syw-cta-desktop {\n      display: none;\n      position: absolute;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      text-align: center;\n      color: #fff;\n      margin: 0;\n      padding: 0;\n      z-index: 2;\n      cursor: pointer;\n      pointer-events: all;\n      text-decoration: none;\n    }\n\n    .syw-cta-desktop:hover,\n    .syw-cta-desktop:focus {\n      color: #231f20;\n      text-decoration: none;\n    }\n\n    .sywMainBanner__scrollTo-arrow {\n      display: block;\n      z-index: 3;\n      width: 15px;\n      height: 15px;\n      margin: 2px auto 0;\n      background: transparent;\n      border-bottom: 2px solid #fff;\n      border-right: 2px solid #fff;\n      transform: translateX(-50%) rotate(45deg);\n      cursor: pointer;\n    }\n\n    @media (orientation: landscape) {\n      .syw-header-content h1 {\n        font-size: 4vw;\n        padding-top: 20px;\n      }\n\n      .syw-cta-mobile {\n        display: none;\n      }\n\n      .syw-cta-desktop {\n        display: block;\n      }\n    }\n\n    html {\n      scroll-behavior: smooth;\n    }\n  '
-          }}
-        />
-        <div className="syw-container">
+ 
+        {/* <div className="syw-container">
           <div className=" image-container">
             
             <Image
@@ -116,7 +109,10 @@ const Body = () => {
 
 
 
-        </div>
+        </div> */}
+
+<Carousel />
+
         <style
           type="text/css"
           dangerouslySetInnerHTML={{
@@ -153,16 +149,16 @@ const Body = () => {
           type="text/css"
           dangerouslySetInnerHTML={{
             __html:
-              ".sywMobileQuotes{background-color:#ea6a2b;padding:35px 0 0}.sywMobileQuotes__quoteIcon{max-width:35px;margin:0 auto}.sywMobileQuotes__quoteIcon img{width:100%}.sywMobileQuotes__title{text-align:center;color:#FFF;margin:25px auto 0}.sywMobileQuotes--quoteSlider{position:relative;background-color:transparent;color:#FFF;overflow:hidden;z-index:1}.sywMobileQuotes__content{text-align:center;display:flex;width:100%;overflow-x:scroll;scroll-snap-type:both mandatory;padding:15px 0 80px}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide{display:flex;flex-direction:column;justify-content:center;background-color:#ea6a2b;min-width:100%;scroll-snap-align:start;scroll-snap-stop:always;-webkit-overflow-scrolling:touch}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .logo{height:15vw;max-height:25px;margin:0 auto}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .logo>img{height:100%}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .text{padding:10px 20px 25px;max-width:375px;margin:0 auto}.sywMobileQuotes--quoteSlider .quoteDots{position:absolute;left:50%;bottom:10px;transform:translate(-50%);z-index:10;list-style:none;padding:0}.sywMobileQuotes--quoteSlider .quoteDots__dot{display:inline;margin:0 5px;padding:0;list-style:none;cursor:pointer}.sywMobileQuotes--quoteSlider .quoteDots__dot.quote_dot_active span{background:#FFF}.sywMobileQuotes--quoteSlider .quoteDots__dot span{display:inline-block;width:12px;height:12px;border:1px solid #FFF;border-radius:50%;pointer-event:none}@media (pointer: fine){.sywMobileQuotes__content{overflow-x:hidden;padding:40px 0 100px}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide{box-sizing:content-box}}@media (min-width: 769px){.sywMobileQuotes{display:none}}\n"
+              ".sywMobileQuotes{background-color:#ab695d;padding:35px 0 0}.sywMobileQuotes__quoteIcon{max-width:35px;margin:0 auto}.sywMobileQuotes__quoteIcon img{width:100%}.sywMobileQuotes__title{text-align:center;color:#FFF;margin:25px auto 0}.sywMobileQuotes--quoteSlider{position:relative;background-color:transparent;color:#FFF;overflow:hidden;z-index:1}.sywMobileQuotes__content{text-align:center;display:flex;width:100%;overflow-x:scroll;scroll-snap-type:both mandatory;padding:15px 0 80px}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide{display:flex;flex-direction:column;justify-content:center;background-color:#ab695d;min-width:100%;scroll-snap-align:start;scroll-snap-stop:always;-webkit-overflow-scrolling:touch}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .logo{height:15vw;max-height:25px;margin:0 auto}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .logo>img{height:100%}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide .text{padding:10px 20px 25px;max-width:375px;margin:0 auto}.sywMobileQuotes--quoteSlider .quoteDots{position:absolute;left:50%;bottom:10px;transform:translate(-50%);z-index:10;list-style:none;padding:0}.sywMobileQuotes--quoteSlider .quoteDots__dot{display:inline;margin:0 5px;padding:0;list-style:none;cursor:pointer}.sywMobileQuotes--quoteSlider .quoteDots__dot.quote_dot_active span{background:#FFF}.sywMobileQuotes--quoteSlider .quoteDots__dot span{display:inline-block;width:12px;height:12px;border:1px solid #FFF;border-radius:50%;pointer-event:none}@media (pointer: fine){.sywMobileQuotes__content{overflow-x:hidden;padding:40px 0 100px}.sywMobileQuotes--quoteSlider .sywQuoteSlider__slide{box-sizing:content-box}}@media (min-width: 769px){.sywMobileQuotes{display:none}}\n"
           }}
         />
 
 
 
 
-        <Work />
+ 
         <Contact />
-        <Feature />
+         
 
         <Review />
         <Rate />
@@ -175,39 +171,8 @@ const Body = () => {
           }}
         />
         <div className="sywPaymentOptions">
-          <h2 className="br_text-2xl-serif md:br_text-3xl-serif">
-            Safe, easy payment options
-          </h2>
-          <ul>
-            <li>
-              <img
-                className=" ls-is-cached lazyloaded"
-                sizes="100vw"
-                src="https://bellroy-cms-images.imgix.net/4420/payment-icons-visa.png?auto=format&fit=max"
-              />
-            </li>
-            <li className="mastercard">
-              <img
-                className=" ls-is-cached lazyloaded"
-                sizes="100vw"
-                src="https://bellroy-cms-images.imgix.net/4423/payment-icons-mastercard-2.png?auto=format&fit=max"
-              />
-            </li>
-            <li>
-              <img
-                className=" ls-is-cached lazyloaded"
-                sizes="100vw"
-                src="https://bellroy-cms-images.imgix.net/4421/payment-icons-paypal.png?auto=format&fit=max"
-              />
-            </li>
-            <li className="apple-pay">
-              <img
-                className=" ls-is-cached lazyloaded"
-                sizes="100vw"
-                src="https://bellroy-cms-images.imgix.net/4422/payment-icons-applepay.png?auto=format&fit=max"
-              />
-            </li>
-          </ul>
+          
+          
         </div>
 
 

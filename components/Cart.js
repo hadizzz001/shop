@@ -9,8 +9,6 @@ const Cart = () => {
     const [localQuantities, setLocalQuantities] = useState(quantities);
     const { isBooleanValue, setBooleanValue } = useBooleanValue();
     const [errors, setErrors] = useState({});
-    const isCartValid = cart?.length > 0 && cart.every((cartItem) => cartItem.additionalInfo && Object.keys(cartItem.additionalInfo).length > 0);
-
 
     const handleRemoveFromCart = (itemId) => {
         removeFromCart(itemId);
@@ -37,20 +35,8 @@ const Cart = () => {
 
 
 
-    const hasAdditionalInfo = (item) => {
-        return item.additionalInfo && Object.keys(item.additionalInfo).length > 0;
-    };
 
 
-    useEffect(() => {
-                const newErrors = {};
-        cart?.forEach((item) => {
-            if (!hasAdditionalInfo(item)) {
-                newErrors[item.id] = 'Info is missing';
-            }
-        });
-        setErrors(newErrors);
-        }, [cart]);
 
 
 
@@ -147,12 +133,8 @@ const Cart = () => {
                                                     </div>
                                                     <div className="Checkout_Cart_LineItems_LineItem_Details_Quantity">
                                                         <span>Qty:</span>
-
-                                                        <input
-                                                            type="text"
-                                                            value={localQuantities[obj.id] || 1}
-                                                            onChange={(e) => handleQuantityChange(obj.id, parseInt(e.target.value, 10))}
-                                                        />
+                                                        <span>{localQuantities[obj.id] || 1}</span>
+                                                        
 
                                                     </div>
                                                     {errors[obj.id] && <p style={{ color: 'red' }}>{errors[obj.id]}<a style={{ color: "#4acb4a", display: "inline" }} href={`/product?id=${obj.id}&&custom=1`}> add now</a></p>}
@@ -214,15 +196,9 @@ const Cart = () => {
                                 </div>
                             </div>
                         </div>
-                        {!isCartValid ?(
-                          
-                            <>
-                            </>
-                        ) : (
-                            <>
-                                <a class="Common_Button Common_Button--short MiniCart_Cart_CtaButton" href="/checkout" rel="nofollow"><span>Go to checkout</span></a>
-                            </>
-                        )}
+
+                        <a class="Common_Button Common_Button--short MiniCart_Cart_CtaButton" href="/checkout" rel="nofollow"><span>Go to checkout</span></a>
+
                     </div>
 
                     <div
@@ -376,7 +352,7 @@ const Cart = () => {
                                     </g>
                                 </svg>
                             </span>
-            
+
                             <span data-render-if="googlepay-available">
                                 <svg width={39} height={27} xmlns="http://www.w3.org/2000/svg">
                                     <g fillRule="nonzero" fill="none">
@@ -407,7 +383,7 @@ const Cart = () => {
                                         />
                                     </g>
                                 </svg>
-                            </span> 
+                            </span>
                         </div>
                     </div>
                 </div>

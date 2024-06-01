@@ -1,4 +1,4 @@
-"use client"  
+"use client"
 
 import React, { createContext, useContext, useEffect, useReducer, useState } from 'react';
 
@@ -12,20 +12,18 @@ const cartReducer = (state, action) => {
       return action.payload; // Assuming action.payload is the updated cart array
     case 'REMOVE_FROM_CART':
       return state.filter((item) => item.id !== action.payload);
+    case 'CLEAR_CART':
+      return []; // Return an empty array to clear the cart
     default:
       return state;
   }
 };
 
-// context/CartContext.js
-
-// ... (previous code)
-let storedCart 
 const CartProvider = ({ children }) => {
   const [cart, dispatch] = useReducer(cartReducer, [], (initial) => {
     if (typeof window !== "undefined") {
       try {
-        storedCart = localStorage.getItem('cart');
+        const storedCart = localStorage.getItem('cart');
         return storedCart ? JSON.parse(storedCart) : initial;
       } catch (error) {
         console.error('Error parsing cart from localStorage:', error);
@@ -33,10 +31,12 @@ const CartProvider = ({ children }) => {
       }
     } 
   });
+  
   const [quantities, setQuantities] = useState(() => {
     const storedQuantities = localStorage.getItem('quantities');
     return storedQuantities ? JSON.parse(storedQuantities) : {};
   });
+
   const [subtotal, setSubtotal] = useState(0);
 
   useEffect(() => {
@@ -56,14 +56,13 @@ const CartProvider = ({ children }) => {
     setSubtotal(newSubtotal);
   }, [quantities, cart]);
 
-  const addToCart = (item, additionalInfo, quantity) => {
+  const addToCart = (item, quantity, additionalInfo = {}) => {
     const existingCartItemIndex = cart.findIndex((cartItem) => String(cartItem.id) === String(item.id));
 
     if (existingCartItemIndex !== -1) {
-      // Item is already in the cart, update quantity and additionalInfo
       setQuantities((prevQuantities) => ({
         ...prevQuantities,
-        [item.id]: quantity || 1,
+        [item.id]: (prevQuantities[item.id] || 0) + quantity,
       }));
 
       dispatch({
@@ -72,29 +71,28 @@ const CartProvider = ({ children }) => {
           String(cartItem.id) === String(item.id)
             ? {
                 ...cartItem,
-                quantity: quantity || 1,
-                additionalInfo: additionalInfo || cartItem.additionalInfo, // Preserve existing additionalInfo if not provided
+                quantity: (cartItem.quantity || 0) + quantity,
+                additionalInfo: additionalInfo || cartItem.additionalInfo,
               }
             : cartItem
         ),
       });
     } else {
-      // Item is not in the cart, add it
       dispatch({
         type: 'ADD_TO_CART',
         payload: [
           ...cart,
           {
             ...item,
-            quantity: quantity || 1,
-            additionalInfo: additionalInfo || {}, // Default to empty object if additionalInfo is not set
+            quantity,
+            additionalInfo,
           },
         ],
       });
 
       setQuantities((prevQuantities) => ({
         ...prevQuantities,
-        [item.id]: quantity || 1,
+        [item.id]: quantity,
       }));
     }
   };
@@ -107,18 +105,17 @@ const CartProvider = ({ children }) => {
     });
   };
 
+  const clearCart = () => {
+    dispatch({ type: 'CLEAR_CART' });
+    setQuantities({});
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, quantities, subtotal }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, quantities, subtotal }}>
       {children}
     </CartContext.Provider>
   );
 };
-
-// ... (remaining code)
-
-
-
-
 
 const useCart = () => {
   const context = useContext(CartContext);
@@ -129,5 +126,3 @@ const useCart = () => {
 };
 
 export { CartProvider, useCart };
-
-

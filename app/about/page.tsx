@@ -22,21 +22,13 @@ export default function Home() {
     <div className="u-clearfix u-sheet u-valign-middle u-sheet-1">
       <div className="u-align-center u-container-style u-group u-group-1">
         <div className="u-container-layout u-valign-middle">
-          <img
-            className="u-border-4 u-border-palette-2-base u-image u-image-circle u-preserve-proportions u-image-1"
-            src="https://res.cloudinary.com/duppvjinz/image/upload/v1715626825/asru2buxw8mikwqm7ll2.jpg"
-            alt=""
-            data-image-width={800}
-            data-image-height={800}
-          />
+           
           <h2 className="u-text u-text-1" style={{fontFamily: '"Manrope", sans-serif',fontWeight: "bolder",marginBottom: "1em",fontSize: "3em"}}>About Company</h2>
           <p className="u-text u-text-2" style={{fontFamily: 'Frank Ruhl Libre, "PT Serif", "Noto Serif", "Noto Serif JP", "Noto Serif KR", "Noto Serif SC", "Noto Serif TC", ui-serif, Georgia, Cambria, Times New Roman, Times, serif',fontSize: "1.2rem",lineHeight: "2rem",fontWeight:"400"}}>
             {" "}
-            Social Tap is just one of the innovative services offered by <a className="u-active-none u-border-1 u-border-active-black u-border-hover-black u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-link u-button-style u-hover-none u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-1" style={{fontFamily: 'Frank Ruhl Libre,"PT Serif","Noto Serif","Noto Serif JP","Noto Serif KR","Noto Serif SC","Noto Serif TC",ui-serif,Georgia,Cambria,Times New Roman,Times,serif'}} href="https://www.thesocialbang.com" target="_blank">The Social Bang</a>, providing cutting-edge solutions for seamless and sustainable business networking.
+            Anazon, founded by Hadi Medlej in 2024, is a local e-commerce shop headquartered in Beirut, Lebanon. Initially an online products, it has expanded to offer a vast array of products and items.
 <br/><br/>
-            At Social Tap, we're reshaping the way businesses connect. Our journey began with a simple handshake and has evolved into a high-tech movement, providing seamless, instant, and eco-friendly solutions for entrepreneurs and business owners globally. 
-            <br/><br/>                     
-            Our mission is to guide you through this cutting-edge networking landscape, empowering you to tap into new opportunities, streamline operations, and make meaningful connections that fuel your business growth. 
+Anazon offers a diverse range of products, catering to almost every conceivable need. These include electronics such as smartphones, tablets, and smart home devices. They also provide a wide selection of books, both physical and digital. Anazon offers everyday items such as cables, batteries, and kitchen essentials. The company sells a vast array of apparel and accessories for all ages and styles.
                                 
           </p>
  
@@ -95,7 +87,7 @@ export default function Home() {
   <style
   dangerouslySetInnerHTML={{
     __html:
-      "\n  .u-section-1 .u-image-1 {\n    border-color: #ec5711 !important;\n    width: 170px;\n    height: 170px;\n    margin: 0 auto;\n}\n"
+      "\n  .u-section-1 .u-image-1 {\n    border-color: #ab695d !important;\n    width: 170px;\n    height: 170px;\n    margin: 0 auto;\n}\n"
   }}
 />
 

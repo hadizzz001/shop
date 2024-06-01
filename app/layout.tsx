@@ -7,8 +7,7 @@ import './bs-select.css'
 import './slick.css'
 import { useSearchParams } from 'next/navigation'
 import { CartProvider } from './context/CartContext';
-import { BooleanProvider } from './context/CartBoolContext';
-import { PDFProvider } from './context/PDFContext';
+import { BooleanProvider } from './context/CartBoolContext'; 
 import GifLoader from '../components/GifLoader'
 
 
@@ -36,16 +35,15 @@ export default function RootLayout({
   />
   <meta content="max-image-preview:large" name="robots" />
   <title>
-    Social Tap
+    Anazon
   </title>
   <meta
-    content="At Social Tap, we're reshaping the way businesses connect."
-    name="description"
-    property=""
+    content="At Anazon, we're reshaping the way businesses connect."
+    name="description" 
   />
-  <meta content="Socialtap" name="keywords" property="" />
+  <meta content="Anazon" name="keywords" property="" />
   <meta
-    content="Social Tap"
+    content="Anazon"
     name=""
     property="og:title"
   />
@@ -56,7 +54,7 @@ export default function RootLayout({
   />
   <meta content="website" name="" property="og:type" />
   <meta
-    content="At Social Tap, we're reshaping the way businesses connect."
+    content="At Anazon, we're reshaping the way businesses connect."
     name=""
     property="og:description"
   />
@@ -67,21 +65,19 @@ export default function RootLayout({
   />
    
   <link
-    href="/favicon"
+    href="/favicon.ico"
     rel="apple-touch-icon"
     sizes="180x180"
   />
   <link
-    href="/favicon"
+    href="/favicon.ico"
     rel="icon"
-    sizes="32x32"
-    type="image/png"
+    sizes="32x32" 
   />
   <link
-    href="/favicon"
+    href="/favicon.ico"
     rel="icon"
-    sizes="16x16"
-    type="image/png"
+    sizes="16x16" 
   /> 
  
   <meta content="#ffffff" name="msapplication-TileColor" />
@@ -129,7 +125,7 @@ export default function RootLayout({
  
       <GifLoader />
 
-        <PDFProvider>
+        
         <BooleanProvider>
         <CartProvider>
           <Navbar2 />
@@ -137,8 +133,7 @@ export default function RootLayout({
           <Footer />
         </CartProvider>
         </BooleanProvider>
-        </PDFProvider>
-
+        
       </body>
     </html>
   )

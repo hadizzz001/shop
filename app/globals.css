@@ -303,7 +303,7 @@ body {
 
 
 a:hover {
-  color: #ea6a2b !important;
+  color: #ab695d !important;
   text-decoration: none;
 }
 
@@ -325,7 +325,7 @@ a:hover {
 }
 
 .productTabs__tabContent__image_tab_4 {
-  background-image: url("https://res.cloudinary.com/duppvjinz/image/upload/v1705952516/v9dfrieph0t7ememxkvm.webp");
+  background-image: url("https://ucarecdn.com/fd4a6f3f-d8bc-41a2-b6d3-163a4af8d178/picnic1.webp");
 }
 
 
@@ -333,7 +333,7 @@ a:hover {
   font-family: "Lato", sans-serif;
   font-size: 12px;
   font-weight: 700;
-  background: #ea6a2b;
+  background: #ab695d;
   text-align: center;
   padding: 0 5px;
   min-width: 100%;
@@ -460,7 +460,7 @@ a:hover {
 
 
 .HtmlProductAddToCart {
-  background-color: #ea6a2b !important;
+  background-color: #ab695d !important;
 }
 
 button:focus {

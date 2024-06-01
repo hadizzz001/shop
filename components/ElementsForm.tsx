@@ -253,7 +253,7 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
                 elements,
                 clientSecret,
                 confirmParams: {
-                    return_url: "https://socialtapnfc.au/done",
+                    return_url: "http://localhost:3000/done",
                     payment_method_data: {
                         billing_details: {
                             name: "Customer",
@@ -291,7 +291,7 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
                 </fieldset>
                 <button
                     className='w-full p-3 mt-4 text-white rounded-md'
-                    style={{ background: "#ea6a2b" }}
+                    style={{ background: "#ab695d" }}
                     type="submit"
                     disabled={
                         !["initial", "succeeded", "error"].includes(payment.status) ||

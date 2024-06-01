@@ -35,11 +35,11 @@ export async function createCheckoutSession(
         },
       ],
       ...(ui_mode === "hosted" && {
-        success_url: "https://socialtapnfc.au/done",
-        cancel_url: "https://socialtapnfc.au/checkout",
+        success_url: "http://localhost:3000/done",
+        cancel_url: "http://localhost:3000/checkout",
       }),
       ...(ui_mode === "embedded" && {
-        return_url: "https://socialtapnfc.au/done",
+        return_url: "http://localhost:3000/done",
       }),
       ui_mode,
     });

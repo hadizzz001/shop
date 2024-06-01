@@ -1,0 +1,786 @@
+{
+  "ssrModuleMapping": {
+    "(app-client)/./node_modules/next/dist/client/components/app-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/layout-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Cards.js": {
+      "*": {
+        "id": "(sc_client)/./components/Cards.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Carousel.js": {
+      "*": {
+        "id": "(sc_client)/./components/Carousel.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Design.js": {
+      "*": {
+        "id": "(sc_client)/./components/Design.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/RCards.js": {
+      "*": {
+        "id": "(sc_client)/./components/RCards.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Rate.js": {
+      "*": {
+        "id": "(sc_client)/./components/Rate.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Stands.js": {
+      "*": {
+        "id": "(sc_client)/./components/Stands.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Stickers.js": {
+      "*": {
+        "id": "(sc_client)/./components/Stickers.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/image.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/link.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/script.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/script.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/shared/lib/head.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/api/sendEmail/sendEmail.ts": {
+      "*": {
+        "id": "(sc_client)/./app/api/sendEmail/sendEmail.ts",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/context/CartBoolContext.js": {
+      "*": {
+        "id": "(sc_client)/./app/context/CartBoolContext.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/context/CartContext.js": {
+      "*": {
+        "id": "(sc_client)/./app/context/CartContext.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/layout.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/layout.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/CarCard.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/CarCard.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Footer.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/Footer.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/GifLoader.js": {
+      "*": {
+        "id": "(sc_client)/./components/GifLoader.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Navbar2.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/Navbar2.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/search/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/search/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/product/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/product/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/shop/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/shop/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/contact/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/contact/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/checkout/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/checkout/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/WhatsAppButton.js": {
+      "*": {
+        "id": "(sc_client)/./components/WhatsAppButton.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/about/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/about/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/term/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/term/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/privacy/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/privacy/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    }
+  },
+  "edgeSSRModuleMapping": {},
+  "clientModules": {
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\page.tsx": {
+      "id": "(app-client)/./app/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Cards.js": {
+      "id": "(app-client)/./components/Cards.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Carousel.js": {
+      "id": "(app-client)/./components/Carousel.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Design.js": {
+      "id": "(app-client)/./components/Design.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\RCards.js": {
+      "id": "(app-client)/./components/RCards.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Rate.js": {
+      "id": "(app-client)/./components/Rate.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Stands.js": {
+      "id": "(app-client)/./components/Stands.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Stickers.js": {
+      "id": "(app-client)/./components/Stickers.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\client\\script.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/script.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\client\\script.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/script.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\shared\\lib\\head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\next\\dist\\esm\\shared\\lib\\head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\api\\sendEmail\\sendEmail.ts": {
+      "id": "(app-client)/./app/api/sendEmail/sendEmail.ts",
+      "name": "*",
+      "chunks": [
+        "app/contact/page:static/chunks/app/contact/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\context\\CartBoolContext.js": {
+      "id": "(app-client)/./app/context/CartBoolContext.js",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\context\\CartContext.js": {
+      "id": "(app-client)/./app/context/CartContext.js",
+      "name": "*",
+      "chunks": [
+        "app/checkout/page:static/chunks/app/checkout/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\layout.tsx": {
+      "id": "(app-client)/./app/layout.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\CarCard.tsx": {
+      "id": "(app-client)/./components/CarCard.tsx",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Footer.tsx": {
+      "id": "(app-client)/./components/Footer.tsx",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\GifLoader.js": {
+      "id": "(app-client)/./components/GifLoader.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Navbar2.tsx": {
+      "id": "(app-client)/./components/Navbar2.tsx",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page.jsx": {
+      "id": "(app-client)/./app/search/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/search/page:static/chunks/app/search/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\product\\page.jsx": {
+      "id": "(app-client)/./app/product/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page.jsx": {
+      "id": "(app-client)/./app/shop/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/shop/page:static/chunks/app/shop/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\contact\\page.tsx": {
+      "id": "(app-client)/./app/contact/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/contact/page:static/chunks/app/contact/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\checkout\\page.jsx": {
+      "id": "(app-client)/./app/checkout/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/checkout/page:static/chunks/app/checkout/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\WhatsAppButton.js": {
+      "id": "(app-client)/./components/WhatsAppButton.js",
+      "name": "*",
+      "chunks": [
+        "app/checkout/page:static/chunks/app/checkout/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\about\\page.tsx": {
+      "id": "(app-client)/./app/about/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\term\\page.jsx": {
+      "id": "(app-client)/./app/term/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/term/page:static/chunks/app/term/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\privacy\\page.jsx": {
+      "id": "(app-client)/./app/privacy/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/privacy/page:static/chunks/app/privacy/page.js"
+      ],
+      "async": false
+    }
+  },
+  "entryCSSFiles": {
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\page": {
+      "modules": [
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\react-responsive-carousel\\lib\\styles\\carousel.min.css",
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\swiper\\swiper.min.css"
+      ],
+      "files": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\layout": {
+      "modules": [
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\bootstrap.min.css",
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\bs-select.css",
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\custom.css",
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\globals.css",
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\slick.css"
+      ],
+      "files": [
+        "static/css/app/layout.css"
+      ]
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\loading": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\product\\page": {
+      "modules": [
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\swiper\\swiper.min.css"
+      ],
+      "files": [
+        "static/css/app/product/page.css"
+      ]
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\contact\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\checkout\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\about\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\about\\loading": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\term\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\privacy\\page": {
+      "modules": [],
+      "files": []
+    }
+  }
+}
