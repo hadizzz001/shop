@@ -109,7 +109,7 @@ const Footer = () => {
                     You are signing up to receive product updates and newsletters. By
                     signing up, you are consenting to our{" "}
                     <a
-                        href="/customer-care/privacy-policy"
+                        href="/privacy"
                         data-auto-id="true"
                         id="page-footer-customer-care-privacy-policy-1"
                     >

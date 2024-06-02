@@ -17,7 +17,7 @@ export default function Features() {
 
   <div className="relative flex py-5 items-center">
   <div className="flex-grow border-t border-gray-400" />
-  <span className="flex-shrink mx-4  "><h2 className="br_text-2xl-serif md:br_text-3xl-serif">Looking for a special design?</h2></span>
+  <span className="flex-shrink mx-4  "><h2 className="br_text-2xl-serif md:br_text-3xl-serif">Looking for a special product?</h2></span>
   <div className="flex-grow border-t border-gray-400" />
 </div>
 
