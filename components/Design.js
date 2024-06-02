@@ -31,18 +31,7 @@ const page = () => {
  
  
    
-  <img
-    className="syw-floating-image cards ls-is-cached lazyloaded"
-    srcSet="
-    https://bellroy-cms-images.imgix.net/4411/business-cardsx2.png?auto=format&fit=max&w=320   320w,
-    https://bellroy-cms-images.imgix.net/4411/business-cardsx2.png?auto=format&fit=max&w=640   640w,
-    https://bellroy-cms-images.imgix.net/4411/business-cardsx2.png?auto=format&fit=max&w=960   960w,
-    https://bellroy-cms-images.imgix.net/4411/business-cardsx2.png?auto=format&fit=max&w=1280 1280w,
-    https://bellroy-cms-images.imgix.net/4411/business-cardsx2.png?auto=format&fit=max&w=1920 1920w
-  "
-    sizes="100vw"
-    src="https://bellroy-cms-images.imgix.net/4411/business-cardsx2.png?auto=format&fit=max"
-  />
+ 
 </div> 
 
     </>

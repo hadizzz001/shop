@@ -23,13 +23,11 @@ const page = () => {
   
 
 
-  const [inputs, setInputs] = useState({
-    email: "",
+  const [inputs, setInputs] = useState({ 
     fname: "",
     lname: "",
     phone: "",
-    address: '',
-     
+    address: '', 
   });
  
 

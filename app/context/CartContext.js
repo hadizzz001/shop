@@ -56,7 +56,7 @@ const CartProvider = ({ children }) => {
     setSubtotal(newSubtotal);
   }, [quantities, cart]);
 
-  const addToCart = (item, quantity, additionalInfo = {}) => {
+  const addToCart = (item, quantity = {}) => {
     const existingCartItemIndex = cart.findIndex((cartItem) => String(cartItem.id) === String(item.id));
 
     if (existingCartItemIndex !== -1) {
@@ -71,8 +71,7 @@ const CartProvider = ({ children }) => {
           String(cartItem.id) === String(item.id)
             ? {
                 ...cartItem,
-                quantity: (cartItem.quantity || 0) + quantity,
-                additionalInfo: additionalInfo || cartItem.additionalInfo,
+                quantity: (cartItem.quantity || 0) + quantity, 
               }
             : cartItem
         ),
@@ -84,8 +83,7 @@ const CartProvider = ({ children }) => {
           ...cart,
           {
             ...item,
-            quantity,
-            additionalInfo,
+            quantity, 
           },
         ],
       });

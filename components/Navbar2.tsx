@@ -341,7 +341,7 @@ function NavBar() {
                       <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
                         <a
                           className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
-                          href="/search?cat=Cards"
+                          href="/search?cat=Appliances"
                           id="0_bags_0_backpacks"
                         >
                           <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
@@ -361,7 +361,7 @@ function NavBar() {
                       <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
                         <a
                           className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
-                          href="/search?cat=Tags"
+                          href="/search?cat=Fashion"
                           id="0_bags_1_crossbody-bags"
                         >
                           <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
@@ -381,7 +381,7 @@ function NavBar() {
                       <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
                         <a
                           className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
-                          href="/search?cat=Stands"
+                          href="/search?cat=Household"
                           id="0_bags_2_tote-bags"
                         >
                           <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
@@ -401,7 +401,7 @@ function NavBar() {
                       <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
                         <a
                           className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
-                          href="/search?cat=Stickers"
+                          href="/search?cat=Picnic Items"
                           id="0_bags_3_market-cooler-bags"
                         >
                           <figure className="br_hidden xl:pointer-fine:br_flex xl:pointer-fine:br_items-center xl:pointer-fine:br_h-24">
