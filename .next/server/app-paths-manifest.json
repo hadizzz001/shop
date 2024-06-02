@@ -1,6 +1,26 @@
 {
   "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/checkout/page": "app/checkout/page.js",
+  "/post/page": "app/post/page.js",
   "/privacy/page": "app/privacy/page.js",
-  "/api/rate/route": "app/api/rate/route.js"
+  "/done/page": "app/done/page.js",
+  "/search/page": "app/search/page.js",
+  "/shop/page": "app/shop/page.js",
+  "/term/page": "app/term/page.js",
+  "/thank/page": "app/thank/page.js",
+  "/product/page": "app/product/page.js",
+  "/api/order/route": "app/api/order/route.js",
+  "/api/post/route": "app/api/post/route.js",
+  "/api/posts/route": "app/api/posts/route.js",
+  "/api/rate/route": "app/api/rate/route.js",
+  "/api/post/[id]/route": "app/api/post/[id]/route.js",
+  "/api/order/[id]/route": "app/api/order/[id]/route.js",
+  "/api/posts1/[id]/route": "app/api/posts1/[id]/route.js",
+  "/api/posts2/[id]/route": "app/api/posts2/[id]/route.js",
+  "/api/posts3/[id]/route": "app/api/posts3/[id]/route.js",
+  "/api/posts/[id]/route": "app/api/posts/[id]/route.js",
+  "/api/rate1/[id]/route": "app/api/rate1/[id]/route.js"
 }
