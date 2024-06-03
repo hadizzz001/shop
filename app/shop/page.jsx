@@ -165,7 +165,7 @@ const Body = () => {
                             Our Products
                         </h1>
                         <p className="br_text-base-sans-stretched md:br_text-lg-sans-stretched">
-                            Discover stylish cards, tags, stands, and stickers to elevate your personal and professional expression.
+                            Discover stylish products to elevate your personal and professional expression.
                         </p>
                     </div>
                 </header>

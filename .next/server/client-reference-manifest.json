@@ -56,70 +56,6 @@
         "async": false
       }
     },
-    "(app-client)/./app/api/sendEmail/sendEmail.ts": {
-      "*": {
-        "id": "(sc_client)/./app/api/sendEmail/sendEmail.ts",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/context/CartBoolContext.js": {
-      "*": {
-        "id": "(sc_client)/./app/context/CartBoolContext.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/context/CartContext.js": {
-      "*": {
-        "id": "(sc_client)/./app/context/CartContext.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/layout.tsx": {
-      "*": {
-        "id": "(sc_client)/./app/layout.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/CarCard.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/CarCard.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/Footer.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/Footer.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/GifLoader.js": {
-      "*": {
-        "id": "(sc_client)/./components/GifLoader.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/Navbar2.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/Navbar2.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./app/page.tsx": {
       "*": {
         "id": "(sc_client)/./app/page.tsx",
@@ -216,17 +152,73 @@
         "async": false
       }
     },
-    "(app-client)/./app/search/page.jsx": {
+    "(app-client)/./app/api/sendEmail/sendEmail.ts": {
       "*": {
-        "id": "(sc_client)/./app/search/page.jsx",
+        "id": "(sc_client)/./app/api/sendEmail/sendEmail.ts",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./app/shop/page.jsx": {
+    "(app-client)/./app/context/CartBoolContext.js": {
       "*": {
-        "id": "(sc_client)/./app/shop/page.jsx",
+        "id": "(sc_client)/./app/context/CartBoolContext.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/context/CartContext.js": {
+      "*": {
+        "id": "(sc_client)/./app/context/CartContext.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/layout.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/layout.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/CarCard.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/CarCard.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Footer.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/Footer.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/GifLoader.js": {
+      "*": {
+        "id": "(sc_client)/./components/GifLoader.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Navbar2.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/Navbar2.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/search/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/search/page.jsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -251,6 +243,14 @@
     "(app-client)/./components/WhatsAppButton.js": {
       "*": {
         "id": "(sc_client)/./components/WhatsAppButton.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/shop/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/shop/page.jsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -419,70 +419,6 @@
       ],
       "async": false
     },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\api\\sendEmail\\sendEmail.ts": {
-      "id": "(app-client)/./app/api/sendEmail/sendEmail.ts",
-      "name": "*",
-      "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\context\\CartBoolContext.js": {
-      "id": "(app-client)/./app/context/CartBoolContext.js",
-      "name": "*",
-      "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\context\\CartContext.js": {
-      "id": "(app-client)/./app/context/CartContext.js",
-      "name": "*",
-      "chunks": [
-        "app/checkout/page:static/chunks/app/checkout/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\layout.tsx": {
-      "id": "(app-client)/./app/layout.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\CarCard.tsx": {
-      "id": "(app-client)/./components/CarCard.tsx",
-      "name": "*",
-      "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Footer.tsx": {
-      "id": "(app-client)/./components/Footer.tsx",
-      "name": "*",
-      "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\GifLoader.js": {
-      "id": "(app-client)/./components/GifLoader.js",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Navbar2.tsx": {
-      "id": "(app-client)/./components/Navbar2.tsx",
-      "name": "*",
-      "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
-      ],
-      "async": false
-    },
     "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\page.tsx": {
       "id": "(app-client)/./app/page.tsx",
       "name": "*",
@@ -611,19 +547,75 @@
       ],
       "async": false
     },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\api\\sendEmail\\sendEmail.ts": {
+      "id": "(app-client)/./app/api/sendEmail/sendEmail.ts",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\context\\CartBoolContext.js": {
+      "id": "(app-client)/./app/context/CartBoolContext.js",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\context\\CartContext.js": {
+      "id": "(app-client)/./app/context/CartContext.js",
+      "name": "*",
+      "chunks": [
+        "app/checkout/page:static/chunks/app/checkout/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\layout.tsx": {
+      "id": "(app-client)/./app/layout.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\CarCard.tsx": {
+      "id": "(app-client)/./components/CarCard.tsx",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Footer.tsx": {
+      "id": "(app-client)/./components/Footer.tsx",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\GifLoader.js": {
+      "id": "(app-client)/./components/GifLoader.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\Navbar2.tsx": {
+      "id": "(app-client)/./components/Navbar2.tsx",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
     "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page.jsx": {
       "id": "(app-client)/./app/search/page.jsx",
       "name": "*",
       "chunks": [
         "app/search/page:static/chunks/app/search/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page.jsx": {
-      "id": "(app-client)/./app/shop/page.jsx",
-      "name": "*",
-      "chunks": [
-        "app/shop/page:static/chunks/app/shop/page.js"
       ],
       "async": false
     },
@@ -650,12 +642,25 @@
         "app/checkout/page:static/chunks/app/checkout/page.js"
       ],
       "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page.jsx": {
+      "id": "(app-client)/./app/shop/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/shop/page:static/chunks/app/shop/page.js"
+      ],
+      "async": false
     }
   },
   "entryCSSFiles": {
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\loading": {
-      "modules": [],
-      "files": []
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\page": {
+      "modules": [
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\react-responsive-carousel\\lib\\styles\\carousel.min.css",
+        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\swiper\\swiper.min.css"
+      ],
+      "files": [
+        "static/css/app/page.css"
+      ]
     },
     "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\layout": {
       "modules": [
@@ -669,20 +674,11 @@
         "static/css/app/layout.css"
       ]
     },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\page": {
-      "modules": [
-        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\react-responsive-carousel\\lib\\styles\\carousel.min.css",
-        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\swiper\\swiper.min.css"
-      ],
-      "files": [
-        "static/css/app/page.css"
-      ]
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page": {
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\loading": {
       "modules": [],
       "files": []
     },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page": {
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page": {
       "modules": [],
       "files": []
     },
@@ -695,6 +691,10 @@
       ]
     },
     "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\checkout\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page": {
       "modules": [],
       "files": []
     }

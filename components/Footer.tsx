@@ -368,11 +368,11 @@ const Footer = () => {
                                     <span>
                                         Contact{" "}
                                         <a
-                                            href="mailto:info@socialtapnfc.au"
+                                            href="mailto:info@anazon-lb.com"
                                             data-auto-id="true"
                                             id="page-footer-mailto-support-bellroy-com-1"
                                         >
-                                            info@anazon.lb
+                                            info@anazon-lb.com
                                         </a>
                                     </span>
                                 </p>

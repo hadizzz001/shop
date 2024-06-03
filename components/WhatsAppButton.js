@@ -74,8 +74,8 @@ const createWhatsAppURL = (inputs, items) => {
     `).join('\n')}
 
     Subtotal: $${totalAmount.toFixed(2)}
-    Delivery fee: $4.00
-    *Total Amount:* $${(totalAmount + 4).toFixed(2)}
+    Delivery fee: $3.00
+    *Total Amount:* $${(totalAmount + 3).toFixed(2)}
   `;
 
     const encodedMessage = encodeURIComponent(message);

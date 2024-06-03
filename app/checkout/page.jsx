@@ -10,15 +10,11 @@ import { useCart } from '../context/CartContext';
 import WhatsAppButton from "../../components/WhatsAppButton";
 
 
-const page = () => {
-  const [isBooleanValue2, setBooleanValue2] = useState(false);
-  const [selectedDialCode, setSelectedDialCode] = useState('+61'); // Initial dial code
+const page = () => { 
   const [selectedOption, setSelectedOption] = useState(7.5);
   const [allTemp, setTemp] = useState()
   const { cart, removeFromCart, quantities, subtotal, addToCart } = useCart();
-  const [localQuantities, setLocalQuantities] = useState(quantities);
-  const [errors, setErrors] = useState({});
-  const [value, setValue] = useState('');
+  const [localQuantities, setLocalQuantities] = useState(quantities); 
   const [phone, setPhone] = useState("");
   
 
@@ -46,7 +42,9 @@ const page = () => {
 
 
 
-
+  const handleRemoveFromCart = (itemId) => {
+    removeFromCart(itemId);
+  };
  
 
 
@@ -543,7 +541,7 @@ const page = () => {
                                                   
                                                     <tr className="shipping_total_fee">
                                                       <td colSpan={1}>
-                                                        <span>Delivery</span>
+                                                        <span>Delivery<small style={{color:"red"}}> (Note: delivery fee may vary depending on location.)</small></span>
                                                       </td>
                                                       <td
                                                         colSpan={1}
@@ -556,7 +554,8 @@ const page = () => {
                                                               <span className="woocommerce-Price-currencySymbol">
                                                                 $
                                                               </span>
-                                                              4.00
+                                                              3.00
+                                                              
                                                             </bdi>
                                                           </span>
                                                         </span>
@@ -580,7 +579,7 @@ const page = () => {
                                                             <span className="woocommerce-Price-currencySymbol">
                                                               $
                                                             </span>
-                                                            {selectedOption !== 0 ? (subtotal + 4).toFixed(2) : subtotal.toFixed(2)}
+                                                            {selectedOption !== 0 ? (subtotal + 3).toFixed(2) : subtotal.toFixed(2)}
                                                           </bdi>
                                                         </span>
                                                       </strong>{" "}
