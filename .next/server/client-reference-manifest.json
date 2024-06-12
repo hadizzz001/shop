@@ -215,46 +215,6 @@
         "chunks": [],
         "async": false
       }
-    },
-    "(app-client)/./app/search/page.jsx": {
-      "*": {
-        "id": "(sc_client)/./app/search/page.jsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/product/page.jsx": {
-      "*": {
-        "id": "(sc_client)/./app/product/page.jsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/checkout/page.jsx": {
-      "*": {
-        "id": "(sc_client)/./app/checkout/page.jsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/WhatsAppButton.js": {
-      "*": {
-        "id": "(sc_client)/./components/WhatsAppButton.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/shop/page.jsx": {
-      "*": {
-        "id": "(sc_client)/./app/shop/page.jsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
     }
   },
   "edgeSSRModuleMapping": {},
@@ -551,7 +511,7 @@
       "id": "(app-client)/./app/api/sendEmail/sendEmail.ts",
       "name": "*",
       "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -559,7 +519,7 @@
       "id": "(app-client)/./app/context/CartBoolContext.js",
       "name": "*",
       "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -567,7 +527,7 @@
       "id": "(app-client)/./app/context/CartContext.js",
       "name": "*",
       "chunks": [
-        "app/checkout/page:static/chunks/app/checkout/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -583,7 +543,7 @@
       "id": "(app-client)/./components/CarCard.tsx",
       "name": "*",
       "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -591,7 +551,7 @@
       "id": "(app-client)/./components/Footer.tsx",
       "name": "*",
       "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -607,47 +567,7 @@
       "id": "(app-client)/./components/Navbar2.tsx",
       "name": "*",
       "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page.jsx": {
-      "id": "(app-client)/./app/search/page.jsx",
-      "name": "*",
-      "chunks": [
-        "app/search/page:static/chunks/app/search/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\product\\page.jsx": {
-      "id": "(app-client)/./app/product/page.jsx",
-      "name": "*",
-      "chunks": [
-        "app/product/page:static/chunks/app/product/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\checkout\\page.jsx": {
-      "id": "(app-client)/./app/checkout/page.jsx",
-      "name": "*",
-      "chunks": [
-        "app/checkout/page:static/chunks/app/checkout/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\components\\WhatsAppButton.js": {
-      "id": "(app-client)/./components/WhatsAppButton.js",
-      "name": "*",
-      "chunks": [
-        "app/checkout/page:static/chunks/app/checkout/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page.jsx": {
-      "id": "(app-client)/./app/shop/page.jsx",
-      "name": "*",
-      "chunks": [
-        "app/shop/page:static/chunks/app/shop/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     }
@@ -675,26 +595,6 @@
       ]
     },
     "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\loading": {
-      "modules": [],
-      "files": []
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page": {
-      "modules": [],
-      "files": []
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\product\\page": {
-      "modules": [
-        "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\node_modules\\swiper\\swiper.min.css"
-      ],
-      "files": [
-        "static/css/app/product/page.css"
-      ]
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\checkout\\page": {
-      "modules": [],
-      "files": []
-    },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page": {
       "modules": [],
       "files": []
     }

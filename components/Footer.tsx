@@ -129,7 +129,33 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.instagram.com/socialtap.nfc/"
+                                    href="https://www.tiktok.com/@anazon.lb"
+                                    data-auto-id="true"
+                                    id="page-footer-http-www-instagram-com-bellroy-1"
+                                >
+
+
+
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 2500 2500"
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
+                                        xmlSpace="preserve"
+                                        height="20px"
+                                    >
+                                        <title>TikTok</title>
+                                        <path d="M2202.4 0H297.6C133.5 0 0 133.5 0 297.6v1904.8C0 2366.5 133.5 2500 297.6 2500h1904.8c164.1 0 297.6-133.5 297.6-297.6V297.6C2500 133.5 2366.5 0 2202.4 0m-237.8 1090.7c-13.7 1.3-27.4 2-41.1 2.1-150.4 0-290.7-75.8-373.2-201.7v686.7c0 280.3-227.2 507.6-507.6 507.6s-507.6-227.2-507.6-507.6 227.2-507.6 507.6-507.6c10.6 0 21 1 31.4 1.6V1322c-10.4-1.2-20.7-3.2-31.4-3.2-143.1 0-259 116-259 259s116 259 259 259c143.1 0 269.5-112.7 269.5-255.8l2.5-1166.3H1554c22.6 214.6 195.6 382.2 410.8 397.9v278" />
+                                    </svg>
+
+
+
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://www.instagram.com/anazon.lb/"
                                     data-auto-id="true"
                                     id="page-footer-http-www-instagram-com-bellroy-1"
                                 >
@@ -159,7 +185,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.facebook.com/socialtap.nfc"
+                                    href="https://www.facebook.com/anazon.lb"
                                     data-auto-id="true"
                                     id="page-footer-https-www-facebook-com-bellroy-official-1"
                                 >
@@ -180,7 +206,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://wa.me/61493310824"
+                                    href="https://wa.me/96176839590"
                                     data-auto-id="true"
                                     id="page-footer-https-www-youtube-com-channel-ucy6vodc_wyzj4rlslixgp1q-1"
                                 >
@@ -251,7 +277,7 @@ const Footer = () => {
                                 >
                                     Privacy Policy
                                 </a>
-                            </li> 
+                            </li>
                         </ul>
                     </div>
 
@@ -344,7 +370,7 @@ const Footer = () => {
                                 >
                                     Our Story
                                 </a>
-                            </li>  
+                            </li>
                         </ul>
                     </div>
                     <div className="column ">  </div>
