@@ -28,7 +28,7 @@ export default function Home() {
                                     {" "}
 
 
-                                    By using this website, you agree to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Anazon’s relationship with you in relation to this website. The term Anazon or ‘us’ or ‘we’ refers to the owner of the website. The term ‘you’ refers to the user or viewer of our website.
+                                    By using this website, you agree to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Shopping’s relationship with you in relation to this website. The term Shopping or ‘us’ or ‘we’ refers to the owner of the website. The term ‘you’ refers to the user or viewer of our website.
 
                                     Usage: The content of the pages of this website is for your general information and use only. It is subject to change without notice.
                                     Accuracy: Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness, or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.

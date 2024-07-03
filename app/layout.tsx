@@ -35,15 +35,15 @@ export default function RootLayout({
   />
   <meta content="max-image-preview:large" name="robots" />
   <title>
-    Anazon
+    Shopping
   </title>
   <meta
-    content="At Anazon, we're reshaping the way businesses connect."
+    content="At Shopping, we're reshaping the way businesses connect."
     name="description" 
   />
-  <meta content="Anazon" name="keywords" property="" />
+  <meta content="Shopping" name="keywords" property="" />
   <meta
-    content="Anazon"
+    content="Shopping"
     name=""
     property="og:title"
   />
@@ -54,7 +54,7 @@ export default function RootLayout({
   />
   <meta content="website" name="" property="og:type" />
   <meta
-    content="At Anazon, we're reshaping the way businesses connect."
+    content="At Shopping, we're reshaping the way businesses connect."
     name=""
     property="og:description"
   />

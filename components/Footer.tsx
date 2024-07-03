@@ -129,7 +129,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.tiktok.com/@anazon.lb"
+                                    href="https://www.tiktok.com/@Shopping.lb"
                                     data-auto-id="true"
                                     id="page-footer-http-www-instagram-com-bellroy-1"
                                 >
@@ -155,7 +155,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.instagram.com/anazon.lb/"
+                                    href="https://www.instagram.com/Shopping.lb/"
                                     data-auto-id="true"
                                     id="page-footer-http-www-instagram-com-bellroy-1"
                                 >
@@ -185,7 +185,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.facebook.com/anazon.lb"
+                                    href="https://www.facebook.com/Shopping.lb"
                                     data-auto-id="true"
                                     id="page-footer-https-www-facebook-com-bellroy-official-1"
                                 >
@@ -394,18 +394,18 @@ const Footer = () => {
                                     <span>
                                         Contact{" "}
                                         <a
-                                            href="mailto:info@anazon-lb.com"
+                                            href="mailto:info@Shopping-lb.com"
                                             data-auto-id="true"
                                             id="page-footer-mailto-support-bellroy-com-1"
                                         >
-                                            info@anazon-lb.com
+                                            info@Shopping-lb.com
                                         </a>
                                     </span>
                                 </p>
                             </div>
                             <div className="column">
                                 <span className="copyright">
-                                    All rights reserved © {(new Date().getFullYear())} Anazon
+                                    All rights reserved © {(new Date().getFullYear())} Shopping
                                 </span>
                             </div>
                         </div>
